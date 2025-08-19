@@ -4,7 +4,8 @@ import {
   FiHome, 
   FiPlus, 
   FiUsers, 
-  FiSettings 
+  FiSettings,
+  FiGrid
 } from 'react-icons/fi';
 
 const NavButton = ({ onClick, icon: Icon, isActive, disabled = false }: { onClick: () => void, icon: React.ComponentType<{ className?: string }>, isActive: boolean, disabled?: boolean }) => (
@@ -35,6 +36,7 @@ export const BottomNav = ({ onNavigate, currentView = 'upload' }: { onNavigate?:
     { name: 'home', dest: 'profile', icon: FiHome, disabled: false },
     { name: 'add', dest: 'upload', icon: FiPlus, disabled: false },
     { name: 'community', dest: 'community', icon: FiUsers, disabled: false },
+    { name: 'groups', dest: 'groups', icon: FiGrid, disabled: false },
     { name: 'settings', dest: 'settings', icon: FiSettings, disabled: false },
   ];
 

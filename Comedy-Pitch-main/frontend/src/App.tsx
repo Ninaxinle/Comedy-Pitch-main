@@ -8,6 +8,7 @@ import ThemeSettings from "./components/ThemeSettings";
 import CommunityHub from "./components/CommunityHub";
 import VoiceRecorder from "./components/VoiceRecorder";
 import Summary from "./components/Summary";
+import Groups from "./components/Groups";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       {view === "edit-profile" && <EditProfile onNavigate={navigateTo} />}
       {view === "theme-settings" && <ThemeSettings onNavigate={navigateTo} />}
       {view === "community" && <CommunityHub onNavigate={navigateTo} />}
+      {view === "groups" && <Groups onNavigate={navigateTo} />}
       {view === "voice-recorder" && <VoiceRecorder onNavigate={navigateTo} />}
       {view === "summary" && <Summary onNavigate={navigateTo} />}
     </div>
