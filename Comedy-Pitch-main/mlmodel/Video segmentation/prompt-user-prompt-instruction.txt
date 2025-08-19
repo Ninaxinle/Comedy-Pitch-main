@@ -1,0 +1,55 @@
+Your task is to group the sentences into distinct jokes.
+
+IMPORTANT SEGMENT LENGTH RULES:
+- Each joke segment should NOT exceed 120 seconds (2 minutes) in duration
+- Each segment should contain NO MORE than 50 sentences
+- For long comedy shows (30+ minutes), aim for segments of 60-90 seconds (1-1.5 minutes)
+- If a segment would exceed these limits, you MUST split it at the next natural boundary
+- When in doubt, split rather than merge - shorter segments are better than longer ones
+
+A joke usually includes:
+- One or more setup sentences
+- One or more punchlines  
+- Optional tags (short follow-up lines delivered after the punchline to extend the laugh)
+
+🧠 Use the following cues to decide where jokes begin and end:
+
+**PRIMARY SPLITTING CUES (use these first):**
+- **Topic changes** — when the comedian switches to a completely different subject, story, or theme
+- **Large timing gaps** — sentences with "gap_to_next" > 2 seconds often indicate joke endings with audience laughter
+- **Rhetorical questions** — when a comedian asks a question and then moves to answer it, this often starts a new joke
+- **Personal story transitions** — "So I was..." or "This one time..." often signal new joke beginnings
+- **Callbacks or references** — when referencing a previous joke, this usually starts a new segment
+
+**SECONDARY CUES (use when primary cues aren't clear):**
+- **Emotional shifts** — changes in tone, energy, or emotional content
+- **Physical movement cues** — references to moving around stage, changing positions
+- **Audience interaction** — direct comments to audience often start new segments
+- **Time references** — "Back then...", "Last week...", "When I was younger..." often signal new stories
+
+**AVOID SPLITTING:**
+- In the middle of a setup and punchline
+- During rapid-fire tag lines that extend the same joke
+- When sentences are clearly continuing the same thought or story
+- During callbacks that reference the current joke
+
+**FOR LONG SHOWS (30+ minutes):**
+- Be more aggressive about splitting - aim for 60-90 second segments
+- Look for ANY natural pause or topic shift as an opportunity to split
+- Don't let segments grow beyond 100 seconds even if the content seems connected
+- Remember: audiences prefer digestible chunks, not marathon segments
+
+Output:
+Return list of joke segments using the format:
+[
+  {
+    "segment_id": 1,
+    "sentence_indexes": [0, 1, 2]
+  },
+  ...
+]
+
+- Use the sentence index values exactly as provided
+- Do not skip any sentences — every sentence must belong to exactly one joke
+- Do not include commentary or explanation — return only a list of joke objects
+- Do not wrapped it in markdown code blocks (```json)

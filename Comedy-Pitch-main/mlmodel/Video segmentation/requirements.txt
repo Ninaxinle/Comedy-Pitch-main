@@ -1,0 +1,38 @@
+# Core dependencies for Video Segmentation Pipeline
+whisperx>=3.4.2
+openai>=1.0.0
+moviepy>=1.0.3
+PyYAML>=6.0
+ffmpeg-python>=0.2.0
+
+# WhisperX additional dependencies
+faster-whisper>=0.9.0
+pyannote.audio>=3.1.0
+speechbrain>=0.5.12
+
+# PyTorch with CUDA support (for GPU acceleration - 12x faster)
+# Install with: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch>=2.0.0+cu121
+torchvision>=0.15.0+cu121
+torchaudio>=2.0.0+cu121
+
+# Audio processing
+librosa>=0.10.0
+soundfile>=0.12.0
+scipy>=1.10.0
+
+# Utilities
+numpy>=1.24.0
+pandas>=2.0.0
+tqdm>=4.65.0
+
+# Note: For CPU-only installation, use:
+# torch>=2.0.0
+# torchvision>=0.15.0
+# torchaudio>=2.0.0
+#
+# GPU Requirements:
+# - NVIDIA GPU with CUDA support
+# - CUDA 12.1+ drivers
+# - 2-4 GB VRAM for optimal performance 

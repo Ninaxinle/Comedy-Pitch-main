@@ -1,0 +1,159 @@
+[
+  {
+    "segment_id": 1,
+    "text": "I got an IUD this week. Yeah. I am not seeing anybody right now, but you know what they say, dress for the job you want, right? Not the job you have.",
+    "feedback": {
+      "summary": "Great punchline via misdirection — add a smoother lead-in",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "Consider adding a short sentence that acknowledges the irony of getting an IUD while single, to make the punchline misdirection feel smoother."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "The punchline lands well — you could add a quick, subtle tag like 'CEO of disappointment' to escalate the humor."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 2,
+    "text": "Yeah, I'm single, if you can believe it. And being single, it has changed my priorities in a way that I'm not super proud of. Okay, I'll give you an example.",
+    "feedback": {
+      "summary": "Good setup — add a clearer tone shift to heighten curiosity",
+      "details": [
+        {
+          "subtype": "flow_disruption",
+          "message": "The transition into 'changed my priorities' is a bit flat — consider punching it up with something more specific or odd to spike curiosity."
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "You could tag the 'if you can believe it' line with an absurd reason why someone *shouldn’t* believe you're single."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 3,
+    "text": "We all remember two years ago, the racial uprising, right?... Feels like I'm not asking for too much, you know what I mean?",
+    "feedback": {
+      "summary": "Strong juxtaposition of seriousness and personal shallowness — refine pacing",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "The contrast between the intense protest and the romantic observation is funny — consider inserting a short pause or sentence between the two ideas to let the turn breathe."
+        },
+        {
+          "subtype": "structure_clarity",
+          "message": "Clarify your own role earlier in the story — e.g., 'I was there, marching' — to keep focus on you before pivoting to the guy’s gesture."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 4,
+    "text": "Yeah, yeah, it's tough being single... That just wasn't true.",
+    "feedback": {
+      "summary": "Good personal contrast — build the reveal with a sharper punch",
+      "details": [
+        {
+          "subtype": "surprise_weakness",
+          "message": "The image of removing a bandaid is funny but low-energy — consider exaggerating the fear for comedic effect ('I had to call my therapist')."
+        },
+        {
+          "subtype": "structure_clarity",
+          "message": "The ‘kinkiest girl’ line would land harder if you explicitly contrast it with your real activity *before* delivering it — building tension first."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 5,
+    "text": "I've been trying to mix things up... It's fucking tough.",
+    "feedback": {
+      "summary": "Strong metaphor — add a sharper ending line",
+      "details": [
+        {
+          "subtype": "angle_suggestion",
+          "message": "The MLM metaphor is excellent — you could extend it by comparing your dating pitch to product features: 'low maintenance, emotionally available… limited edition.'"
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "The final line 'you cannot girl boss your way...' is great — you might follow it with a sharper tag like 'Turns out his heart is not a startup.'"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 6,
+    "text": "It was a holiday weekend... Anyway.",
+    "feedback": {
+      "summary": "Dark but effective punchline — consider softening setup tone",
+      "details": [
+        {
+          "subtype": "audience_reference_fit",
+          "message": "This segment relies on dark humor — to keep audience with you, consider using a lighter tone leading into the urn line before dropping it."
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "The ‘cremation burns fat’ line is strong — you might tag it with a faux-inspirational line like 'Hot girl summer just got literal.'"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 7,
+    "text": "Yeah, I do have some body image issues... Okay.",
+    "feedback": {
+      "summary": "Smart turn on 'revenge body' idea — reinforce payoff",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "The 'revenge personality' twist is clever — consider giving an absurd example of what that might look like before launching into the next segment."
+        },
+        {
+          "subtype": "callback_opportunity",
+          "message": "This could be a nice callback setup if later you reference personality traits as revenge tools again."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 8,
+    "text": "My revenge personality, I'm thinking, is just gonna be a really cool British girl... Pretty freaking rock and roll. Yeah, yeah.",
+    "feedback": {
+      "summary": "Fun character shift — consider variety in phrasing",
+      "details": [
+        {
+          "subtype": "voice_consistency",
+          "message": "The British persona is a funny contrast — maybe add one line showing how poorly you actually do the accent or stay in character."
+        },
+        {
+          "subtype": "overused_pattern",
+          "message": "‘Rock and roll’ is repeated a lot — you could swap one of them for a synonym or visual metaphor to keep it fresh."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 9,
+    "text": "I want to talk to you guys about something that's important to me... you need to calm down.",
+    "feedback": {
+      "summary": "Smart cultural commentary — tighten setup for stronger rhythm",
+      "details": [
+        {
+          "subtype": "length_balance",
+          "message": "The segment is long — consider trimming some historical comparisons (e.g., 'some women' line) to maintain pacing."
+        },
+        {
+          "subtype": "structure_clarity",
+          "message": "The 'Gen Z voting skepticism' premise is strong — clarify upfront why you're making the comparison to fashion/culture for a tighter argument."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "The 'trailer for Avatar 2' timeline is great — you could add a tag like 'James Cameron could never move that fast.'"
+        }
+      ]
+    }
+  }
+]

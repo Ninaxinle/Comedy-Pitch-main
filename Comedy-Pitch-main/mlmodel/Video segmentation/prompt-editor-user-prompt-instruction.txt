@@ -1,0 +1,40 @@
+Your Task
+
+1. **Evaluate the existing segmentation from the perspective of a comedy audience:**
+   - Is each joke duration shorter than 120 seconds (2 minutes)? If longer, you MUST break it up.
+   - For long shows (30+ minutes), are segments 60-90 seconds or shorter?
+   - Does each segment contain fewer than 50 sentences?
+   - Does each segment feel like one complete joke?
+   - Are tags grouped with their punchlines?
+   - Does a new segment start when a new idea or topic starts?
+   - Are punchlines delivered at the right point in the segment?
+   - Do timing gaps support the segmentation? (Large gaps >2s often indicate natural joke boundaries)
+
+2. **Revise the segmentation if necessary:**
+   - **PRIORITY: Split long segments** - if any segment exceeds 120 seconds or 50 sentences, split it immediately
+   - **For long shows**: Be aggressive about splitting segments longer than 90 seconds
+   - Merge segments ONLY if they clearly continue the same joke and are both short (<60 seconds each)
+   - Split segments if they contain more than one distinct joke or topic
+   - Reorder or reassign sentences if they are placed incorrectly
+   - Consider timing: sentences with large "gap_to_next" values (>2s) often end joke segments due to audience laughter
+   - **When in doubt, split rather than merge** - shorter segments are better for audience engagement
+
+3. **Special attention for long comedy shows:**
+   - Look for ANY natural pause, topic shift, or timing gap as an opportunity to split
+   - Don't let segments grow beyond 100 seconds even if content seems connected
+   - Remember: audiences prefer digestible 60-90 second chunks, not marathon segments
+
+✅ Output Format:
+Return only the revised list of joke segments using the format:
+[
+  {
+    "segment_id": 1,
+    "sentence_indexes": [0, 1, 2]
+  },
+  ...
+]
+
+- Use the original sentence indexes exactly as provided.
+- Ensure each sentence appears in exactly one segment.
+- Do not include commentary, explanations, or markdown — only the list of revised joke segments.
+- Do not wrapped it in markdown code blocks (```json)

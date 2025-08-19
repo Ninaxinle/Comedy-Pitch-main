@@ -1,0 +1,164 @@
+[
+  {
+    "segment_id": 1,
+    "text": "Thank you so much. It's so good to be here. Oh my gosh.",
+    "feedback": {
+      "summary": "Consider adding a stronger opening hook",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "Openings should ideally signal your comedic style or tone. Consider adding a quick, light joke or observational quip right after the greeting to grab attention."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 2,
+    "text": "Happy Virgo season. Yeah. That was a test. Now I know where my enemies are. Got your ass. Got your ass. I'm with you.",
+    "feedback": {
+      "summary": "Refine astrology reference for broader clarity",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "Clarify the 'test' and 'enemies' line — consider briefly explaining how recognizing Virgo season reveals your enemies to help land the joke."
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "You could tag this with a quick line about what kind of people fail that 'test' — e.g., overly rational types, Geminis, etc."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 3,
+    "text": "I've been dabbling in astrology a bit lately because I'm not well. And I am unfortunately a Gemini. Woo! Also known as a two-faced bitch, according to my birth chart and some other people.",
+    "feedback": {
+      "summary": "Solid premise, room to heighten the character self-roast",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "The line 'two-faced bitch' is funny — you might heighten the absurdity by giving a specific quote from your chart like 'will destroy friendships in June.'"
+        },
+        {
+          "subtype": "voice_consistency",
+          "message": "Lean further into the dry self-deprecating tone — e.g., 'some other people… mostly my exes and my therapist.'"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 4,
+    "text": "What I like about astrology is that it sort of lets you surrender to something bigger than yourself... Take it up with the sky.",
+    "feedback": {
+      "summary": "Great build with thematic callbacks — consider tightening",
+      "details": [
+        {
+          "subtype": "length_balance",
+          "message": "This segment runs a bit long. You could tighten the middle by trimming slightly repetitive lines like 'It's like religion in that way' if it doesn’t add punch."
+        },
+        {
+          "subtype": "callback_opportunity",
+          "message": "‘Take it up with the sky’ is strong — consider calling back to it later in the set when referencing another personal flaw."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 5,
+    "text": "no I I like I I do like astrology I just think it's best paired with some therapy... I miss my dad.",
+    "feedback": {
+      "summary": "Strong cultural and character contrasts — consider polishing the ending tag",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "The 'I miss my dad' tag is funny and dark — consider preceding it with a slightly longer pause or setup to increase impact."
+        },
+        {
+          "subtype": "angle_suggestion",
+          "message": "You could briefly mention how you reconciled therapy with your upbringing — this adds texture and another laugh from contrast."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 6,
+    "text": "I can't help but notice there's a lot of cuties here tonight... Gorgeous.",
+    "feedback": {
+      "summary": "Clever misdirection — clarify punchline setup slightly",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "The 'I'm bi... by myself' is clever. Consider adding a small setup before to prime the audience for a misdirect (e.g., 'So just a heads up...')."
+        },
+        {
+          "subtype": "flow_disruption",
+          "message": "The 'decorated war heroes' line may be a slight non sequitur — consider clarifying the joke’s logic or connecting it more clearly to the previous line."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 7,
+    "text": "Yeah, I'm trying to get back out there... That's something just sort of unique and interesting about me.",
+    "feedback": {
+      "summary": "Punchline needs clearer sarcasm or misdirection",
+      "details": [
+        {
+          "subtype": "surprise_weakness",
+          "message": "‘Something unique about me’ undercuts the setup — clarify that the line is sarcastic, or twist it further to expose the banality."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 8,
+    "text": "I will say though, now that I'm leaving my apartment a lot more often... She's a Sag.",
+    "feedback": {
+      "summary": "Strong premise with clear escalation — consider tag enhancements",
+      "details": [
+        {
+          "subtype": "tag_potential",
+          "message": "You could tag the 'before Christ door technology' with a quick historical misreference — e.g., 'Even Jesus had a ring camera.'"
+        },
+        {
+          "subtype": "callback_opportunity",
+          "message": "Consider calling back to Alexa’s priorities later in the set — e.g., 'Thanks to Alexa, I know my ex’s moon sign but not my landlord’s phone number.'"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 9,
+    "text": "I have been celebrating the return of gossip... It's just a good journalist.",
+    "feedback": {
+      "summary": "Fantastic contrast between gossip and conspiracy — polish the closing beat",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "The transition from 'toxic Gemini behavior' to conspiracy theories could be smoother — try adding a linking sentence."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "The final 'good journalist' punchline is clever — consider emphasizing it with a brief pause or tone shift before delivering."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 10,
+    "text": "You know who I think must have been the biggest gossips... you're a nosy bitch who lives for drama.",
+    "feedback": {
+      "summary": "Strong unique angle — clarify setup slightly for max payoff",
+      "details": [
+        {
+          "subtype": "angle_suggestion",
+          "message": "Consider explicitly framing this as a 'historical hot take' to let the audience know you’re pivoting to absurd logic."
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "You could add a tag like 'Genghis Khan: gossip girl of the steppes' to escalate the absurd imagery."
+        }
+      ]
+    }
+  }
+]

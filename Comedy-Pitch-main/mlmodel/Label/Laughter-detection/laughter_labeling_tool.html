@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>笑声标记工具 - Laughter Labeling Tool</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            padding: 30px;
+        }
+
+        .upload-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px dashed #4facfe;
+        }
+
+        .file-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px dashed #4facfe;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .file-input:hover {
+            border-color: #00f2fe;
+            background: #f0f8ff;
+        }
+
+        .audio-player {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .audio-player audio {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(79, 172, 254, 0.3);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+            color: white;
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(86, 171, 47, 0.3);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 65, 108, 0.3);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .btn-warning:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(240, 147, 251, 0.3);
+        }
+
+        .status {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: 600;
+            color: #1976d2;
+        }
+
+        .current-time {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .laughter-segments {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .laughter-segments h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .segment-list {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: white;
+        }
+
+        .segment-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+            background: white;
+        }
+
+        .segment-item:last-child {
+            border-bottom: none;
+        }
+
+        .segment-time {
+            font-family: monospace;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .segment-duration {
+            font-weight: 600;
+            color: #4facfe;
+        }
+
+        .delete-btn {
+            background: #ff416c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .export-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .export-section h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .instructions {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .instructions h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .instructions ol {
+            color: #856404;
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 5px;
+        }
+
+        .keyboard-shortcuts {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .keyboard-shortcuts h4 {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+
+        .shortcut {
+            display: inline-block;
+            background: #6c757d;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎭 笑声标记工具</h1>
+            <p>Laughter Labeling Tool - 手工标记笑声开始和结束时间</p>
+        </div>
+
+        <div class="main-content">
+            <div class="instructions">
+                <h4>📋 使用说明</h4>
+                <ol>
+                    <li>选择音频文件（支持 MP3, WAV, M4A 等格式）</li>
+                    <li>播放音频，听到笑声开始时点击"标记开始"按钮</li>
+                    <li>听到笑声结束时点击"标记结束"按钮</li>
+                    <li>重复步骤2-3直到标记完所有笑声</li>
+                    <li>完成后导出CSV文件用于验证</li>
+                </ol>
+            </div>
+
+                         <div class="keyboard-shortcuts">
+                 <h4>⌨️ 键盘快捷键</h4>
+                 <p>
+                     <span class="shortcut">S</span> 标记笑声开始 | 
+                     <span class="shortcut">E</span> 标记笑声结束 | 
+                     <span class="shortcut">Space</span> 播放/暂停 | 
+                     <span class="shortcut">R</span> 重置所有标记
+                 </p>
+                 <p>
+                     <span class="shortcut">←</span> 后退1秒 | 
+                     <span class="shortcut">→</span> 前进1秒 | 
+                     <span class="shortcut">←←</span> 后退5秒 | 
+                     <span class="shortcut">→→</span> 前进5秒
+                 </p>
+             </div>
+
+            <div class="upload-section">
+                <h3>📁 选择音频文件</h3>
+                <input type="file" id="audioFile" class="file-input" accept="audio/*">
+            </div>
+
+            <div class="audio-player hidden" id="audioPlayer">
+                <h3>🎵 音频播放器</h3>
+                <audio id="audioElement" controls>
+                    您的浏览器不支持音频播放
+                </audio>
+                <div class="current-time" id="currentTime">00:00 / 00:00</div>
+                
+                <div class="controls">
+                    <button class="btn btn-primary" id="startBtn">🎬 标记开始</button>
+                    <button class="btn btn-success" id="endBtn">⏹️ 标记结束</button>
+                    <button class="btn btn-warning" id="resetBtn">🔄 重置标记</button>
+                    <button class="btn btn-danger" id="undoBtn">↩️ 撤销上一个</button>
+                </div>
+
+                <div class="status" id="status">
+                    请选择音频文件开始标记
+                </div>
+            </div>
+
+            <div class="laughter-segments">
+                <h3>📊 已标记的笑声片段</h3>
+                <div class="segment-list" id="segmentList">
+                    <div style="text-align: center; padding: 20px; color: #666;">
+                        暂无标记的笑声片段
+                    </div>
+                </div>
+            </div>
+
+            <div class="export-section">
+                <h3>💾 导出结果</h3>
+                <p>导出为CSV格式，可用于验证脚本</p>
+                <button class="btn btn-primary" id="exportBtn" disabled>📥 导出CSV</button>
+                <button class="btn btn-success" id="exportJsonBtn" disabled>📥 导出JSON</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+                 class LaughterLabeler {
+             constructor() {
+                 this.audioElement = document.getElementById('audioElement');
+                 this.currentTimeDisplay = document.getElementById('currentTime');
+                 this.statusDisplay = document.getElementById('status');
+                 this.segmentList = document.getElementById('segmentList');
+                 this.audioPlayer = document.getElementById('audioPlayer');
+                 
+                 this.segments = [];
+                 this.currentSegment = null;
+                 this.isPlaying = false;
+                 this.lastKeyTime = 0;
+                 this.keyRepeatCount = 0;
+                 
+                 this.initializeEventListeners();
+             }
+
+            initializeEventListeners() {
+                // File input
+                document.getElementById('audioFile').addEventListener('change', (e) => {
+                    this.loadAudioFile(e.target.files[0]);
+                });
+
+                // Audio controls
+                document.getElementById('startBtn').addEventListener('click', () => this.markStart());
+                document.getElementById('endBtn').addEventListener('click', () => this.markEnd());
+                document.getElementById('resetBtn').addEventListener('click', () => this.resetSegments());
+                document.getElementById('undoBtn').addEventListener('click', () => this.undoLastSegment());
+
+                // Export buttons
+                document.getElementById('exportBtn').addEventListener('click', () => this.exportCSV());
+                document.getElementById('exportJsonBtn').addEventListener('click', () => this.exportJSON());
+
+                // Audio events
+                this.audioElement.addEventListener('loadedmetadata', () => {
+                    this.updateTimeDisplay();
+                });
+
+                this.audioElement.addEventListener('timeupdate', () => {
+                    this.updateTimeDisplay();
+                });
+
+                this.audioElement.addEventListener('play', () => {
+                    this.isPlaying = true;
+                    this.updateStatus('正在播放音频...');
+                });
+
+                this.audioElement.addEventListener('pause', () => {
+                    this.isPlaying = false;
+                    this.updateStatus('音频已暂停');
+                });
+
+                                 // Keyboard shortcuts
+                 document.addEventListener('keydown', (e) => {
+                     if (e.target.tagName === 'INPUT') return; // Don't interfere with text input
+                     
+                     switch(e.key.toLowerCase()) {
+                         case 's':
+                             e.preventDefault();
+                             this.markStart();
+                             break;
+                         case 'e':
+                             e.preventDefault();
+                             this.markEnd();
+                             break;
+                         case ' ':
+                             e.preventDefault();
+                             this.togglePlayPause();
+                             break;
+                         case 'r':
+                             e.preventDefault();
+                             this.resetSegments();
+                             break;
+                         case 'arrowleft':
+                             e.preventDefault();
+                             this.handleArrowKey(-1);
+                             break;
+                         case 'arrowright':
+                             e.preventDefault();
+                             this.handleArrowKey(1);
+                             break;
+                     }
+                 });
+            }
+
+            loadAudioFile(file) {
+                if (!file) return;
+
+                const url = URL.createObjectURL(file);
+                this.audioElement.src = url;
+                this.audioPlayer.classList.remove('hidden');
+                this.updateStatus(`已加载音频文件: ${file.name}`);
+                this.resetSegments();
+            }
+
+            markStart() {
+                if (!this.audioElement.src) {
+                    this.updateStatus('请先选择音频文件');
+                    return;
+                }
+
+                const currentTime = this.audioElement.currentTime;
+                
+                if (this.currentSegment) {
+                    this.updateStatus('已有未完成的笑声片段，请先标记结束');
+                    return;
+                }
+
+                this.currentSegment = {
+                    start: currentTime,
+                    end: null
+                };
+
+                this.updateStatus(`标记笑声开始: ${this.formatTime(currentTime)}`);
+                this.updateExportButtons();
+            }
+
+            markEnd() {
+                if (!this.currentSegment) {
+                    this.updateStatus('请先标记笑声开始');
+                    return;
+                }
+
+                const currentTime = this.audioElement.currentTime;
+                
+                if (currentTime <= this.currentSegment.start) {
+                    this.updateStatus('结束时间必须大于开始时间');
+                    return;
+                }
+
+                this.currentSegment.end = currentTime;
+                
+                // Add to segments
+                this.segments.push({
+                    start_sec: this.currentSegment.start,
+                    end_sec: this.currentSegment.end,
+                    duration: this.currentSegment.end - this.currentSegment.start
+                });
+
+                this.updateStatus(`标记笑声结束: ${this.formatTime(currentTime)} (持续时间: ${this.formatTime(this.currentSegment.end - this.currentSegment.start)})`);
+                
+                this.currentSegment = null;
+                this.updateSegmentList();
+                this.updateExportButtons();
+            }
+
+            undoLastSegment() {
+                if (this.segments.length === 0) {
+                    this.updateStatus('没有可撤销的标记');
+                    return;
+                }
+
+                this.segments.pop();
+                this.updateSegmentList();
+                this.updateStatus('已撤销上一个标记');
+                this.updateExportButtons();
+            }
+
+            resetSegments() {
+                this.segments = [];
+                this.currentSegment = null;
+                this.updateSegmentList();
+                this.updateStatus('已重置所有标记');
+                this.updateExportButtons();
+            }
+
+                         togglePlayPause() {
+                 if (this.audioElement.paused) {
+                     this.audioElement.play();
+                 } else {
+                     this.audioElement.pause();
+                 }
+             }
+
+             handleArrowKey(direction) {
+                 const currentTime = Date.now();
+                 const timeDiff = currentTime - this.lastKeyTime;
+                 
+                 // 如果按键间隔小于500ms，认为是连续按键
+                 if (timeDiff < 500) {
+                     this.keyRepeatCount++;
+                 } else {
+                     this.keyRepeatCount = 0;
+                 }
+                 
+                 this.lastKeyTime = currentTime;
+                 
+                 // 根据连续按键次数决定跳转距离
+                 let seconds = direction;
+                 if (this.keyRepeatCount >= 2) {
+                     seconds = direction * 5; // 连续按键时跳转5秒
+                 }
+                 
+                 this.seekRelative(seconds);
+             }
+
+             seekRelative(seconds) {
+                 if (!this.audioElement.src) {
+                     this.updateStatus('请先选择音频文件');
+                     return;
+                 }
+
+                 const newTime = this.audioElement.currentTime + seconds;
+                 const duration = this.audioElement.duration;
+                 
+                 // 确保时间在有效范围内
+                 if (newTime < 0) {
+                     this.audioElement.currentTime = 0;
+                 } else if (newTime > duration) {
+                     this.audioElement.currentTime = duration;
+                 } else {
+                     this.audioElement.currentTime = newTime;
+                 }
+
+                 const direction = seconds > 0 ? '前进' : '后退';
+                 const absSeconds = Math.abs(seconds);
+                 this.updateStatus(`${direction}${absSeconds}秒: ${this.formatTime(this.audioElement.currentTime)}`);
+             }
+
+            updateTimeDisplay() {
+                const current = this.audioElement.currentTime || 0;
+                const duration = this.audioElement.duration || 0;
+                this.currentTimeDisplay.textContent = `${this.formatTime(current)} / ${this.formatTime(duration)}`;
+            }
+
+            updateStatus(message) {
+                this.statusDisplay.textContent = message;
+            }
+
+            updateSegmentList() {
+                if (this.segments.length === 0) {
+                    this.segmentList.innerHTML = '<div style="text-align: center; padding: 20px; color: #666;">暂无标记的笑声片段</div>';
+                    return;
+                }
+
+                this.segmentList.innerHTML = this.segments.map((segment, index) => `
+                    <div class="segment-item">
+                        <div>
+                            <strong>片段 ${index + 1}</strong>
+                            <div class="segment-time">
+                                开始: ${this.formatTime(segment.start_sec)} | 
+                                结束: ${this.formatTime(segment.end_sec)}
+                            </div>
+                        </div>
+                        <div>
+                            <span class="segment-duration">${this.formatTime(segment.duration)}</span>
+                            <button class="delete-btn" onclick="labeler.deleteSegment(${index})">删除</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            deleteSegment(index) {
+                this.segments.splice(index, 1);
+                this.updateSegmentList();
+                this.updateStatus(`已删除片段 ${index + 1}`);
+                this.updateExportButtons();
+            }
+
+            updateExportButtons() {
+                const hasSegments = this.segments.length > 0;
+                document.getElementById('exportBtn').disabled = !hasSegments;
+                document.getElementById('exportJsonBtn').disabled = !hasSegments;
+            }
+
+            formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            exportCSV() {
+                if (this.segments.length === 0) {
+                    this.updateStatus('没有可导出的标记');
+                    return;
+                }
+
+                const csvContent = [
+                    'start_sec,end_sec,duration',
+                    ...this.segments.map(segment => 
+                        `${segment.start_sec.toFixed(3)},${segment.end_sec.toFixed(3)},${segment.duration.toFixed(3)}`
+                    )
+                ].join('\n');
+
+                this.downloadFile(csvContent, 'laughter_segments.csv', 'text/csv');
+                this.updateStatus('CSV文件已导出');
+            }
+
+            exportJSON() {
+                if (this.segments.length === 0) {
+                    this.updateStatus('没有可导出的标记');
+                    return;
+                }
+
+                const jsonData = {};
+                this.segments.forEach((segment, index) => {
+                    jsonData[index.toString()] = {
+                        start_sec: segment.start_sec,
+                        end_sec: segment.end_sec
+                    };
+                });
+
+                const jsonContent = JSON.stringify(jsonData, null, 2);
+                this.downloadFile(jsonContent, 'laughter_segments.json', 'application/json');
+                this.updateStatus('JSON文件已导出');
+            }
+
+            downloadFile(content, filename, contentType) {
+                const blob = new Blob([content], { type: contentType });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
+        }
+
+        // Initialize the labeler
+        const labeler = new LaughterLabeler();
+    </script>
+</body>
+</html> 

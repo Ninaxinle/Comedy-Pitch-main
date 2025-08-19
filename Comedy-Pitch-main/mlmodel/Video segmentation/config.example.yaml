@@ -1,0 +1,56 @@
+# Video Segmentation Pipeline Configuration Template
+# Copy this file to config.yaml and customize with your settings
+
+llm:
+  api_key: "your-openai-api-key-here"  # Get from https://platform.openai.com/api-keys
+  model: "gpt-4o"                      # Recommended: gpt-4o (best), gpt-4o-mini (fast), gpt-4, gpt-3.5-turbo
+  temperature: 0.3                     # 0.0 = deterministic, 1.0 = creative (0.3 = balanced)
+  # max_tokens: 4000                   # Uncomment to limit output (removed for unlimited processing)
+
+whisper:
+  model: "large"      # Options: tiny, base, small, medium, large
+                      # Recommended: "large" (1.55B params, Whisper Large v3, best accuracy)
+                      # Alternative: "base" for faster processing on limited hardware
+  language: "en"      # CRITICAL PERFORMANCE SETTING!
+                      # "en" = Skip 30-second language detection (FAST, recommended for English)
+                      # "auto" = Detect language for each file (SLOW, use only for multilingual)
+  word_timestamps: true  # Required for timestamp correction and gap analysis
+  # force_cpu: true     # Uncomment ONLY if GPU issues (reduces performance by 12x)
+  
+  # VAD (Voice Activity Detection) Settings - ALWAYS ENABLED
+  # ✅ Reliable CLI approach with fixed timeout (no more timeouts on long videos!)
+  vad_method: "pyannote"  # Voice activity detection method (pyannote recommended)
+  vad_onset: 0.1         # VAD onset threshold (0.1 = conservative, good for comedy intro detection)
+  vad_offset: 0.8        # VAD offset threshold (0.8 = captures speech endings with pauses)
+  # These VAD settings showed 74.8% consistency in validation tests
+  
+  cli_timeout: 3600      # WhisperX CLI timeout in seconds (default: 1 hour)
+                         # Sufficient for full comedy specials with VAD processing
+   
+ffmpeg:
+  audio_codec: "pcm_s16le"  # Uncompressed audio for best transcription quality
+  sample_rate: 16000        # Optimal sample rate for Whisper models
+  channels: 1               # Mono audio (sufficient for speech, saves space)
+
+directories:
+  input_videos: "input_videos"
+  output_audio: "output_audio"
+  transcripts: "output_transcripts"
+  segmentations: "output_segmentations"
+  summaries: "output_summaries" 
+
+processing:
+  timestamp_buffer: 0.05      # Buffer in seconds for timestamp correction
+  # max_video_size_mb removed - smart chunking handles files of any size automatically
+
+chunking:
+  enabled: true                 # Enable smart chunking for large files that fail LLM token limits
+  min_chunk_duration: 300      # Minimum chunk duration in seconds (5 minutes)
+  size_reduction_factor: 0.2   # Reduce chunk size by 20% if LLM call fails (adaptive sizing)
+  boundary_search_window: 60   # Search window in seconds (±30s) around target chunk boundary
+  max_retries: 3               # Maximum number of chunk size reduction attempts
+  delay_between_chunks: 10     # Delay in seconds between processing chunks to avoid rate limits
+ 
+debug:
+  verbose: true                # Enable detailed logging
+  save_intermediate_files: true  # Keep all intermediate files for debugging

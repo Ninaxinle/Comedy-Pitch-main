@@ -1,0 +1,339 @@
+[
+  {
+    "segment_id": 1,
+    "text": "From New York City, Comedy Central presents... Bill Burr!... It's a beautiful theater here.",
+    "feedback": {
+      "summary": "Solid intro — could include quick opener to establish tone",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "Consider opening with a short, disarming line to signal the comedic tone before diving into longer bits — even a sarcastic compliment about the venue or the audience can help set up your voice quickly."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 2,
+    "text": "I didn't do anything today... I'll never own a helicopter.",
+    "feedback": {
+      "summary": "Strong observational premise — enhance contrast with more absurdity",
+      "details": [
+        {
+          "subtype": "tag_potential",
+          "message": "The ‘futon and macaroni’ image is strong — you could tag it with something like, 'It’s not even the microwave kind. I had to stir.'"
+        },
+        {
+          "subtype": "angle_suggestion",
+          "message": "Consider exaggerating how far away from 'helicopter' you are — e.g., ‘I got excited when my neighbor threw out a swivel chair.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 3,
+    "text": "You know what I love about that show... No, they're dumb.",
+    "feedback": {
+      "summary": "Great insight into celebrity culture — sharpen the moral twist",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "You could strengthen the punch by briefly contrasting one example of excess with a simple ‘real-world’ responsibility they ignore (e.g., taxes or plumbing)."
+        },
+        {
+          "subtype": "callback_opportunity",
+          "message": "Consider calling back to ‘Behind the Music’ later — e.g., “This whole story ends with them crying in a documentary.”"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 4,
+    "text": "I tell you right now, man... just for the hell of it.",
+    "feedback": {
+      "summary": "Funny economic comparison — escalate Bill Gates image more absurdly",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Iced-out laptop medallion’ is great — consider pushing further with a surreal visual, e.g., ‘spinning mouse on a gold chain.’"
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "Tagging ‘midget in his crew’ with a callback like 'It's in the Microsoft employee handbook’ could maintain momentum while softening edge."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 5,
+    "text": "Have you noticed that's the new status symbol of rich people?... biting on somebody's leg.",
+    "feedback": {
+      "summary": "Risky premise — clarify satirical tone early",
+      "details": [
+        {
+          "subtype": "audience_reference_fit",
+          "message": "Because it touches on sensitive tropes, frame the bit earlier as satire — e.g., ‘We’re so dumb with wealth signals, now this is the new Rolex.’"
+        },
+        {
+          "subtype": "structure_clarity",
+          "message": "The ‘movie roles’ idea could land better with one absurd example like ‘They’re always eating someone or granting wishes, never closing the big merger.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 6,
+    "text": "So I was listening to George Bush today... Damn, that blue's a good dog.",
+    "feedback": {
+      "summary": "Strong character-based bit — tighten repetition",
+      "details": [
+        {
+          "subtype": "length_balance",
+          "message": "Consider trimming a few ‘terror’ iterations to preserve pacing and increase impact of the ‘bloodhound’ closer."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Dragged out of a barbecue’ is vivid — tagging it with a contrast like ‘Still had mustard on his tie’ could boost the laugh."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 7,
+    "text": "I'll tell you one thing I have realized, though... scare the hell out of them.",
+    "feedback": {
+      "summary": "Edgy premise with vivid imagery — ground one absurdity before escalation",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "To maintain audience trust, clarify upfront this is a comedic exaggeration — perhaps mention a stereotype disclaimer or absurd ‘military strategy update.’"
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "The ‘banjo’ ending is hilarious — consider tagging it with something like ‘They think Deliverance is a war anthem.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 8,
+    "text": "Seriously, you wouldn't want to draft a guy like me... It was the best damn duck ever, right?",
+    "feedback": {
+      "summary": "Well-executed character shift — strengthen redneck voice consistency",
+      "details": [
+        {
+          "subtype": "voice_consistency",
+          "message": "Consider pushing the redneck syntax even further — repeat ‘over her’ with even more confusion or add a malapropism to heighten the voice."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Moose and duck with one shot’ is great — you could tag it with something like ‘I call it God’s combo meal.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 9,
+    "text": "So, anywho, I took the subway here this evening... It's not my problem.",
+    "feedback": {
+      "summary": "Sharp moral cowardice bit — consider clarifying tone on dark ending",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "‘She picked him’ is a strong, harsh closer — consider softening or signaling the nihilism earlier so the audience doesn’t misread your intent."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "The ‘I just stared at the floor’ image is relatable — a callback later to ‘not making eye contact’ could bring closure to this passivity theme."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 10,
+    "text": "I don't know if she's into that kind of thing... I wanted some cookies.",
+    "feedback": {
+      "summary": "Classic talk show satire — punch the absurd escalation harder",
+      "details": [
+        {
+          "subtype": "tag_potential",
+          "message": "‘Chocolate chip cookies’ could be pushed more absurd — e.g., ‘He threw the tray out the window and threatened the oven.’"
+        },
+        {
+          "subtype": "angle_suggestion",
+          "message": "You could contrast how quickly the audience turns on the guy versus how little evidence is presented on those shows."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 11,
+    "text": "Now, I'm not saying guys aren't jerks... lady, you're humping him for his money.",
+    "feedback": {
+      "summary": "Sharp hypocrisy angle — slightly soften closing line or precede with joke buffer",
+      "details": [
+        {
+          "subtype": "audience_reference_fit",
+          "message": "To maintain rhythm, consider cushioning the harsh closer with a laugh line like ‘And that’s fine! Just own it.’"
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Drools in his bathrobe’ is excellent — you might tag it with something like ‘Even the bathrobe is confused why it's still in use.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 12,
+    "text": "See, that's something I could never do, man... this isn't as bad as I was thinking a second ago.",
+    "feedback": {
+      "summary": "Funny inner monologue — pacing could benefit from shorter sentence structure",
+      "details": [
+        {
+          "subtype": "length_balance",
+          "message": "The will-on-the-headboard idea is great — break up the lines into shorter beats to maintain rhythm during a long bit."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "‘House in Miami’ as the motivator works — a specific absurd item (e.g., ‘Heirloom Fabergé egg collection’) might heighten the twist."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 13,
+    "text": "Now, I got some issues, I guess... I've always loved him.",
+    "feedback": {
+      "summary": "Cynical take on materialism — escalate contrast more sharply",
+      "details": [
+        {
+          "subtype": "angle_suggestion",
+          "message": "The idea of women appearing based on financial status could be tagged with a parody dating profile line like ‘Seeking emotionally stable ATM.’"
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Trolls and ferrets under a bridge’ is good imagery — heighten it with one absurd detail like ‘and a guy bartering moldy Hot Pockets.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 14,
+    "text": "No, you know what? You haven't solidified my issues... Shelf in my house.",
+    "feedback": {
+      "summary": "Great sports anecdote — shorten setup to land punch quicker",
+      "details": [
+        {
+          "subtype": "length_balance",
+          "message": "Consider trimming the description of the ball’s trajectory to get to the image of her clueless reaction faster."
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "The ‘other unbelievable free things’ line could benefit from a fake example: ‘like my free Range Rover from that Pepsi sweepstakes I never entered.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 15,
+    "text": "So, anywho. I was taking the, uh... I refused to do it.",
+    "feedback": {
+      "summary": "Relatable workplace satire — exaggerate the absurdity of corporate speak",
+      "details": [
+        {
+          "subtype": "angle_suggestion",
+          "message": "Push the ‘paperclip discipline’ further — e.g., “If you use more than 2.3 clips a week, you're flagged for clip fraud.”"
+        },
+        {
+          "subtype": "voice_consistency",
+          "message": "The ‘I’m too dumb to run a business’ line is strong self-deprecation — tag it with a fake resume bullet for flavor."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 16,
+    "text": "Cubicles should be illegal, man... look for a weapon.",
+    "feedback": {
+      "summary": "Great escalation — sharpen the gopher image",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "The ‘pop your head like a gopher’ line is visual — consider ending with ‘and instantly regret the sunlight’ or ‘and get slapped down by HR.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 17,
+    "text": "Pathetic, man. You know what I love about the cubicle?... I got called a cracker for, like, 18 stops.",
+    "feedback": {
+      "summary": "Complex blend of social commentary and self-deprecation — clarify tone on racial references",
+      "details": [
+        {
+          "subtype": "audience_reference_fit",
+          "message": "When using racially charged language, clarify your intent earlier — e.g., ‘this story’s going to get uncomfortable, but bear with me.’"
+        },
+        {
+          "subtype": "flow_disruption",
+          "message": "The transition from cubicle to subway story is abrupt — bridge the segments with a line like ‘speaking of confined spaces filled with awkwardness...’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 18,
+    "text": "I'll tell you, that's funny, though... Please, please don't do this.",
+    "feedback": {
+      "summary": "Strong commentary on white defensiveness — tighten the press conference image",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "‘No air conditioning on the subway’ is a funny excuse — tag it with another exaggerated defense like ‘I was lightheaded from a tuna melt.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 19,
+    "text": "No, that's why a lot of white dudes... Please don't do this.",
+    "feedback": {
+      "summary": "Punchy premise — exaggerate the ‘black shirt’ misunderstanding more",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "Add one or two failed attempts to backpedal (e.g., ‘I meant dark shirt — not dark like that!’) to deepen the spiral."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 20,
+    "text": "So, anywho, I got a computer recently... Please tell me you're not that stupid.",
+    "feedback": {
+      "summary": "Relatable tech frustration — could tighten pacing",
+      "details": [
+        {
+          "subtype": "length_balance",
+          "message": "Consider trimming some of the ‘dinosaur/dictionary’ examples to maintain punchline speed."
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "You could tag the final ‘you got me’ line with something like ‘Even Clippy’s like, you’re on your own.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 21,
+    "text": "All right, that's it for me. You guys were a lot of fun. Thank you very much. God bless you.",
+    "feedback": {
+      "summary": "Clean sign-off — could benefit from a callback or closing punch",
+      "details": [
+        {
+          "subtype": "callback_opportunity",
+          "message": "Consider ending with a callback to an earlier bit (e.g., ‘Now if you’ll excuse me, I’m off to go fight for a foul ball.’) to wrap the set thematically."
+        }
+      ]
+    }
+  }
+]

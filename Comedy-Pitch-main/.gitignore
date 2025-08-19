@@ -1,0 +1,55 @@
+# Root level gitignore for Comedy-Judge project
+# Each subfolder has its own specific .gitignore
+
+# Cursor Stuff
+.cursorrules
+tools/
+scratchpad.md
+
+
+# Global IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Global OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Global environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Documentation build outputs
+docs/_build/
+/site
+
+# Temporary folders
+tmp/
+temp/
+
+# Log files
+*.log
+logs/
+
+# Backup files
+*.bak
+*.backup
+
+# Custom project-specific ignores
+# Add any project-wide files or directories here 
+# Configuration files with sensitive data
+config.yaml
+**/config.yaml

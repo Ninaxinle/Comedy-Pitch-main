@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laughter Detection Validator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .upload-section {
+            padding: 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .upload-group {
+            margin-bottom: 20px;
+        }
+
+        .upload-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .file-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px dashed #4facfe;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-input:hover {
+            border-color: #00f2fe;
+            background: #f0f8ff;
+        }
+
+        .file-input:focus {
+            outline: none;
+            border-color: #4facfe;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+        }
+
+        .main-content {
+            display: flex;
+            min-height: 600px;
+        }
+
+        .audio-list {
+            flex: 1;
+            padding: 20px;
+            border-right: 1px solid #e9ecef;
+            background: #fafafa;
+        }
+
+        .audio-list h3 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.3em;
+        }
+
+        .audio-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .audio-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left-color: #4facfe;
+        }
+
+        .audio-item.active {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border-left-color: #fff;
+        }
+
+        .audio-item h4 {
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .audio-item p {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .laughter-list {
+            flex: 1;
+            padding: 20px;
+            background: white;
+        }
+
+        .laughter-list h3 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.3em;
+        }
+
+        .laughter-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .laughter-item:hover {
+            background: #e3f2fd;
+            border-color: #4facfe;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .laughter-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            align-items: center;
+        }
+
+        .play-button {
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            background: #00f2fe;
+            transform: translateY(-1px);
+        }
+
+        .play-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 20px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: #4facfe;
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(20px);
+        }
+
+        .laughter-item h4 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .laughter-time {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .laughter-duration {
+            color: #4facfe;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .audio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #333;
+            color: white;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
+        }
+
+        .audio-player audio {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .status {
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4facfe;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎵 Laughter Detection Validator</h1>
+            <p>Load audio files and CSV data to validate laughter detection accuracy</p>
+        </div>
+
+        <div class="upload-section">
+            <div class="upload-group">
+                <label for="audioFolder">📁 Select Audio Files Folder:</label>
+                <input type="file" id="audioFolder" class="file-input" webkitdirectory directory multiple>
+            </div>
+            <div class="upload-group">
+                <label for="csvFile">📊 Select CSV File with Laughter Data:</label>
+                <input type="file" id="csvFile" class="file-input" accept=".csv">
+            </div>
+            <div class="upload-group">
+                <div class="toggle-container">
+                    <label for="continuousPlay">🎵 Continuous Playback:</label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="continuousPlay">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span>Play next laughter segment automatically</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="status" class="status hidden"></div>
+
+        <div class="main-content">
+            <div class="audio-list">
+                <h3>🎵 Audio Files</h3>
+                <div id="audioListContent">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Please select audio files and CSV data to begin</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="laughter-list">
+                <h3>😄 Laughter Segments</h3>
+                <div id="laughterListContent">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Select an audio file to view laughter segments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-player hidden" id="audioPlayer">
+        <audio id="audioElement" controls>
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        class LaughterValidator {
+            constructor() {
+                this.audioFiles = new Map();
+                this.csvData = [];
+                this.currentAudio = null;
+                this.audioElement = document.getElementById('audioElement');
+                this.continuousPlay = false;
+                this.currentLaughterIndex = 0;
+                this.currentLaughterSegments = [];
+                
+                this.initializeEventListeners();
+            }
+
+            initializeEventListeners() {
+                document.getElementById('audioFolder').addEventListener('change', (e) => {
+                    this.loadAudioFiles(e.target.files);
+                });
+
+                document.getElementById('csvFile').addEventListener('change', (e) => {
+                    this.loadCSVFile(e.target.files[0]);
+                });
+
+                document.getElementById('continuousPlay').addEventListener('change', (e) => {
+                    this.continuousPlay = e.target.checked;
+                });
+
+                this.audioElement.addEventListener('ended', () => {
+                    // Handle continuous playback
+                    if (this.continuousPlay && this.currentLaughterSegments.length > 0) {
+                        this.playNextLaughterSegment();
+                    } else {
+                        // Reset player when audio ends
+                        setTimeout(() => {
+                            this.audioElement.currentTime = 0;
+                        }, 1000);
+                    }
+                });
+
+                this.audioElement.addEventListener('timeupdate', () => {
+                    // Check if we should stop playing (for laughter duration)
+                    if (this.currentLaughterEndTime && this.audioElement.currentTime >= this.currentLaughterEndTime) {
+                        this.audioElement.pause();
+                        this.currentLaughterEndTime = null;
+                    }
+                });
+            }
+
+            showStatus(message, type = 'info') {
+                const status = document.getElementById('status');
+                status.textContent = message;
+                status.className = `status ${type}`;
+                status.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    status.classList.add('hidden');
+                }, 5000);
+            }
+
+            loadAudioFiles(files) {
+                this.audioFiles.clear();
+                
+                for (let file of files) {
+                    if (file.type.startsWith('audio/')) {
+                        const url = URL.createObjectURL(file);
+                        this.audioFiles.set(file.name, {
+                            file: file,
+                            url: url,
+                            name: file.name
+                        });
+                    }
+                }
+
+                this.showStatus(`Loaded ${this.audioFiles.size} audio files`, 'success');
+                this.renderAudioList();
+            }
+
+            loadCSVFile(file) {
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const csv = e.target.result;
+                        this.csvData = this.parseCSV(csv);
+                        this.showStatus(`Loaded ${this.csvData.length} laughter segments from CSV`, 'success');
+                        this.renderAudioList();
+                    } catch (error) {
+                        this.showStatus(`Error parsing CSV: ${error.message}`, 'error');
+                    }
+                };
+                reader.readAsText(file);
+            }
+
+            parseCSV(csvText) {
+                const lines = csvText.split('\n');
+                const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
+                
+                const data = [];
+                for (let i = 1; i < lines.length; i++) {
+                    if (lines[i].trim()) {
+                        const values = lines[i].split(',').map(v => v.trim().replace(/"/g, ''));
+                        const row = {};
+                        headers.forEach((header, index) => {
+                            row[header] = values[index] || '';
+                        });
+                        data.push(row);
+                    }
+                }
+                
+                return data;
+            }
+
+            renderAudioList() {
+                const container = document.getElementById('audioListContent');
+                
+                if (this.audioFiles.size === 0) {
+                    container.innerHTML = `
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            <p>Please select audio files to begin</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                let html = '';
+                for (let [fileName, audioData] of this.audioFiles) {
+                    const laughterCount = this.getLaughterCountForFile(fileName);
+                    const matchingCsvFiles = this.csvData.filter(row => 
+                        row.SourceFile && this.matchesAudioFile(row.SourceFile, fileName)
+                    ).map(row => row.SourceFile);
+                    
+                    html += `
+                        <div class="audio-item" data-filename="${fileName}">
+                            <h4>${fileName}</h4>
+                            <p>${laughterCount} laughter segments detected</p>
+                            ${matchingCsvFiles.length > 0 ? `<small style="color: #666;">Matches: ${matchingCsvFiles[0]}</small>` : '<small style="color: #ff6b6b;">No CSV match found</small>'}
+                        </div>
+                    `;
+                }
+
+                container.innerHTML = html;
+
+                // Add click listeners
+                container.querySelectorAll('.audio-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        this.selectAudio(item.dataset.filename);
+                    });
+                });
+            }
+
+            getLaughterCountForFile(fileName) {
+                return this.csvData.filter(row => 
+                    row.SourceFile && this.matchesAudioFile(row.SourceFile, fileName)
+                ).length;
+            }
+
+            matchesAudioFile(csvSourceFile, audioFileName) {
+                // Remove file extension from audio file name
+                const audioNameWithoutExt = audioFileName.replace(/\.[^/.]+$/, "");
+                
+                // Try different matching strategies
+                // 1. Direct match
+                if (csvSourceFile === audioFileName) return true;
+                
+                // 2. Audio filename is contained in CSV source file
+                if (csvSourceFile.includes(audioNameWithoutExt)) return true;
+                
+                // 3. CSV source file is contained in audio filename
+                if (audioNameWithoutExt.includes(csvSourceFile)) return true;
+                
+                // 4. Extract key parts from CSV source file (remove quotes, special chars)
+                const cleanCsvName = csvSourceFile.replace(/["""]/g, "").replace(/[^\w\s-]/g, "");
+                if (audioNameWithoutExt.includes(cleanCsvName) || cleanCsvName.includes(audioNameWithoutExt)) return true;
+                
+                // 5. Try matching by first few words
+                const csvWords = cleanCsvName.split(/\s+/).slice(0, 3).join(" ");
+                if (audioNameWithoutExt.includes(csvWords) || csvWords.includes(audioNameWithoutExt)) return true;
+                
+                return false;
+            }
+
+            selectAudio(fileName) {
+                // Update active state
+                document.querySelectorAll('.audio-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                document.querySelector(`[data-filename="${fileName}"]`).classList.add('active');
+
+                this.currentAudio = this.audioFiles.get(fileName);
+                this.audioElement.src = this.currentAudio.url;
+                
+                // Show audio player
+                document.getElementById('audioPlayer').classList.remove('hidden');
+                
+                this.renderLaughterList(fileName);
+            }
+
+            renderLaughterList(fileName) {
+                const container = document.getElementById('laughterListContent');
+                const laughterSegments = this.csvData.filter(row => 
+                    row.SourceFile && this.matchesAudioFile(row.SourceFile, fileName)
+                );
+
+                if (laughterSegments.length === 0) {
+                    container.innerHTML = `
+                        <div class="loading">
+                            <p>No laughter segments found for this audio file</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Store current laughter segments for continuous playback
+                this.currentLaughterSegments = laughterSegments;
+                this.currentLaughterIndex = 0;
+
+                let html = '';
+                laughterSegments.forEach((segment, index) => {
+                    const startTime = parseFloat(segment.StartTime) || 0;
+                    const endTime = parseFloat(segment.EndTime) || 0;
+                    const duration = (endTime - startTime).toFixed(2);
+                    const type = segment.Type || 'laughter';
+                    const intensity = segment.Intensity || 'moderate';
+                    const notes = segment.Notes || '';
+                    
+                    html += `
+                        <div class="laughter-item" data-start="${startTime}" data-end="${endTime}" data-index="${index}">
+                            <h4>Laughter ${index + 1}</h4>
+                            <div class="laughter-time">Start: ${this.formatTime(startTime)} | End: ${this.formatTime(endTime)}</div>
+                            <div class="laughter-duration">Duration: ${duration}s | Type: ${type} | Intensity: ${intensity}</div>
+                            ${notes ? `<div style="font-size: 0.9em; color: #666; margin-top: 5px;">${notes}</div>` : ''}
+                            <div class="laughter-controls">
+                                <button class="play-button" onclick="laughterValidator.playLaughterSegment(${startTime}, ${endTime}, ${index})">
+                                    ▶️ Play Laughter
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                container.innerHTML = html;
+            }
+
+            formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            playLaughterSegment(startTime, endTime, index) {
+                if (!this.audioElement.src) return;
+
+                // Set current laughter end time for duration control
+                this.currentLaughterEndTime = endTime;
+                this.currentLaughterIndex = index;
+
+                this.audioElement.currentTime = startTime;
+                this.audioElement.play().catch(error => {
+                    this.showStatus(`Error playing audio: ${error.message}`, 'error');
+                });
+
+                // Highlight the clicked segment
+                document.querySelectorAll('.laughter-item').forEach(item => {
+                    item.style.background = '#f8f9fa';
+                });
+                document.querySelector(`[data-index="${index}"]`).style.background = '#e8f5e8';
+
+                this.showStatus(`Playing laughter segment ${index + 1} (${this.formatTime(startTime)} - ${this.formatTime(endTime)})`, 'info');
+            }
+
+            playNextLaughterSegment() {
+                if (this.currentLaughterSegments.length === 0) return;
+
+                this.currentLaughterIndex = (this.currentLaughterIndex + 1) % this.currentLaughterSegments.length;
+                const nextSegment = this.currentLaughterSegments[this.currentLaughterIndex];
+                
+                const startTime = parseFloat(nextSegment.StartTime) || 0;
+                const endTime = parseFloat(nextSegment.EndTime) || 0;
+
+                this.playLaughterSegment(startTime, endTime, this.currentLaughterIndex);
+            }
+        }
+
+        // Initialize the application
+        let laughterValidator;
+        document.addEventListener('DOMContentLoaded', () => {
+            laughterValidator = new LaughterValidator();
+        });
+    </script>
+</body>
+</html> 

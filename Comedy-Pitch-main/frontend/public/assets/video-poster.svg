@@ -1,0 +1,18 @@
+<svg width="400" height="225" viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="225" fill="#1F2937"/>
+  
+  <!-- Play button circle -->
+  <circle cx="200" cy="112.5" r="40" fill="rgba(255,255,255,0.2)"/>
+  
+  <!-- Play triangle - properly centered -->
+  <path d="M190 97L190 128L215 112.5L190 97Z" fill="white"/>
+  
+  <!-- Title text -->
+  <text x="200" y="180" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+    Astrology Solves All of Your Problems
+  </text>
+  <text x="200" y="200" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="12">
+    Julia Shiplett - Stand-Up
+  </text>
+</svg> 

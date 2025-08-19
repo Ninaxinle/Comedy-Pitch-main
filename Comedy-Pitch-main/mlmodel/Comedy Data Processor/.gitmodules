@@ -1,0 +1,3 @@
+[submodule "libs/laughter-detection"]
+	path = libs/laughter-detection
+	url = https://github.com/jrgillick/laughter-detection.git

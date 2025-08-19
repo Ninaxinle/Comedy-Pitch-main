@@ -1,0 +1,730 @@
+[
+  {
+    "index": 0,
+    "text": "I got an IUD this week.",
+    "start_time": 0.031,
+    "end_time": 3.983,
+    "gap_to_next": 2.21
+  },
+  {
+    "index": 1,
+    "text": "Yeah.",
+    "start_time": 3.983,
+    "end_time": 5.347,
+    "gap_to_next": 0.6
+  },
+  {
+    "index": 2,
+    "text": "I am not seeing anybody right now, but you know what they say, dress for the job you want, right?",
+    "start_time": 5.347,
+    "end_time": 9.734,
+    "gap_to_next": 0.44
+  },
+  {
+    "index": 3,
+    "text": "Not the job you have.",
+    "start_time": 9.734,
+    "end_time": 13.378,
+    "gap_to_next": 1.72
+  },
+  {
+    "index": 4,
+    "text": "Yeah, I'm single, if you can believe it.",
+    "start_time": 13.378,
+    "end_time": 15.88,
+    "gap_to_next": 0.16
+  },
+  {
+    "index": 5,
+    "text": "And being single, it has changed my priorities in a way that I'm not super proud of.",
+    "start_time": 15.88,
+    "end_time": 21.526,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 6,
+    "text": "Okay, I'll give you an example.",
+    "start_time": 21.566,
+    "end_time": 23.088,
+    "gap_to_next": 0.42
+  },
+  {
+    "index": 7,
+    "text": "We all remember two years ago, the racial uprising, right?",
+    "start_time": 23.088,
+    "end_time": 26.511,
+    "gap_to_next": 0.5
+  },
+  {
+    "index": 8,
+    "text": "I went to a protest.",
+    "start_time": 26.511,
+    "end_time": 28.213,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 9,
+    "text": "I went to a Black Lives Matter protest.",
+    "start_time": 28.233,
+    "end_time": 30.275,
+    "gap_to_next": 0.34
+  },
+  {
+    "index": 10,
+    "text": "And, you know, it was insane out there.",
+    "start_time": 30.275,
+    "end_time": 32.277,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 11,
+    "text": "Okay, yeah, thank you.",
+    "start_time": 32.297,
+    "end_time": 33.518,
+    "gap_to_next": 0.2
+  },
+  {
+    "index": 12,
+    "text": "Goddamn.",
+    "start_time": 33.518,
+    "end_time": 36.447,
+    "gap_to_next": 1.13
+  },
+  {
+    "index": 13,
+    "text": "No, we go to this protest and it's crazy out there, right?",
+    "start_time": 36.447,
+    "end_time": 39.47,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 14,
+    "text": "We got like tear gas going, sirens, cops are there, it's really dangerous, really crazy.",
+    "start_time": 39.49,
+    "end_time": 44.314,
+    "gap_to_next": 0.8
+  },
+  {
+    "index": 15,
+    "text": "And this one guy, he's getting arrested, okay?",
+    "start_time": 44.314,
+    "end_time": 46.657,
+    "gap_to_next": 0.28
+  },
+  {
+    "index": 16,
+    "text": "And as the cops are pulling him into the car, okay, he's screaming at the top of his lungs, call my girlfriend, call my girlfriend, and reciting her phone number to the crowd, okay?",
+    "start_time": 46.657,
+    "end_time": 56.065,
+    "gap_to_next": 0.46
+  },
+  {
+    "index": 17,
+    "text": "At that exact moment, a can of tear gas comes sailing through the air, hits me in the leg and I'm down on the ground, okay?",
+    "start_time": 56.065,
+    "end_time": 63.012,
+    "gap_to_next": -0.02
+  },
+  {
+    "index": 18,
+    "text": "And as my friends are dragging me to safety, the only thing I can think to myself is, oh my god, you memorized her number?",
+    "start_time": 62.992,
+    "end_time": 71.745,
+    "gap_to_next": 1.74
+  },
+  {
+    "index": 19,
+    "text": "That's beautiful.",
+    "start_time": 71.745,
+    "end_time": 74.128,
+    "gap_to_next": 1.06
+  },
+  {
+    "index": 20,
+    "text": "Feels like I'm not asking for too much, you know what I mean?",
+    "start_time": 74.128,
+    "end_time": 76.332,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 21,
+    "text": "Yeah, yeah, it's tough being single.",
+    "start_time": 76.372,
+    "end_time": 81.179,
+    "gap_to_next": 0.94
+  },
+  {
+    "index": 22,
+    "text": "It feels like the guys that I'm trying to see, you know, they're not really trying to really get to know who I am, right?",
+    "start_time": 81.179,
+    "end_time": 86.186,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 23,
+    "text": "They don't really want to get to know the real me.",
+    "start_time": 86.206,
+    "end_time": 88.189,
+    "gap_to_next": -0.02
+  },
+  {
+    "index": 24,
+    "text": "I hooked up with this one guy and he texted me afterwards.",
+    "start_time": 88.169,
+    "end_time": 91.633,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 25,
+    "text": "He said, you're the kinkiest girl I've ever been with.",
+    "start_time": 91.713,
+    "end_time": 94.937,
+    "gap_to_next": 0.88
+  },
+  {
+    "index": 26,
+    "text": "And I said, I know this text was not meant for me.",
+    "start_time": 94.937,
+    "end_time": 97.861,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 27,
+    "text": "And I knew that because at the time I had my arm in the sink and I was soaking off a bandaid, okay?",
+    "start_time": 97.901,
+    "end_time": 104.248,
+    "gap_to_next": 0.5
+  },
+  {
+    "index": 28,
+    "text": "Because I was too afraid to take it off because of the pain.",
+    "start_time": 104.248,
+    "end_time": 106.551,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 29,
+    "text": "So that just wasn't true.",
+    "start_time": 106.571,
+    "end_time": 107.512,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 30,
+    "text": "That just wasn't true.",
+    "start_time": 107.572,
+    "end_time": 109.975,
+    "gap_to_next": -0.02
+  },
+  {
+    "index": 31,
+    "text": "I've been trying to mix things up, been trying to change up my luck, you know, see if I can get some.",
+    "start_time": 109.955,
+    "end_time": 114.383,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 32,
+    "text": "And I asked a guy out recently, and I realized I sound a little needy.",
+    "start_time": 114.443,
+    "end_time": 119.031,
+    "gap_to_next": 0.14
+  },
+  {
+    "index": 33,
+    "text": "I sound a little desperate in a way I'm not super thrilled about.",
+    "start_time": 119.031,
+    "end_time": 122.677,
+    "gap_to_next": 0.5
+  },
+  {
+    "index": 34,
+    "text": "I sound like a white woman with a pyramid scheme.",
+    "start_time": 122.677,
+    "end_time": 126.784,
+    "gap_to_next": 0.6
+  },
+  {
+    "index": 35,
+    "text": "Um...",
+    "start_time": 126.784,
+    "end_time": 128.267,
+    "gap_to_next": -0.02
+  },
+  {
+    "index": 36,
+    "text": "Sat the guy down, said, hey, Bessie, this will only take five minutes of your time.",
+    "start_time": 128.247,
+    "end_time": 133.081,
+    "gap_to_next": 1.16
+  },
+  {
+    "index": 37,
+    "text": "And ultimately, it is an opportunity for growth, right?",
+    "start_time": 133.081,
+    "end_time": 136.592,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 38,
+    "text": "We start now, in six months, we're taking it far.",
+    "start_time": 136.612,
+    "end_time": 138.698,
+    "gap_to_next": 0.18
+  },
+  {
+    "index": 39,
+    "text": "But there are also part-time options.",
+    "start_time": 138.698,
+    "end_time": 141.68,
+    "gap_to_next": 0.66
+  },
+  {
+    "index": 40,
+    "text": "If that's better for you.",
+    "start_time": 141.68,
+    "end_time": 142.662,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 41,
+    "text": "The moral of the story is, ladies, you cannot girl boss your way into his heart, okay?",
+    "start_time": 142.722,
+    "end_time": 148.872,
+    "gap_to_next": 1.34
+  },
+  {
+    "index": 42,
+    "text": "It's tough to realize that.",
+    "start_time": 148.872,
+    "end_time": 150.375,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 43,
+    "text": "It's fucking tough.",
+    "start_time": 150.395,
+    "end_time": 151.978,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 44,
+    "text": "It was a holiday weekend the other weekend.",
+    "start_time": 151.998,
+    "end_time": 153.901,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 45,
+    "text": "I didn't go home.",
+    "start_time": 153.921,
+    "end_time": 155.544,
+    "gap_to_next": 0.9
+  },
+  {
+    "index": 46,
+    "text": "I usually don't go home for holidays because I kind of struggle with body image issues.",
+    "start_time": 155.544,
+    "end_time": 160.112,
+    "gap_to_next": 0.34
+  },
+  {
+    "index": 47,
+    "text": "And whenever I go home, they're always talking about how small my mom is, okay?",
+    "start_time": 160.112,
+    "end_time": 165.321,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 48,
+    "text": "And like how much smaller she is than me.",
+    "start_time": 165.341,
+    "end_time": 167.164,
+    "gap_to_next": -0.02
+  },
+  {
+    "index": 49,
+    "text": "And, you know, it's not too bad.",
+    "start_time": 167.144,
+    "end_time": 170.088,
+    "gap_to_next": 0.1
+  },
+  {
+    "index": 50,
+    "text": "I mean, they're not wrong.",
+    "start_time": 170.188,
+    "end_time": 172.131,
+    "gap_to_next": 0.82
+  },
+  {
+    "index": 51,
+    "text": "She does look very skinny in her urn.",
+    "start_time": 172.131,
+    "end_time": 176.077,
+    "gap_to_next": 1.42
+  },
+  {
+    "index": 52,
+    "text": "She's about that big.",
+    "start_time": 176.077,
+    "end_time": 177.139,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 53,
+    "text": "Doesn't get much bigger than that.",
+    "start_time": 177.159,
+    "end_time": 178.861,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 54,
+    "text": "I see some concerned faces, but listen up, okay?",
+    "start_time": 178.881,
+    "end_time": 182.286,
+    "gap_to_next": 0.68
+  },
+  {
+    "index": 55,
+    "text": "Listen up, I'm giving you a great tip right now.",
+    "start_time": 182.286,
+    "end_time": 184.389,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 56,
+    "text": "Throw away those diet pills, okay?",
+    "start_time": 184.469,
+    "end_time": 186.312,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 57,
+    "text": "Throw away those shakes.",
+    "start_time": 186.332,
+    "end_time": 187.434,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 58,
+    "text": "Okay, I guess cremation burns fat.",
+    "start_time": 187.454,
+    "end_time": 189.016,
+    "gap_to_next": 0.2
+  },
+  {
+    "index": 59,
+    "text": "Anyway.",
+    "start_time": 189.016,
+    "end_time": 193.199,
+    "gap_to_next": 0.64
+  },
+  {
+    "index": 60,
+    "text": "Yeah, I do have some body image issues, and I always worried that it would, like, come up in a relationship, right?",
+    "start_time": 193.199,
+    "end_time": 203.055,
+    "gap_to_next": 0.92
+  },
+  {
+    "index": 61,
+    "text": "But I can confidently tell you that I have never been broken up with for my body, okay?",
+    "start_time": 203.055,
+    "end_time": 209.326,
+    "gap_to_next": 1.4
+  },
+  {
+    "index": 62,
+    "text": "I have only been broken up with because of my personality.",
+    "start_time": 209.326,
+    "end_time": 213.532,
+    "gap_to_next": 1.48
+  },
+  {
+    "index": 63,
+    "text": "I've only been broken up with because of who I am, so...",
+    "start_time": 213.532,
+    "end_time": 218.039,
+    "gap_to_next": 0.52
+  },
+  {
+    "index": 64,
+    "text": "Um, you know, when you get broken up with for your body, it's a little bit easier because you can always go out and get a revenge body, right?",
+    "start_time": 218.039,
+    "end_time": 224.252,
+    "gap_to_next": 0.1
+  },
+  {
+    "index": 65,
+    "text": "It's harder to get a revenge personality, isn't it?",
+    "start_time": 224.352,
+    "end_time": 228.24,
+    "gap_to_next": 0.66
+  },
+  {
+    "index": 66,
+    "text": "Isn't it?",
+    "start_time": 228.24,
+    "end_time": 228.861,
+    "gap_to_next": 0.22
+  },
+  {
+    "index": 67,
+    "text": "But I have been working on one.",
+    "start_time": 228.861,
+    "end_time": 230.204,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 68,
+    "text": "I've been working on a revenge personality, and I wanted to show it to you guys and see what you think.",
+    "start_time": 230.224,
+    "end_time": 234.834,
+    "gap_to_next": 0.12
+  },
+  {
+    "index": 69,
+    "text": "Okay.",
+    "start_time": 234.834,
+    "end_time": 237.445,
+    "gap_to_next": 2.51
+  },
+  {
+    "index": 70,
+    "text": "My revenge personality, I'm thinking, is just gonna be a really cool British girl, okay?",
+    "start_time": 237.445,
+    "end_time": 243.998,
+    "gap_to_next": 0.74
+  },
+  {
+    "index": 71,
+    "text": "And this is how it is.",
+    "start_time": 243.998,
+    "end_time": 244.659,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 72,
+    "text": "Okay, so instead of, like, when my boyfriend's mean to me, instead of being like, I'm gonna kill myself, I'm gonna be like, hey, that really wasn't rock and roll, was it?",
+    "start_time": 244.699,
+    "end_time": 253.497,
+    "gap_to_next": -0.02
+  },
+  {
+    "index": 73,
+    "text": "Really not rock and roll at all.",
+    "start_time": 253.477,
+    "end_time": 255.642,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 74,
+    "text": "And then, you know, if we have sex for the first time, instead of being like, I'm going to marry you, I'm going to watch you die, I'm going to say, hey, that was pretty rock and roll, wasn't it?",
+    "start_time": 255.702,
+    "end_time": 265.787,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 75,
+    "text": "Pretty freaking rock and roll.",
+    "start_time": 265.827,
+    "end_time": 269.697,
+    "gap_to_next": -0.02
+  },
+  {
+    "index": 76,
+    "text": "Yeah, yeah.",
+    "start_time": 269.677,
+    "end_time": 271.979,
+    "gap_to_next": 0.44
+  },
+  {
+    "index": 77,
+    "text": "I want to talk to you guys about something that's important to me.",
+    "start_time": 271.979,
+    "end_time": 274.362,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 78,
+    "text": "Okay, I want to talk about voting for a second.",
+    "start_time": 274.422,
+    "end_time": 276.524,
+    "gap_to_next": 0.5
+  },
+  {
+    "index": 79,
+    "text": "So, yeah, yeah.",
+    "start_time": 276.524,
+    "end_time": 278.847,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 80,
+    "text": "Guys, you know, we've got less than 100 days, okay, until the midterm elections, okay?",
+    "start_time": 278.867,
+    "end_time": 283.612,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 81,
+    "text": "It's quickly coming upon us, and I'm Gen Z, and Gen Z is kind of famously skeptical about voting, and I get it, because for a long time I was the same way.",
+    "start_time": 283.632,
+    "end_time": 291.9,
+    "gap_to_next": 0.34
+  },
+  {
+    "index": 82,
+    "text": "I kind of approached voting the same way that I approached Hinge and dating apps, right?",
+    "start_time": 291.9,
+    "end_time": 296.545,
+    "gap_to_next": -0.02
+  },
+  {
+    "index": 83,
+    "text": "Like ultimately just pick the dude you are least afraid to be in an elevator with and move on.",
+    "start_time": 296.525,
+    "end_time": 301.735,
+    "gap_to_next": 0.3
+  },
+  {
+    "index": 84,
+    "text": "You know what I mean?",
+    "start_time": 301.735,
+    "end_time": 303.338,
+    "gap_to_next": 0.2
+  },
+  {
+    "index": 85,
+    "text": "But I actually think that Gen Z can create more change than we might otherwise think.",
+    "start_time": 303.338,
+    "end_time": 308.388,
+    "gap_to_next": 0.44
+  },
+  {
+    "index": 86,
+    "text": "I was thinking about it the other day and I realized that Gen Z got rid of skinny jeans quicker than Abraham Lincoln got rid of slavery.",
+    "start_time": 308.388,
+    "end_time": 315.923,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 87,
+    "text": "You know what I mean?",
+    "start_time": 315.963,
+    "end_time": 317.065,
+    "gap_to_next": -0.02
+  },
+  {
+    "index": 88,
+    "text": "He kind of dragged his feet a little bit.",
+    "start_time": 317.045,
+    "end_time": 319.088,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 89,
+    "text": "Did he not?",
+    "start_time": 319.108,
+    "end_time": 319.668,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 90,
+    "text": "He did.",
+    "start_time": 319.729,
+    "end_time": 320.089,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 91,
+    "text": "He took his time.",
+    "start_time": 320.129,
+    "end_time": 321.311,
+    "gap_to_next": 0.34
+  },
+  {
+    "index": 92,
+    "text": "But Gen Z, when we see a problem, we immediately eliminate it, right?",
+    "start_time": 321.311,
+    "end_time": 324.535,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 93,
+    "text": "Like, it took probably a good couple hundred years to get rid of slavery.",
+    "start_time": 324.595,
+    "end_time": 328.961,
+    "gap_to_next": 0.22
+  },
+  {
+    "index": 94,
+    "text": "Took a couple hundred years for women, some women, to get the right to vote.",
+    "start_time": 328.961,
+    "end_time": 332.505,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 95,
+    "text": "Took hundreds of years for the U.S.",
+    "start_time": 332.525,
+    "end_time": 334.448,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 96,
+    "text": "to become an independent nation.",
+    "start_time": 334.488,
+    "end_time": 336.951,
+    "gap_to_next": 0.88
+  },
+  {
+    "index": 97,
+    "text": "Gen Z got rid of wearing bras...",
+    "start_time": 336.951,
+    "end_time": 341.783,
+    "gap_to_next": 0.49
+  },
+  {
+    "index": 98,
+    "text": "Drinking regular milk and generally liking things between the release of the first Avatar movie and the trailer for the second.",
+    "start_time": 341.783,
+    "end_time": 354.322,
+    "gap_to_next": 1.62
+  },
+  {
+    "index": 99,
+    "text": "That is a very ambitious timeline, right?",
+    "start_time": 354.322,
+    "end_time": 357.148,
+    "gap_to_next": 0.3
+  },
+  {
+    "index": 100,
+    "text": "I can't remember the last time that I used capital letters and punctuation in a text message.",
+    "start_time": 357.148,
+    "end_time": 362.761,
+    "gap_to_next": 0.1
+  },
+  {
+    "index": 101,
+    "text": "Gen Z got rid of that.",
+    "start_time": 362.761,
+    "end_time": 364.405,
+    "gap_to_next": 0.72
+  },
+  {
+    "index": 102,
+    "text": "Because ultimately, at this point, it's like if you're still wearing bras, you need to grow up, right?",
+    "start_time": 364.405,
+    "end_time": 369.056,
+    "gap_to_next": 0.56
+  },
+  {
+    "index": 103,
+    "text": "And if you're using capital letters and punctuation, you need to calm down.",
+    "start_time": 369.056,
+    "end_time": 373.225,
+    "gap_to_next": 0.0
+  }
+]

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Label Review UI</title>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 0; }
+    header { padding: 12px 16px; border-bottom: 1px solid #eee; display: flex; gap: 12px; align-items: center; }
+    main { display: grid; grid-template-columns: 320px 1fr; gap: 16px; padding: 16px; }
+    .panel { border: 1px solid #eee; border-radius: 8px; overflow: hidden; background: #fff; }
+    .panel h3 { margin: 0; padding: 10px 12px; border-bottom: 1px solid #f1f1f1; background: #fafafa; font-size: 14px; font-weight: 600; }
+    .panel .content { padding: 12px; max-height: calc(100vh - 180px); overflow: auto; }
+    .audio-bar { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border-top: 1px solid #eee; }
+    .file-row { padding: 6px 8px; border-radius: 6px; cursor: pointer; }
+    .file-row:hover { background: #f5f7ff; }
+    .active { background: #eef3ff; }
+    .seg { padding: 8px 10px; border: 1px solid #eee; border-radius: 8px; margin-bottom: 10px; }
+    .seg-head { display: flex; align-items: center; justify-content: space-between; font-size: 13px; margin-bottom: 8px; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; background: #f2f4f7; color: #334155; }
+    .sent { padding: 6px 8px; border-radius: 6px; margin: 4px 0; border: 1px dashed #eee; }
+    .btn { padding: 4px 8px; font-size: 12px; border: 1px solid #d0d7de; background: #fff; border-radius: 6px; cursor: pointer; }
+    .btn:hover { background: #f6f8fa; }
+    .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+    .chip { padding: 2px 6px; border-radius: 999px; font-size: 12px; border: 1px solid #e5e7eb; cursor: pointer; }
+    .chip:hover { filter: brightness(0.95); }
+    .chip.S { background: #dcfce7; border-color: #86efac; }
+    .chip.L { background: #fef9c3; border-color: #fde68a; }
+    .chip.E { background: #fee2e2; border-color: #fecaca; }
+    .laugh { background: #e0f2fe; border-color: #bae6fd; }
+    .meta { color: #64748b; font-size: 12px; }
+    .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .l-item { font-size: 12px; padding: 2px 6px; border-radius: 6px; border: 1px solid #e5e7eb; }
+  </style>
+</head>
+<body>
+  <header>
+    <input id="dirInput" type="file" webkitdirectory multiple />
+    <div class="meta" id="basePath"></div>
+  </header>
+  <main>
+    <section class="panel">
+      <h3>Audio Files</h3>
+      <div class="content" id="audioList"></div>
+    </section>
+
+    <section class="panel">
+      <h3 id="currentTitle">Details</h3>
+      <div class="content" id="details"></div>
+      <div class="audio-bar">
+        <audio id="player" controls style="width: 100%"></audio>
+      </div>
+      <div class="audio-bar" style="justify-content: space-between">
+        <div class="row">
+          <label for="sourceSel" class="meta">Source:</label>
+          <select id="sourceSel" class="btn">
+            <option value="original">Original</option>
+            <option value="muted">Muted</option>
+          </select>
+          <span id="mutedAvail" class="badge" style="display:none">Muted available</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const audioListEl = document.getElementById('audioList');
+    const detailsEl = document.getElementById('details');
+    const player = document.getElementById('player');
+    const sourceSel = document.getElementById('sourceSel');
+    const mutedAvail = document.getElementById('mutedAvail');
+    const currentTitle = document.getElementById('currentTitle');
+    const basePathEl = document.getElementById('basePath');
+
+    let allFiles = [];
+    let currentOriginalFile = null;
+    let currentMutedFile = null;
+    let stopAt = null;
+
+    player.addEventListener('timeupdate', () => {
+      if (stopAt != null && player.currentTime >= stopAt) {
+        player.pause();
+        stopAt = null;
+      }
+    });
+
+    document.getElementById('dirInput').addEventListener('change', (e) => {
+      allFiles = Array.from(e.target.files || []);
+      if (!allFiles.length) return;
+      const commonPrefix = (allFiles[0].webkitRelativePath || '').split('/')[0];
+      basePathEl.textContent = `Loaded folder: ${commonPrefix || '(local selection)'}`;
+      listAudio();
+    });
+
+    function listAudio() {
+      audioListEl.innerHTML = '';
+      const audioFiles = allFiles.filter(f => f.webkitRelativePath && f.webkitRelativePath.includes('/1-input-audio/') && /\.(wav|mp3|m4a|flac)$/i.test(f.name));
+      audioFiles.sort((a,b)=>a.name.localeCompare(b.name));
+      audioFiles.forEach(file => {
+        const row = document.createElement('div');
+        row.className = 'file-row';
+        row.textContent = file.name;
+        row.onclick = () => loadBundle(file);
+        audioListEl.appendChild(row);
+      });
+    }
+
+    function findBySuffix(suffix) {
+      return allFiles.find(f => (f.webkitRelativePath || '').endsWith(suffix));
+    }
+
+    function findCompanionFiles(baseName) {
+      // Build expected relative suffixes
+      const sentSuffix = `/2-transcript/${baseName}_sentences.json`;
+      const segSuffix = `/2-transcript/${baseName}_segments.json`;
+      const laughSuffix = `/4-laughter-detected/${baseName}.json`;
+      const wordsSuffix = `/3-word-timestamp/${baseName}_words.csv`;
+      const segLabelSuffix = `/5-label/${baseName}_segments_labeled.csv`;
+      const wordsLabelSuffix = `/5-label/${baseName}_words_labeled.csv`;
+      const mutedSuffix = `/6-laughter-muted-audio/${baseName}_muted.wav`;
+
+      // Prefer existing, allow variants
+      const sentences = findBySuffix(sentSuffix);
+      const segments = findBySuffix(segSuffix);
+      const laughter = findBySuffix(laughSuffix);
+      const words = findBySuffix(wordsSuffix);
+      const segLabels = findBySuffix(segLabelSuffix);
+      const wordLabels = findBySuffix(wordsLabelSuffix);
+      const muted = findBySuffix(mutedSuffix);
+
+      return { sentences, segments, laughter, words, segLabels, wordLabels, muted };
+    }
+
+    async function readText(file) {
+      return new Promise((resolve, reject) => {
+        const fr = new FileReader();
+        fr.onerror = reject;
+        fr.onload = () => resolve(fr.result);
+        fr.readAsText(file);
+      });
+    }
+
+    async function parseJSON(file) {
+      if (!file) return null;
+      try {
+        const txt = await readText(file);
+        return JSON.parse(txt);
+      } catch { return null; }
+    }
+
+    async function parseCSV(file) {
+      if (!file) return [];
+      const txt = await readText(file);
+      const parsed = Papa.parse(txt, { header: true, skipEmptyLines: true });
+      return parsed.data || [];
+    }
+
+    function baseNameFromAudio(file) {
+      const n = file.name;
+      const i = n.lastIndexOf('.');
+      return i > 0 ? n.substring(0, i) : n;
+    }
+
+    function setPlayerSource(preserveTime=true) {
+      const wasPlaying = !player.paused && !player.ended;
+      const t = player.currentTime || 0;
+      const pickMuted = sourceSel.value === 'muted' && currentMutedFile;
+      const file = pickMuted ? currentMutedFile : currentOriginalFile;
+      if (!file) return;
+      const url = URL.createObjectURL(file);
+      player.src = url;
+      if (preserveTime && t > 0) {
+        player.onloadedmetadata = () => {
+          try { player.currentTime = Math.min(t, player.duration || t); } catch {}
+          if (wasPlaying) player.play();
+          player.onloadedmetadata = null;
+        };
+      } else if (wasPlaying) {
+        player.play();
+      }
+    }
+
+    sourceSel.addEventListener('change', () => setPlayerSource(true));
+
+    function playRange(start, end) {
+      try { player.currentTime = Math.max(0, start); } catch {}
+      stopAt = Math.max(start, end || start);
+      player.play();
+    }
+
+    function overlap(a1,a2,b1,b2){ const lo=Math.max(a1,b1), hi=Math.min(a2,b2); return Math.max(0, hi-lo); }
+
+    async function loadBundle(audioFile) {
+      // UI
+      Array.from(audioListEl.children).forEach(ch => ch.classList.remove('active'));
+      const clicked = Array.from(audioListEl.children).find(ch => ch.textContent === audioFile.name);
+      if (clicked) clicked.classList.add('active');
+      currentTitle.textContent = audioFile.name;
+
+      currentOriginalFile = audioFile;
+      const baseName = baseNameFromAudio(audioFile);
+      const { sentences, segments, laughter, segLabels, wordLabels, muted } = findCompanionFiles(baseName);
+
+      currentMutedFile = muted || null;
+      if (currentMutedFile) {
+        mutedAvail.style.display = '';
+        // enable muted option
+        [...sourceSel.options].forEach(o=>o.disabled=false);
+      } else {
+        mutedAvail.style.display = 'none';
+        sourceSel.value = 'original';
+        // disable muted option
+        [...sourceSel.options].forEach(o=>{ if (o.value==='muted') o.disabled = true; });
+      }
+      setPlayerSource(false);
+
+      const [sentJson, segJson, laughJson, segLabCsv, wordLabCsv] = await Promise.all([
+        parseJSON(sentences),
+        parseJSON(segments),
+        parseJSON(laughter),
+        parseCSV(segLabels),
+        parseCSV(wordLabels),
+      ]);
+
+      // Index helpers
+      const laughEvents = (laughJson && Object.values(laughJson).map(e=>({start:+e.start_sec, end:+e.end_sec}))) || [];
+      const segIdToLaughterDur = new Map();
+      (segLabCsv||[]).forEach(r=>{ if (r.segment_id != null && r.laughter_duration != null) segIdToLaughterDur.set(String(r.segment_id), +r.laughter_duration); });
+
+      // Build per-sentence words with labels (S/E/L)
+      const words = (wordLabCsv||[]).map(r=>({
+        word: r.word,
+        start: +r.start,
+        end: +r.end,
+        label: r.LaughterLabel || 'N',
+      })).filter(w=>Number.isFinite(w.start) && Number.isFinite(w.end));
+      words.sort((a,b)=>a.start-b.start);
+
+      // Render segments
+      detailsEl.innerHTML = '';
+      if (!segJson || !Array.isArray(segJson)) {
+        detailsEl.textContent = 'Missing or invalid segments JSON.';
+        return;
+      }
+
+      segJson.forEach(seg => {
+        const segStart = +seg.start_time ?? +seg.start ?? 0;
+        const segEnd = +seg.end_time ?? +seg.end ?? segStart;
+        const sid = seg.segment_id != null ? String(seg.segment_id) : '';
+        const wrap = document.createElement('div');
+        wrap.className = 'seg';
+        const top = document.createElement('div');
+        top.className = 'seg-head';
+        const left = document.createElement('div');
+        left.innerHTML = `<strong>Segment ${sid || ''}</strong> <span class="meta">${(segEnd-segStart).toFixed(2)}s</span>`;
+        const right = document.createElement('div');
+        const ld = segIdToLaughterDur.get(sid) ?? null;
+        right.innerHTML = `<span class="badge">Laughter: ${(ld!=null? ld.toFixed(2): '0.00')}s</span>`;
+        top.append(left,right); wrap.appendChild(top);
+
+        // Sentences for this segment
+        const sentIdxs = Array.isArray(seg.sentence_indexes) ? seg.sentence_indexes : [];
+        const sentList = document.createElement('div');
+        (sentJson||[]).filter(s=> sentIdxs.includes(s.index)).forEach(s => {
+          const sStart = +s.start_time ?? +s.start ?? 0; const sEnd = +s.end_time ?? +s.end ?? sStart;
+          const sentEl = document.createElement('div'); sentEl.className = 'sent';
+          const row = document.createElement('div'); row.className = 'row';
+          const btn = document.createElement('button'); btn.className='btn'; btn.textContent='Play sentence';
+          btn.onclick = () => playRange(sStart, sEnd);
+          const txt = document.createElement('div'); txt.textContent = s.text || '';
+          row.append(btn, txt); sentEl.appendChild(row);
+
+          // Laughter overlaps within sentence
+          const laughRow = document.createElement('div'); laughRow.className='chips';
+          const overlaps = laughEvents.filter(e => overlap(sStart,sEnd,e.start,e.end) > 0);
+          overlaps.forEach(e => {
+            const c = document.createElement('span'); c.className='chip laugh';
+            c.textContent = `😂 ${(Math.max(0, Math.min(e.end,sEnd)-Math.max(e.start,sStart))).toFixed(2)}s`;
+            c.title = `${e.start.toFixed(2)}–${e.end.toFixed(2)}s`;
+            c.onclick = () => playRange(Math.max(e.start, sStart), Math.min(e.end, sEnd));
+            laughRow.appendChild(c);
+          });
+          if (overlaps.length) sentEl.appendChild(laughRow);
+
+          // Words with S/E/L labels inside this sentence
+          const wordRow = document.createElement('div'); wordRow.className='chips';
+          words.filter(w => overlap(sStart, sEnd, w.start, w.end) > 0 && (w.label==='S' || w.label==='E' || w.label==='L'))
+               .forEach(w => {
+                 const chip = document.createElement('span'); chip.className = `chip ${w.label}`;
+                 chip.textContent = `${w.word} (${w.label})`;
+                 chip.title = `${w.start.toFixed(2)}–${w.end.toFixed(2)}s`;
+                 chip.onclick = () => playRange(w.start, w.end);
+                 wordRow.appendChild(chip);
+               });
+          if (wordRow.children.length) sentEl.appendChild(wordRow);
+
+          sentList.appendChild(sentEl);
+        });
+        wrap.appendChild(sentList);
+        detailsEl.appendChild(wrap);
+      });
+    }
+  </script>
+</body>
+</html>
+

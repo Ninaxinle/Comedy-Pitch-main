@@ -1,0 +1,183 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Machine Learning / Data Science specific
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.model
+*.weights
+*.ckpt
+checkpoint
+*.pth
+*.pth.tar
+*.safetensors
+model_weights.h5
+*.pb
+saved_model/
+
+# Audio files (typically large for ML projects)
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.aac
+*.ogg
+*.wma
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+
+# Data files (often large and should be managed separately)
+*.csv
+*.tsv
+*.json
+*.parquet
+*.feather
+*.npy
+*.npz
+
+# TensorBoard logs
+logs/
+runs/
+tb_logs/
+tensorboard_logs/
+
+# Weights & Biases
+wandb/
+
+# MLflow
+mlruns/
+
+# DVC (Data Version Control)
+.dvc
+
+# Experiment tracking
+experiments/
+checkpoints/
+models/
+outputs/
+
+# Temporary training files
+temp_*
+tmp_*
+*.tmp
+
+# CUDA cache
+.nv/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Datasets (comment out if you want to track small datasets)
+# datasets/
+# data/
+
+# Model artifacts that are too large for git
+# *.bin
+# *.onnx
+
+# Keep existing model checkpoints in the project (they're already tracked)
+!checkpoints/
+!checkpoints/**/*.pth.tar
+
+# Comedy-specific file patterns
+laughter_test_output/
+*_laughter.TextGrid
+laugh_*.wav
+
+# Output directories from processing
+output/
+results/
+processed_audio/ 

@@ -1,0 +1,151 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# cursor
+.cursorrules   
+tools/
+
+# input output data
+input_videos/
+output_audio/
+output_transcripts/
+output_segmentations/
+output_summaries/
+
+# requirements
+spec/*
+
+# Virtual Environment
+py310/
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# PyTorch Model Cache
+~/.cache/torch/
+~/.cache/huggingface/
+~/.cache/whisper/
+
+# Project Output Directories
+output_audio/
+output_transcripts/
+transcripts/
+output_segmentations/
+segmentations/
+input_videos/
+
+# Test Data (large files)
+test video data/
+test_videos/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.m4a
+*.mp3
+*.flac
+
+# Logs
+*.log
+logs/
+video_segmentation.log
+
+# API Keys and Sensitive Config
+.env
+config.yaml  # Real config with API keys
+config_production.yaml
+config_local.yaml
+test_config.yaml
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Windows
+*.lnk
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon?
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# FFmpeg temporary files
+ffmpeg_*.txt
+
+# Model downloads
+*.pt
+*.pth
+*.bin
+models/
+
+# Test artifacts
+test_results/
+validation/
+debug/
+
+# Documentation builds
+docs/_build/
+site/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Backup files
+*.bak
+*.backup
+*~ 

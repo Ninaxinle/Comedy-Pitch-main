@@ -1,0 +1,11 @@
+Your task is to write a short context summary that provides important background information and recurring references that appear throughout the performance. This summary will be used to help understand individual joke segments, especially when a segment references something introduced earlier in the show.
+
+📌 Your context summary should:
+ - Identify major themes or topics the comedian talks about (e.g., family, dating, travel, politics)
+- Mention any recurring characters, stories, or inside references (e.g., the comedian’s mom, a coworker, a pet, a city)
+- Include any ongoing narratives or callbacks that are important for understanding later jokes
+- Be written in clear, concise language for someone who will read a single segment in isolation
+- Avoid retelling the whole transcript — instead, provide just enough information to ground all segments in context
+
+🎯 Goal: This context will be shown before individual joke segments, so readers can understand all references even if they didn’t read the full performance.
+Now, write the global context summary for the following transcript:

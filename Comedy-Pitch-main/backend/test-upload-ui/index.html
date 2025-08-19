@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Upload Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .step {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="file"], input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .progress {
+            width: 100%;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #007bff;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        .token-section {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .token-section input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Video Upload Test</h1>
+        
+        <!-- Firebase Token Section -->
+        <div class="token-section">
+            <label for="firebaseToken">Firebase Token (Required for API calls):</label>
+            <input type="text" id="firebaseToken" placeholder="Paste your Firebase ID token here..." />
+            <small>Get this from the test-auth-ui page after signing in</small>
+        </div>
+
+        <!-- Step 1: File Selection -->
+        <div class="step">
+            <h3>Step 1: Select Video File</h3>
+            <div class="form-group">
+                <label for="videoFile">Choose Video File:</label>
+                <input type="file" id="videoFile" accept="video/*,audio/*" />
+            </div>
+            <div id="fileInfo" class="status info" style="display: none;"></div>
+        </div>
+
+        <!-- Step 2: Get Presigned URL -->
+        <div class="step">
+            <h3>Step 2: Get Presigned URL</h3>
+            <button id="getPresignedBtn" onclick="getPresignedUrl()" disabled>Get Presigned URL</button>
+            <div id="presignedStatus" class="status" style="display: none;"></div>
+            <div id="presignedUrl" style="display: none; margin-top: 10px;">
+                <label>Presigned URL:</label>
+                <textarea id="presignedUrlText" readonly></textarea>
+            </div>
+        </div>
+
+        <!-- Step 3: Upload to Storage -->
+        <div class="step">
+            <h3>Step 3: Upload to Storage</h3>
+            <button id="uploadBtn" onclick="uploadFile()" disabled>Upload File</button>
+            <div class="progress" id="uploadProgress" style="display: none;">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div id="uploadStatus" class="status" style="display: none;"></div>
+        </div>
+
+        <!-- Step 4: Register Video -->
+        <div class="step">
+            <h3>Step 4: Register Video</h3>
+            <div class="form-group">
+                <label for="videoTitle">Title:</label>
+                <input type="text" id="videoTitle" placeholder="Enter video title..." />
+            </div>
+            <div class="form-group">
+                <label for="videoDescription">Description:</label>
+                <textarea id="videoDescription" placeholder="Enter video description..."></textarea>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="isPublic" checked /> Make video public
+                </label>
+            </div>
+            <button id="registerBtn" onclick="registerVideo()" disabled>Register Video</button>
+            <div id="registerStatus" class="status" style="display: none;"></div>
+        </div>
+
+        <!-- Results -->
+        <div class="step">
+            <h3>Results</h3>
+            <div id="results" class="status info" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        let selectedFile = null;
+        let presignedUrl = null;
+        let storageKey = null;
+
+        // File selection
+        document.getElementById('videoFile').addEventListener('change', function(e) {
+            selectedFile = e.target.files[0];
+            if (selectedFile) {
+                document.getElementById('fileInfo').style.display = 'block';
+                document.getElementById('fileInfo').innerHTML = `
+                    <strong>Selected File:</strong> ${selectedFile.name}<br>
+                    <strong>Size:</strong> ${(selectedFile.size / 1024 / 1024).toFixed(2)} MB<br>
+                    <strong>Type:</strong> ${selectedFile.type}
+                `;
+                document.getElementById('getPresignedBtn').disabled = false;
+                
+                // Auto-fill title from filename
+                const title = selectedFile.name.replace(/\.[^/.]+$/, ""); // Remove extension
+                document.getElementById('videoTitle').value = title;
+            } else {
+                document.getElementById('fileInfo').style.display = 'none';
+                document.getElementById('getPresignedBtn').disabled = true;
+            }
+        });
+
+        // Get presigned URL
+        async function getPresignedUrl() {
+            if (!selectedFile) {
+                showStatus('presignedStatus', 'Please select a file first.', 'error');
+                return;
+            }
+
+            const token = document.getElementById('firebaseToken').value.trim();
+            if (!token) {
+                showStatus('presignedStatus', 'Please enter your Firebase token first.', 'error');
+                return;
+            }
+
+            showStatus('presignedStatus', 'Getting presigned URL...', 'info');
+            document.getElementById('getPresignedBtn').disabled = true;
+
+            try {
+                const response = await fetch('/api/videos/uploads/presign', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        filename: selectedFile.name,
+                        content_type: selectedFile.type,
+                        content_length: selectedFile.size
+                    })
+                });
+
+                if (!response.ok) {
+                    const error = await response.text();
+                    throw new Error(`HTTP ${response.status}: ${error}`);
+                }
+
+                const data = await response.json();
+                presignedUrl = data.upload_url;
+                storageKey = data.storage_key;
+
+                document.getElementById('presignedUrl').style.display = 'block';
+                document.getElementById('presignedUrlText').value = presignedUrl;
+                
+                showStatus('presignedStatus', 'Presigned URL generated successfully!', 'success');
+                document.getElementById('uploadBtn').disabled = false;
+            } catch (error) {
+                showStatus('presignedStatus', `Error: ${error.message}`, 'error');
+                document.getElementById('getPresignedBtn').disabled = false;
+            }
+        }
+
+        // Upload file
+        async function uploadFile() {
+            if (!presignedUrl || !selectedFile) {
+                showStatus('uploadStatus', 'Please get a presigned URL first.', 'error');
+                return;
+            }
+
+            showStatus('uploadStatus', 'Uploading file...', 'info');
+            document.getElementById('uploadBtn').disabled = true;
+            document.getElementById('uploadProgress').style.display = 'block';
+
+            try {
+                const response = await fetch(presignedUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': selectedFile.type
+                    },
+                    body: selectedFile
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Upload failed: HTTP ${response.status}`);
+                }
+
+                showStatus('uploadStatus', 'File uploaded successfully!', 'success');
+                document.getElementById('registerBtn').disabled = false;
+            } catch (error) {
+                showStatus('uploadStatus', `Upload error: ${error.message}`, 'error');
+                document.getElementById('uploadBtn').disabled = false;
+            } finally {
+                document.getElementById('uploadProgress').style.display = 'none';
+            }
+        }
+
+        // Register video
+        async function registerVideo() {
+            if (!storageKey) {
+                showStatus('registerStatus', 'Please upload a file first.', 'error');
+                return;
+            }
+
+            const token = document.getElementById('firebaseToken').value.trim();
+            if (!token) {
+                showStatus('registerStatus', 'Please enter your Firebase token.', 'error');
+                return;
+            }
+
+            const title = document.getElementById('videoTitle').value.trim();
+            if (!title) {
+                showStatus('registerStatus', 'Please enter a title.', 'error');
+                return;
+            }
+
+            showStatus('registerStatus', 'Registering video...', 'info');
+            document.getElementById('registerBtn').disabled = true;
+
+            try {
+                const response = await fetch('/api/videos/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        storage_key: storageKey,
+                        title: title,
+                        description: document.getElementById('videoDescription').value.trim(),
+                        file_type: selectedFile.type.startsWith('video/') ? 'video' : 'audio',
+                        is_public: document.getElementById('isPublic').checked
+                    })
+                });
+
+                if (!response.ok) {
+                    const error = await response.text();
+                    throw new Error(`HTTP ${response.status}: ${error}`);
+                }
+
+                const videoData = await response.json();
+                showStatus('registerStatus', 'Video registered successfully!', 'success');
+                
+                // Show results
+                document.getElementById('results').style.display = 'block';
+                document.getElementById('results').innerHTML = `
+                    <strong>🎉 Upload Complete!</strong><br>
+                    <strong>Video ID:</strong> ${videoData.id}<br>
+                    <strong>Title:</strong> ${videoData.title}<br>
+                    <strong>Storage URL:</strong> <a href="${videoData.storage_url}" target="_blank">${videoData.storage_url}</a><br>
+                    <strong>Created:</strong> ${new Date(videoData.created_at).toLocaleString()}
+                `;
+            } catch (error) {
+                showStatus('registerStatus', `Registration error: ${error.message}`, 'error');
+                document.getElementById('registerBtn').disabled = false;
+            }
+        }
+
+        // Helper function to show status
+        function showStatus(elementId, message, type) {
+            const element = document.getElementById(elementId);
+            element.style.display = 'block';
+            element.className = `status ${type}`;
+            element.textContent = message;
+        }
+    </script>
+</body>
+</html> 

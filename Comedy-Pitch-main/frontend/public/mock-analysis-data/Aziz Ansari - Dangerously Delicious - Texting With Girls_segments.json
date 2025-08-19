@@ -1,0 +1,67 @@
+[
+  {
+    "segment_id": 1,
+    "sentence_indexes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "start_time": 1.6,
+    "end_time": 18.43,
+    "duration": 16.82,
+    "text": "I was in a relationship for a few years, and I think in the time I was in the relationship, all dating communication went exclusively to text. You can't call anybody anymore. If you call someone, they're like, what, are you on fire? Then quit wasting my time, text me that shit.",
+    "total_gap": 2.51
+  },
+  {
+    "segment_id": 2,
+    "sentence_indexes": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "start_time": 18.42,
+    "end_time": 70.21,
+    "duration": 51.79,
+    "text": "And I don't like texting people, especially girls. There's always miscommunication that happens. This is a situation I get into all the time. I'll text a girl. She texts me back right away. I text her back right away. She texts me back right away. I text her back right away. She texts me back right away. I text her back right away. She texts me back right away. Then I'll say something like, all right, cool. So you want to get pizza on Tuesday? And then I don't hear anything. And I'm like, what just happened? I know you read that shit. You responded to 20 other things I just said. What, do you not like me anymore? You don't have two seconds to say, yes, I want to get pizza, or no, I don't want to get pizza? Would you check your phone into a locker and go ride a roller coaster for a few hours? What's the deal? And after a few hours of no response, I get real upset. And I just want to send a text that says something like, well, guess who just got uninvited to the pizza party? You did, because I hate you now.",
+    "total_gap": 11.19
+  },
+  {
+    "segment_id": 3,
+    "sentence_indexes": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "start_time": 70.21,
+    "end_time": 84.99,
+    "duration": 14.78,
+    "text": "Girl always writes something bad. Sorry, I was at my niece's ballet recital. We had to turn off our phones. Whatever, we're done. I finished that pizza hours ago. I went with my friend Brian. He's nice to me.",
+    "total_gap": 0.32
+  }
+]

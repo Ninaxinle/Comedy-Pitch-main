@@ -1,0 +1,2886 @@
+[
+  {
+    "index": 0,
+    "text": "From New York City, Comedy Central presents... Bill Burr!",
+    "start_time": 3.355,
+    "end_time": 27.211,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 1,
+    "text": "All right, thank you.",
+    "start_time": 27.231,
+    "end_time": 27.732,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 2,
+    "text": "Thank you very much.",
+    "start_time": 27.772,
+    "end_time": 30.288,
+    "gap_to_next": 1.73
+  },
+  {
+    "index": 3,
+    "text": "All right, nice, nice.",
+    "start_time": 30.288,
+    "end_time": 32.031,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 4,
+    "text": "Nice to be here.",
+    "start_time": 32.051,
+    "end_time": 33.633,
+    "gap_to_next": 0.72
+  },
+  {
+    "index": 5,
+    "text": "It's a beautiful theater here.",
+    "start_time": 33.633,
+    "end_time": 34.775,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 6,
+    "text": "I didn't do anything today.",
+    "start_time": 34.815,
+    "end_time": 35.816,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 7,
+    "text": "I'm a loser, man.",
+    "start_time": 35.856,
+    "end_time": 37.158,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 8,
+    "text": "You know what I was doing?",
+    "start_time": 37.178,
+    "end_time": 38.4,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 9,
+    "text": "I was sitting around, I was watching that show, MTV Cribs.",
+    "start_time": 38.42,
+    "end_time": 41.364,
+    "gap_to_next": 0.82
+  },
+  {
+    "index": 10,
+    "text": "You guys know that show?",
+    "start_time": 41.364,
+    "end_time": 42.826,
+    "gap_to_next": 0.74
+  },
+  {
+    "index": 11,
+    "text": "You know the show where they show all the rock stars and the rappers' houses and all their stuff?",
+    "start_time": 42.826,
+    "end_time": 46.892,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 12,
+    "text": "Doesn't that show make you feel like a loser?",
+    "start_time": 46.912,
+    "end_time": 50.335,
+    "gap_to_next": 1.6
+  },
+  {
+    "index": 13,
+    "text": "Kills my self-esteem.",
+    "start_time": 50.335,
+    "end_time": 51.677,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 14,
+    "text": "I'm sitting there watching Britney Spears.",
+    "start_time": 51.717,
+    "end_time": 53.78,
+    "gap_to_next": 0.46
+  },
+  {
+    "index": 15,
+    "text": "She's like 20 years old.",
+    "start_time": 53.78,
+    "end_time": 55.062,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 16,
+    "text": "She's like, oh my God, this is my helicopter.",
+    "start_time": 55.123,
+    "end_time": 58.428,
+    "gap_to_next": 1.02
+  },
+  {
+    "index": 17,
+    "text": "I had it spray painted pink to match my top today.",
+    "start_time": 58.428,
+    "end_time": 61.232,
+    "gap_to_next": 0.1
+  },
+  {
+    "index": 18,
+    "text": "So cool.",
+    "start_time": 61.232,
+    "end_time": 62.434,
+    "gap_to_next": 0.66
+  },
+  {
+    "index": 19,
+    "text": "I put some glitter on the part.",
+    "start_time": 62.434,
+    "end_time": 65.659,
+    "gap_to_next": 0.66
+  },
+  {
+    "index": 20,
+    "text": "We're going to fly up to the house.",
+    "start_time": 65.659,
+    "end_time": 68.343,
+    "gap_to_next": 0.92
+  },
+  {
+    "index": 21,
+    "text": "I'm like 34 sitting on a futon eating macaroni and cheese.",
+    "start_time": 68.343,
+    "end_time": 72.25,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 22,
+    "text": "Like, oh my God, I'm a loser.",
+    "start_time": 72.27,
+    "end_time": 76.416,
+    "gap_to_next": 1.08
+  },
+  {
+    "index": 23,
+    "text": "I'll never own a helicopter.",
+    "start_time": 76.416,
+    "end_time": 79.917,
+    "gap_to_next": 1.72
+  },
+  {
+    "index": 24,
+    "text": "You know what I love about that show, though?",
+    "start_time": 79.917,
+    "end_time": 81.559,
+    "gap_to_next": 0.4
+  },
+  {
+    "index": 25,
+    "text": "All they're doing is showing you what not to do when you get rich.",
+    "start_time": 81.559,
+    "end_time": 86.024,
+    "gap_to_next": 1.7
+  },
+  {
+    "index": 26,
+    "text": "Seriously, because none of those people are saving their money.",
+    "start_time": 86.024,
+    "end_time": 88.868,
+    "gap_to_next": 0.5
+  },
+  {
+    "index": 27,
+    "text": "Half of them, all they have is one-hit albums, so should they really be buying all of that stuff?",
+    "start_time": 88.868,
+    "end_time": 93.413,
+    "gap_to_next": 0.58
+  },
+  {
+    "index": 28,
+    "text": "20-room house, 17 cars.",
+    "start_time": 93.413,
+    "end_time": 95.676,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 29,
+    "text": "It's just like, dude, don't you watch Behind the Music?",
+    "start_time": 95.736,
+    "end_time": 99.5,
+    "gap_to_next": 1.8
+  },
+  {
+    "index": 30,
+    "text": "Haven't you learned anything from that program?",
+    "start_time": 99.5,
+    "end_time": 102.223,
+    "gap_to_next": 0.52
+  },
+  {
+    "index": 31,
+    "text": "You're gonna be smoking crack in like six weeks.",
+    "start_time": 102.223,
+    "end_time": 105.828,
+    "gap_to_next": 1.3
+  },
+  {
+    "index": 32,
+    "text": "Save your money.",
+    "start_time": 105.828,
+    "end_time": 108.115,
+    "gap_to_next": 1.03
+  },
+  {
+    "index": 33,
+    "text": "No, they're dumb.",
+    "start_time": 108.115,
+    "end_time": 108.716,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 34,
+    "text": "I tell you right now, man, if you want to know how to be rich, don't look at a rapper, don't look at a rock star.",
+    "start_time": 108.776,
+    "end_time": 112.362,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 35,
+    "text": "Look at a guy like Bill Gates.",
+    "start_time": 112.382,
+    "end_time": 114.225,
+    "gap_to_next": 0.6
+  },
+  {
+    "index": 36,
+    "text": "That dude is so good at being rich, it's, like, irritating.",
+    "start_time": 114.225,
+    "end_time": 117.891,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 37,
+    "text": "He makes, like, $30 million a day.",
+    "start_time": 117.911,
+    "end_time": 120.495,
+    "gap_to_next": 0.64
+  },
+  {
+    "index": 38,
+    "text": "And look at him.",
+    "start_time": 120.495,
+    "end_time": 122.098,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 39,
+    "text": "He dresses like he works in, like, a shoe store.",
+    "start_time": 122.118,
+    "end_time": 125.624,
+    "gap_to_next": 1.5
+  },
+  {
+    "index": 40,
+    "text": "But that's why he's always gonna be rich.",
+    "start_time": 125.624,
+    "end_time": 128.068,
+    "gap_to_next": 0.72
+  },
+  {
+    "index": 41,
+    "text": "He's not showing off, trying to, like, buy all this flashy stuff, like, walking around with, like, an iced-out laptop medallion hanging off his neck.",
+    "start_time": 128.068,
+    "end_time": 135.503,
+    "gap_to_next": 0.6
+  },
+  {
+    "index": 42,
+    "text": "Have some fuzzy pimp hat to the side, sitting in a hot tub with some bitches, you know?",
+    "start_time": 135.503,
+    "end_time": 141.389,
+    "gap_to_next": 0.9
+  },
+  {
+    "index": 43,
+    "text": "Have a midget in his crew just for the hell of it.",
+    "start_time": 141.389,
+    "end_time": 147.976,
+    "gap_to_next": 4.6
+  },
+  {
+    "index": 44,
+    "text": "Have you noticed that's the new status symbol of rich people?",
+    "start_time": 147.976,
+    "end_time": 150.538,
+    "gap_to_next": 0.64
+  },
+  {
+    "index": 45,
+    "text": "Midgets.",
+    "start_time": 150.538,
+    "end_time": 152.781,
+    "gap_to_next": 1.94
+  },
+  {
+    "index": 46,
+    "text": "I'm serious.",
+    "start_time": 152.781,
+    "end_time": 153.281,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 47,
+    "text": "No entourage is complete now unless you have a midget.",
+    "start_time": 153.361,
+    "end_time": 157.325,
+    "gap_to_next": 1.14
+  },
+  {
+    "index": 48,
+    "text": "And you know what?",
+    "start_time": 157.325,
+    "end_time": 157.886,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 49,
+    "text": "That's good for midgets.",
+    "start_time": 157.906,
+    "end_time": 160.188,
+    "gap_to_next": 1.32
+  },
+  {
+    "index": 50,
+    "text": "Seriously, because historically, those people have not gotten good jobs.",
+    "start_time": 160.188,
+    "end_time": 164.258,
+    "gap_to_next": 0.27
+  },
+  {
+    "index": 51,
+    "text": "Even when they book a movie, they never get to be the lead, never get to be the hero.",
+    "start_time": 164.258,
+    "end_time": 168.203,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 52,
+    "text": "They always got to play like a troll or a fairy, running out from under a bridge, biting on somebody's leg.",
+    "start_time": 168.223,
+    "end_time": 178.134,
+    "gap_to_next": 4.5
+  },
+  {
+    "index": 53,
+    "text": "So I was listening to George Bush today.",
+    "start_time": 178.134,
+    "end_time": 179.796,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 54,
+    "text": "You guys like George?",
+    "start_time": 179.816,
+    "end_time": 181.858,
+    "gap_to_next": 1.38
+  },
+  {
+    "index": 55,
+    "text": "No?",
+    "start_time": 181.858,
+    "end_time": 181.999,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 56,
+    "text": "Yes?",
+    "start_time": 182.079,
+    "end_time": 182.319,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 57,
+    "text": "No?",
+    "start_time": 182.399,
+    "end_time": 183.0,
+    "gap_to_next": 0.44
+  },
+  {
+    "index": 58,
+    "text": "I like George.",
+    "start_time": 183.0,
+    "end_time": 183.7,
+    "gap_to_next": 0.14
+  },
+  {
+    "index": 59,
+    "text": "You know what I like about George Bush?",
+    "start_time": 183.7,
+    "end_time": 185.062,
+    "gap_to_next": 0.24
+  },
+  {
+    "index": 60,
+    "text": "He makes me feel like I could be president too.",
+    "start_time": 185.062,
+    "end_time": 191.389,
+    "gap_to_next": 4.62
+  },
+  {
+    "index": 61,
+    "text": "Oh, he does.",
+    "start_time": 191.389,
+    "end_time": 195.427,
+    "gap_to_next": 3.46
+  },
+  {
+    "index": 62,
+    "text": "He's like the first guy, like, from my reading level, you know, like, the first guy, like, from my math class to finally go out and do something.",
+    "start_time": 195.427,
+    "end_time": 203.699,
+    "gap_to_next": 1.48
+  },
+  {
+    "index": 63,
+    "text": "You know what I love about George?",
+    "start_time": 203.699,
+    "end_time": 204.68,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 64,
+    "text": "He can't say the word terror.",
+    "start_time": 204.7,
+    "end_time": 207.404,
+    "gap_to_next": 1.52
+  },
+  {
+    "index": 65,
+    "text": "He can't.",
+    "start_time": 207.404,
+    "end_time": 207.765,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 66,
+    "text": "He uses the word every speech.",
+    "start_time": 207.785,
+    "end_time": 209.087,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 67,
+    "text": "He can't say terror.",
+    "start_time": 209.127,
+    "end_time": 209.888,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 68,
+    "text": "He goes, terror.",
+    "start_time": 209.908,
+    "end_time": 213.473,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 69,
+    "text": "That's what he says.",
+    "start_time": 213.493,
+    "end_time": 214.234,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 70,
+    "text": "He goes, America will not stand for terror.",
+    "start_time": 214.274,
+    "end_time": 219.001,
+    "gap_to_next": 2.66
+  },
+  {
+    "index": 71,
+    "text": "Anybody who supports terror, if you're a terrorist...",
+    "start_time": 219.001,
+    "end_time": 224.485,
+    "gap_to_next": 1.5
+  },
+  {
+    "index": 72,
+    "text": "We're going to get you.",
+    "start_time": 224.485,
+    "end_time": 226.848,
+    "gap_to_next": 1.44
+  },
+  {
+    "index": 73,
+    "text": "What kind of president goes, we're going to get you?",
+    "start_time": 226.848,
+    "end_time": 232.256,
+    "gap_to_next": 3.28
+  },
+  {
+    "index": 74,
+    "text": "He's like some redneck they dragged out of a barbecue, put him in a suit.",
+    "start_time": 232.256,
+    "end_time": 238.945,
+    "gap_to_next": 1.82
+  },
+  {
+    "index": 75,
+    "text": "Yo, if you're standing on stage going, we're going to get you, you should just be up there with a couple of bloodhounds going, go get him, blue.",
+    "start_time": 238.945,
+    "end_time": 246.236,
+    "gap_to_next": 1.32
+  },
+  {
+    "index": 76,
+    "text": "Smell the shirt.",
+    "start_time": 246.236,
+    "end_time": 247.277,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 77,
+    "text": "Go get him.",
+    "start_time": 247.317,
+    "end_time": 248.96,
+    "gap_to_next": 0.82
+  },
+  {
+    "index": 78,
+    "text": "Damn, that blue's a good dog.",
+    "start_time": 248.96,
+    "end_time": 252.515,
+    "gap_to_next": 1.85
+  },
+  {
+    "index": 79,
+    "text": "I'll tell you one thing I have realized, though.",
+    "start_time": 252.515,
+    "end_time": 254.237,
+    "gap_to_next": 0.32
+  },
+  {
+    "index": 80,
+    "text": "When you go to war, man, that's the one time when you really have to, like, appreciate rednecks, though.",
+    "start_time": 254.237,
+    "end_time": 258.762,
+    "gap_to_next": 1.3
+  },
+  {
+    "index": 81,
+    "text": "No, you know why?",
+    "start_time": 258.762,
+    "end_time": 259.222,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 82,
+    "text": "Because rednecks, they're like the one group of people that actually want to go to war.",
+    "start_time": 259.242,
+    "end_time": 264.929,
+    "gap_to_next": 1.14
+  },
+  {
+    "index": 83,
+    "text": "Everybody else tries to get out of it.",
+    "start_time": 264.929,
+    "end_time": 266.45,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 84,
+    "text": "Like, rich people never go to war.",
+    "start_time": 266.49,
+    "end_time": 268.372,
+    "gap_to_next": 0.42
+  },
+  {
+    "index": 85,
+    "text": "You ask a college kid if he wants to go to war, he's just like, um, I'm taking a sociology class, and I think war is, like, really stupid.",
+    "start_time": 268.372,
+    "end_time": 276.021,
+    "gap_to_next": 0.38
+  },
+  {
+    "index": 86,
+    "text": "My roommate's, like, half Afghani, so that's going to cause some static.",
+    "start_time": 276.021,
+    "end_time": 283.143,
+    "gap_to_next": 4.2
+  },
+  {
+    "index": 87,
+    "text": "You ask a redneck if he wants to go to war, he's just like, hell yeah!",
+    "start_time": 283.143,
+    "end_time": 287.95,
+    "gap_to_next": 1.38
+  },
+  {
+    "index": 88,
+    "text": "Absolutely, I'm ready right now.",
+    "start_time": 287.95,
+    "end_time": 291.075,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 89,
+    "text": "You just point the direction, buddy, I'm ready to do this.",
+    "start_time": 291.095,
+    "end_time": 295.522,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 90,
+    "text": "No, they're frightening people, but you gotta utilize them.",
+    "start_time": 295.542,
+    "end_time": 300.249,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 91,
+    "text": "Seriously, you wanna scare the enemy, okay?",
+    "start_time": 300.269,
+    "end_time": 302.593,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 92,
+    "text": "And rednecks are like America's pit bulls.",
+    "start_time": 302.613,
+    "end_time": 306.198,
+    "gap_to_next": 1.56
+  },
+  {
+    "index": 93,
+    "text": "They should just sedate those people, drop them off in Afghanistan, just let them run wild.",
+    "start_time": 306.198,
+    "end_time": 312.252,
+    "gap_to_next": 1.03
+  },
+  {
+    "index": 94,
+    "text": "Just be like, dude, just go do everything you ever dreamed of doing.",
+    "start_time": 312.252,
+    "end_time": 315.116,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 95,
+    "text": "Just go crazy.",
+    "start_time": 315.136,
+    "end_time": 316.839,
+    "gap_to_next": 0.82
+  },
+  {
+    "index": 96,
+    "text": "Have one of your friends play the banjo.",
+    "start_time": 316.839,
+    "end_time": 318.561,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 97,
+    "text": "It'll scare the hell out of them.",
+    "start_time": 318.601,
+    "end_time": 322.226,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 98,
+    "text": "Seriously, you wouldn't want to draft a guy like me.",
+    "start_time": 322.246,
+    "end_time": 324.49,
+    "gap_to_next": 0.54
+  },
+  {
+    "index": 99,
+    "text": "I'm a comedian.",
+    "start_time": 324.49,
+    "end_time": 325.251,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 100,
+    "text": "I'm useless.",
+    "start_time": 325.311,
+    "end_time": 326.973,
+    "gap_to_next": 1.02
+  },
+  {
+    "index": 101,
+    "text": "I'm a coward.",
+    "start_time": 326.973,
+    "end_time": 328.055,
+    "gap_to_next": 0.36
+  },
+  {
+    "index": 102,
+    "text": "I don't like confrontations.",
+    "start_time": 328.055,
+    "end_time": 329.857,
+    "gap_to_next": 0.44
+  },
+  {
+    "index": 103,
+    "text": "You draft a redneck, not only is that dude a psycho, he'll actually save you money.",
+    "start_time": 329.857,
+    "end_time": 334.444,
+    "gap_to_next": 0.96
+  },
+  {
+    "index": 104,
+    "text": "Those guys show up to the army like, here's your M16.",
+    "start_time": 334.444,
+    "end_time": 337.088,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 105,
+    "text": "They're like, I already got one.",
+    "start_time": 337.128,
+    "end_time": 340.805,
+    "gap_to_next": 2.28
+  },
+  {
+    "index": 106,
+    "text": "I got some stuff in the trunk you ain't ever seen before, buddy.",
+    "start_time": 340.805,
+    "end_time": 344.871,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 107,
+    "text": "I went on the internet, got me some of that surface-to-air stuff, took it out hunting, got me a moose and a duck at the same time.",
+    "start_time": 344.892,
+    "end_time": 352.744,
+    "gap_to_next": 1.26
+  },
+  {
+    "index": 108,
+    "text": "I didn't even see the duck.",
+    "start_time": 352.744,
+    "end_time": 354.507,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 109,
+    "text": "Duck was over her.",
+    "start_time": 354.527,
+    "end_time": 356.169,
+    "gap_to_next": 0.52
+  },
+  {
+    "index": 110,
+    "text": "I'm aiming at the moose.",
+    "start_time": 356.169,
+    "end_time": 357.331,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 111,
+    "text": "Duck's over her.",
+    "start_time": 357.351,
+    "end_time": 358.453,
+    "gap_to_next": 0.22
+  },
+  {
+    "index": 112,
+    "text": "That's my peripheral.",
+    "start_time": 358.453,
+    "end_time": 359.635,
+    "gap_to_next": 0.3
+  },
+  {
+    "index": 113,
+    "text": "Over her.",
+    "start_time": 359.635,
+    "end_time": 360.576,
+    "gap_to_next": 0.28
+  },
+  {
+    "index": 114,
+    "text": "And the shot went up the moose's ass, and the shrapnel from his antler hit the duck.",
+    "start_time": 360.576,
+    "end_time": 365.685,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 115,
+    "text": "Duck came down.",
+    "start_time": 365.705,
+    "end_time": 366.566,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 116,
+    "text": "It was the best damn duck ever, right?",
+    "start_time": 366.586,
+    "end_time": 371.838,
+    "gap_to_next": 3.39
+  },
+  {
+    "index": 117,
+    "text": "So, anywho, I took the subway here this evening.",
+    "start_time": 371.838,
+    "end_time": 375.583,
+    "gap_to_next": 0.64
+  },
+  {
+    "index": 118,
+    "text": "I hate taking the subway because I have a very, like, howdy-doody, kind of mug me kind of face.",
+    "start_time": 375.583,
+    "end_time": 380.931,
+    "gap_to_next": 2.0
+  },
+  {
+    "index": 119,
+    "text": "No, people tend to mess with me when I'm on the train, you know?",
+    "start_time": 380.931,
+    "end_time": 383.414,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 120,
+    "text": "So I don't look at anybody when I'm on the train.",
+    "start_time": 383.434,
+    "end_time": 385.176,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 121,
+    "text": "I just, like, stare at the floor, you know?",
+    "start_time": 385.216,
+    "end_time": 386.999,
+    "gap_to_next": 0.36
+  },
+  {
+    "index": 122,
+    "text": "This is a true story.",
+    "start_time": 386.999,
+    "end_time": 387.6,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 123,
+    "text": "One night, I'm sitting there.",
+    "start_time": 387.68,
+    "end_time": 388.761,
+    "gap_to_next": 0.26
+  },
+  {
+    "index": 124,
+    "text": "I'm staring at the floor.",
+    "start_time": 388.761,
+    "end_time": 390.203,
+    "gap_to_next": 0.38
+  },
+  {
+    "index": 125,
+    "text": "There's, like, 20 other people in the middle of the train.",
+    "start_time": 390.203,
+    "end_time": 392.627,
+    "gap_to_next": 0.4
+  },
+  {
+    "index": 126,
+    "text": "All of a sudden, I hear this lady's voice at the back of the train.",
+    "start_time": 392.627,
+    "end_time": 394.449,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 127,
+    "text": "I swear to God, she's sitting there.",
+    "start_time": 394.489,
+    "end_time": 395.911,
+    "gap_to_next": 0.3
+  },
+  {
+    "index": 128,
+    "text": "She's going, she's going, let go of my neck.",
+    "start_time": 395.911,
+    "end_time": 401.369,
+    "gap_to_next": 1.21
+  },
+  {
+    "index": 129,
+    "text": "I swear to God, she's like, ow!",
+    "start_time": 401.369,
+    "end_time": 404.092,
+    "gap_to_next": 1.14
+  },
+  {
+    "index": 130,
+    "text": "You're hurting me!",
+    "start_time": 404.092,
+    "end_time": 405.974,
+    "gap_to_next": 0.96
+  },
+  {
+    "index": 131,
+    "text": "Let go of my neck!",
+    "start_time": 405.974,
+    "end_time": 408.277,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 132,
+    "text": "And you know how it's like you don't want to look when some stuff like that's happening?",
+    "start_time": 408.297,
+    "end_time": 412.201,
+    "gap_to_next": 0.66
+  },
+  {
+    "index": 133,
+    "text": "You know, you try to ignore it, you're just sitting there going like, settle that!",
+    "start_time": 412.201,
+    "end_time": 417.307,
+    "gap_to_next": 2.08
+  },
+  {
+    "index": 134,
+    "text": "Make it go away!",
+    "start_time": 417.307,
+    "end_time": 418.549,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 135,
+    "text": "Don't want to see the rest of that!",
+    "start_time": 418.629,
+    "end_time": 422.333,
+    "gap_to_next": 0.76
+  },
+  {
+    "index": 136,
+    "text": "But it just keeps going.",
+    "start_time": 422.333,
+    "end_time": 423.114,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 137,
+    "text": "She's going, I said, ow!",
+    "start_time": 423.134,
+    "end_time": 425.457,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 138,
+    "text": "You're hurting me!",
+    "start_time": 425.477,
+    "end_time": 429.331,
+    "gap_to_next": 2.61
+  },
+  {
+    "index": 139,
+    "text": "So finally, I got to look.",
+    "start_time": 429.331,
+    "end_time": 430.753,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 140,
+    "text": "I look down.",
+    "start_time": 430.833,
+    "end_time": 431.334,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 141,
+    "text": "I swear to God, man, this dude has got his girl, like, right by the back of the neck.",
+    "start_time": 431.414,
+    "end_time": 435.339,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 142,
+    "text": "He's going, you shut the hell up.",
+    "start_time": 435.359,
+    "end_time": 437.482,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 143,
+    "text": "You shut up.",
+    "start_time": 437.502,
+    "end_time": 438.023,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 144,
+    "text": "She's like, ah!",
+    "start_time": 438.083,
+    "end_time": 440.266,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 145,
+    "text": "Shut up.",
+    "start_time": 440.286,
+    "end_time": 444.031,
+    "gap_to_next": 3.2
+  },
+  {
+    "index": 146,
+    "text": "Ah!",
+    "start_time": 444.031,
+    "end_time": 444.091,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 147,
+    "text": "So I don't know what the hell to do, you know?",
+    "start_time": 444.111,
+    "end_time": 446.495,
+    "gap_to_next": 0.66
+  },
+  {
+    "index": 148,
+    "text": "Because it's like, I really want to help her out, but I don't really know how to fight.",
+    "start_time": 446.495,
+    "end_time": 449.939,
+    "gap_to_next": 0.1
+  },
+  {
+    "index": 149,
+    "text": "So what am I going to do?",
+    "start_time": 449.939,
+    "end_time": 452.603,
+    "gap_to_next": 0.42
+  },
+  {
+    "index": 150,
+    "text": "I'm going to walk down the end of the train.",
+    "start_time": 452.603,
+    "end_time": 454.425,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 151,
+    "text": "Five seconds later, I'm going to be going, ah!",
+    "start_time": 454.485,
+    "end_time": 461.191,
+    "gap_to_next": 4.82
+  },
+  {
+    "index": 152,
+    "text": "I was just trying to help.",
+    "start_time": 461.191,
+    "end_time": 465.657,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 153,
+    "text": "So I didn't do a damn thing.",
+    "start_time": 465.677,
+    "end_time": 467.979,
+    "gap_to_next": 1.18
+  },
+  {
+    "index": 154,
+    "text": "I didn't.",
+    "start_time": 467.979,
+    "end_time": 468.28,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 155,
+    "text": "I just sat there.",
+    "start_time": 468.3,
+    "end_time": 469.041,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 156,
+    "text": "I was like, to hell with her.",
+    "start_time": 469.061,
+    "end_time": 469.922,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 157,
+    "text": "She picked them.",
+    "start_time": 469.962,
+    "end_time": 470.963,
+    "gap_to_next": 0.36
+  },
+  {
+    "index": 158,
+    "text": "It's not my problem.",
+    "start_time": 470.963,
+    "end_time": 473.426,
+    "gap_to_next": 1.52
+  },
+  {
+    "index": 159,
+    "text": "I don't know if she's into that kind of thing, but... So I was watching a little bit of Oprah the other night.",
+    "start_time": 473.426,
+    "end_time": 481.376,
+    "gap_to_next": 0.92
+  },
+  {
+    "index": 160,
+    "text": "I don't really like that show.",
+    "start_time": 481.376,
+    "end_time": 482.197,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 161,
+    "text": "My girlfriend likes it, and I want to get laid, so, you know.",
+    "start_time": 482.217,
+    "end_time": 485.541,
+    "gap_to_next": 1.4
+  },
+  {
+    "index": 162,
+    "text": "No, no, you pick your battles.",
+    "start_time": 485.541,
+    "end_time": 487.448,
+    "gap_to_next": 0.38
+  },
+  {
+    "index": 163,
+    "text": "You know what I like about that show?",
+    "start_time": 487.448,
+    "end_time": 488.269,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 164,
+    "text": "They always examine relationships on that show.",
+    "start_time": 488.289,
+    "end_time": 490.271,
+    "gap_to_next": 0.22
+  },
+  {
+    "index": 165,
+    "text": "You know what I realized?",
+    "start_time": 490.271,
+    "end_time": 490.992,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 166,
+    "text": "Whenever they do it on those talk shows, 90% of the time, the dude is always wrong.",
+    "start_time": 491.012,
+    "end_time": 496.698,
+    "gap_to_next": 1.42
+  },
+  {
+    "index": 167,
+    "text": "It's unbelievable.",
+    "start_time": 496.698,
+    "end_time": 497.558,
+    "gap_to_next": 0.22
+  },
+  {
+    "index": 168,
+    "text": "Two people, 90% of the time, guy's always wrong.",
+    "start_time": 497.558,
+    "end_time": 501.963,
+    "gap_to_next": 1.4
+  },
+  {
+    "index": 169,
+    "text": "This woman is always totally innocent, like, I was just trying to make him some chocolate chip cookies, and he didn't think there was enough chocolate chips in the cookies, so he started beating me with the cookie pan.",
+    "start_time": 501.963,
+    "end_time": 513.815,
+    "gap_to_next": 0.58
+  },
+  {
+    "index": 170,
+    "text": "It was horrible.",
+    "start_time": 513.815,
+    "end_time": 515.782,
+    "gap_to_next": 0.38
+  },
+  {
+    "index": 171,
+    "text": "And the guy's like always the biggest moron ever, like, well, what?",
+    "start_time": 515.782,
+    "end_time": 518.766,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 172,
+    "text": "I wanted some cookies.",
+    "start_time": 518.786,
+    "end_time": 523.151,
+    "gap_to_next": 3.28
+  },
+  {
+    "index": 173,
+    "text": "Now, I'm not saying guys aren't jerks.",
+    "start_time": 523.151,
+    "end_time": 524.473,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 174,
+    "text": "I'm a good example of one.",
+    "start_time": 524.553,
+    "end_time": 525.734,
+    "gap_to_next": 0.14
+  },
+  {
+    "index": 175,
+    "text": "You know what I'm saying?",
+    "start_time": 525.734,
+    "end_time": 526.515,
+    "gap_to_next": 0.22
+  },
+  {
+    "index": 176,
+    "text": "But women can be jerks too.",
+    "start_time": 526.515,
+    "end_time": 528.157,
+    "gap_to_next": 0.54
+  },
+  {
+    "index": 177,
+    "text": "They should balance it out.",
+    "start_time": 528.157,
+    "end_time": 529.519,
+    "gap_to_next": 0.5
+  },
+  {
+    "index": 178,
+    "text": "Like, you know what group of women I'd love them to do a show on?",
+    "start_time": 529.519,
+    "end_time": 531.681,
+    "gap_to_next": 0.28
+  },
+  {
+    "index": 179,
+    "text": "Are those 24, 25-year-old gorgeous women who will go out and like hook up and marry like an 80-year-old rich guy.",
+    "start_time": 531.681,
+    "end_time": 538.681,
+    "gap_to_next": 0.67
+  },
+  {
+    "index": 180,
+    "text": "You ever seen them hanging out with, like, Hugh Hefner, some 70-year-old guy in his pajamas?",
+    "start_time": 538.681,
+    "end_time": 543.668,
+    "gap_to_next": 0.88
+  },
+  {
+    "index": 181,
+    "text": "Now, if they were just honest about it and were like, look, this guy's gonna die in, like, seven or eight minutes.",
+    "start_time": 543.668,
+    "end_time": 547.713,
+    "gap_to_next": 0.36
+  },
+  {
+    "index": 182,
+    "text": "I'm gonna get a bag of cash and a Lexus.",
+    "start_time": 547.713,
+    "end_time": 549.696,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 183,
+    "text": "I wouldn't have a problem with it.",
+    "start_time": 549.716,
+    "end_time": 551.137,
+    "gap_to_next": 0.46
+  },
+  {
+    "index": 184,
+    "text": "But they always try and lie and be like, no, I love him for who he is.",
+    "start_time": 551.137,
+    "end_time": 555.643,
+    "gap_to_next": 1.34
+  },
+  {
+    "index": 185,
+    "text": "It has nothing to do with the big yacht.",
+    "start_time": 555.643,
+    "end_time": 557.426,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 186,
+    "text": "There's just something about the way he drools in his bathrobe as he pushes the checkers along.",
+    "start_time": 557.466,
+    "end_time": 562.713,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 187,
+    "text": "It's really enjoyable.",
+    "start_time": 562.753,
+    "end_time": 565.276,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 188,
+    "text": "You just wanna be like, lady, you're humping him for his money.",
+    "start_time": 565.296,
+    "end_time": 568.668,
+    "gap_to_next": 1.23
+  },
+  {
+    "index": 189,
+    "text": "See, that's something I could never do, man.",
+    "start_time": 568.668,
+    "end_time": 569.81,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 190,
+    "text": "If some 80-year-old billionaire, rich old lady came walking down the street, started like hitting on me, sitting like, hey there, sonny.",
+    "start_time": 569.85,
+    "end_time": 576.859,
+    "gap_to_next": 0.98
+  },
+  {
+    "index": 191,
+    "text": "You know, started grabbing my ass.",
+    "start_time": 576.859,
+    "end_time": 578.061,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 192,
+    "text": "Ooh, you're pretty firm.",
+    "start_time": 578.081,
+    "end_time": 578.822,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 193,
+    "text": "What are you, in the Navy or something?",
+    "start_time": 578.842,
+    "end_time": 580.845,
+    "gap_to_next": 0.88
+  },
+  {
+    "index": 194,
+    "text": "This big lady, get the hell away from me.",
+    "start_time": 580.845,
+    "end_time": 583.168,
+    "gap_to_next": 0.66
+  },
+  {
+    "index": 195,
+    "text": "Right, you're old, you're gross.",
+    "start_time": 583.168,
+    "end_time": 585.932,
+    "gap_to_next": 1.52
+  },
+  {
+    "index": 196,
+    "text": "You know, I'm sorry.",
+    "start_time": 585.932,
+    "end_time": 586.974,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 197,
+    "text": "I'm sure you were unbelievable back in the 20s when you were doing the Charleston, making beer in your bathtub, but you were at least four decades beyond humpable.",
+    "start_time": 587.014,
+    "end_time": 594.825,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 198,
+    "text": "I'm sorry.",
+    "start_time": 594.905,
+    "end_time": 595.606,
+    "gap_to_next": 0.12
+  },
+  {
+    "index": 199,
+    "text": "I'm sorry.",
+    "start_time": 595.606,
+    "end_time": 597.254,
+    "gap_to_next": 1.45
+  },
+  {
+    "index": 200,
+    "text": "No, how do you have sex?",
+    "start_time": 597.254,
+    "end_time": 598.015,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 201,
+    "text": "I don't understand.",
+    "start_time": 598.035,
+    "end_time": 598.495,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 202,
+    "text": "How do you have sex with somebody 40, 50 years older than you?",
+    "start_time": 598.515,
+    "end_time": 601.378,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 203,
+    "text": "I'll tell you the only way you can do it.",
+    "start_time": 601.398,
+    "end_time": 602.499,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 204,
+    "text": "You know what you got to do?",
+    "start_time": 602.519,
+    "end_time": 603.12,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 205,
+    "text": "You got to put the will on the headboard.",
+    "start_time": 603.16,
+    "end_time": 607.864,
+    "gap_to_next": 3.06
+  },
+  {
+    "index": 206,
+    "text": "No, so at any point, if you lose your nerve, you just can read some of the stuff that you're getting.",
+    "start_time": 607.864,
+    "end_time": 613.129,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 207,
+    "text": "You're just sitting there like, oh, my God, this is disgusting.",
+    "start_time": 613.149,
+    "end_time": 616.052,
+    "gap_to_next": 0.46
+  },
+  {
+    "index": 208,
+    "text": "What is becoming me?",
+    "start_time": 616.052,
+    "end_time": 617.353,
+    "gap_to_next": 0.3
+  },
+  {
+    "index": 209,
+    "text": "Oh, a house in Miami.",
+    "start_time": 617.353,
+    "end_time": 618.534,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 210,
+    "text": "Okay, I can stick this out a little bit longer.",
+    "start_time": 618.554,
+    "end_time": 620.836,
+    "gap_to_next": 0.38
+  },
+  {
+    "index": 211,
+    "text": "I guess this isn't as bad as I was thinking a second ago.",
+    "start_time": 620.836,
+    "end_time": 626.465,
+    "gap_to_next": 2.87
+  },
+  {
+    "index": 212,
+    "text": "Now, I got some issues, I guess.",
+    "start_time": 626.465,
+    "end_time": 629.75,
+    "gap_to_next": 1.88
+  },
+  {
+    "index": 213,
+    "text": "I do.",
+    "start_time": 629.75,
+    "end_time": 630.751,
+    "gap_to_next": 0.74
+  },
+  {
+    "index": 214,
+    "text": "I'm not going to lie to you.",
+    "start_time": 630.751,
+    "end_time": 632.434,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 215,
+    "text": "Like, a beautiful woman.",
+    "start_time": 632.454,
+    "end_time": 633.035,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 216,
+    "text": "I don't trust beautiful women.",
+    "start_time": 633.055,
+    "end_time": 634.957,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 217,
+    "text": "I just don't.",
+    "start_time": 634.977,
+    "end_time": 635.598,
+    "gap_to_next": 0.22
+  },
+  {
+    "index": 218,
+    "text": "You know why?",
+    "start_time": 635.598,
+    "end_time": 635.899,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 219,
+    "text": "Because you know what I've noticed in my life as a man?",
+    "start_time": 635.919,
+    "end_time": 638.202,
+    "gap_to_next": 0.1
+  },
+  {
+    "index": 220,
+    "text": "Beautiful women are only around when you have stuff.",
+    "start_time": 638.202,
+    "end_time": 640.766,
+    "gap_to_next": 0.84
+  },
+  {
+    "index": 221,
+    "text": "When your life is going on, great.",
+    "start_time": 640.766,
+    "end_time": 642.729,
+    "gap_to_next": 0.18
+  },
+  {
+    "index": 222,
+    "text": "They're all over the place.",
+    "start_time": 642.729,
+    "end_time": 643.53,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 223,
+    "text": "But when you're broke, you can't find a beautiful woman.",
+    "start_time": 643.61,
+    "end_time": 646.867,
+    "gap_to_next": 1.09
+  },
+  {
+    "index": 224,
+    "text": "You're like under a bridge.",
+    "start_time": 646.867,
+    "end_time": 647.769,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 225,
+    "text": "There's like trolls and ferrets running around.",
+    "start_time": 647.829,
+    "end_time": 649.573,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 226,
+    "text": "They're just not around.",
+    "start_time": 649.593,
+    "end_time": 651.036,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 227,
+    "text": "Then the second you get some, like you get a little money off, they come out of the woodwork like, oh my God, you have some stuff.",
+    "start_time": 651.056,
+    "end_time": 656.909,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 228,
+    "text": "Can you buy me some stuff?",
+    "start_time": 656.929,
+    "end_time": 658.272,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 229,
+    "text": "I want some stuff too.",
+    "start_time": 658.352,
+    "end_time": 660.717,
+    "gap_to_next": 1.1
+  },
+  {
+    "index": 230,
+    "text": "Then the second you go broke, oh my God, I left something over here next to this guy.",
+    "start_time": 660.717,
+    "end_time": 665.207,
+    "gap_to_next": 0.3
+  },
+  {
+    "index": 231,
+    "text": "He has stuff.",
+    "start_time": 665.207,
+    "end_time": 665.788,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 232,
+    "text": "I've always loved him.",
+    "start_time": 665.808,
+    "end_time": 671.032,
+    "gap_to_next": 4.18
+  },
+  {
+    "index": 233,
+    "text": "No, you know what?",
+    "start_time": 671.032,
+    "end_time": 671.413,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 234,
+    "text": "You haven't solidified my issues.",
+    "start_time": 671.433,
+    "end_time": 673.235,
+    "gap_to_next": 0.36
+  },
+  {
+    "index": 235,
+    "text": "This is what solidified it, okay?",
+    "start_time": 673.235,
+    "end_time": 674.617,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 236,
+    "text": "I was at a Yankees game one time, right?",
+    "start_time": 674.637,
+    "end_time": 676.38,
+    "gap_to_next": 0.34
+  },
+  {
+    "index": 237,
+    "text": "I'm sitting there.",
+    "start_time": 676.38,
+    "end_time": 676.94,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 238,
+    "text": "It was like the end of the inning, and Tino Martinez catches a foul ball to end the inning.",
+    "start_time": 676.96,
+    "end_time": 680.405,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 239,
+    "text": "You know how they always throw it into the crowd?",
+    "start_time": 680.425,
+    "end_time": 682.128,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 240,
+    "text": "There's like a hundred people going, Tino, Tino, Tino, foul, foul.",
+    "start_time": 682.148,
+    "end_time": 685.152,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 241,
+    "text": "There's a beautiful girl sitting right in the front row.",
+    "start_time": 685.172,
+    "end_time": 687.075,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 242,
+    "text": "Of course, oh, my God, I have these.",
+    "start_time": 687.095,
+    "end_time": 689.378,
+    "gap_to_next": 0.44
+  },
+  {
+    "index": 243,
+    "text": "Eh, I get to sit in the front row.",
+    "start_time": 689.378,
+    "end_time": 691.18,
+    "gap_to_next": 0.46
+  },
+  {
+    "index": 244,
+    "text": "What, this doesn't happen to everybody?",
+    "start_time": 691.18,
+    "end_time": 694.555,
+    "gap_to_next": 1.53
+  },
+  {
+    "index": 245,
+    "text": "So there's 100 people asking for this stupid ball.",
+    "start_time": 694.555,
+    "end_time": 697.358,
+    "gap_to_next": 0.12
+  },
+  {
+    "index": 246,
+    "text": "He walks right up to her, just hands it right to her.",
+    "start_time": 697.358,
+    "end_time": 700.603,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 247,
+    "text": "Didn't flip it, didn't toss it, handed it right to her.",
+    "start_time": 700.623,
+    "end_time": 703.626,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 248,
+    "text": "You know what I'd have to do in my lifetime to ever catch a foul ball?",
+    "start_time": 703.646,
+    "end_time": 706.87,
+    "gap_to_next": 0.62
+  },
+  {
+    "index": 249,
+    "text": "First of all, it would have to be like the one in a million chance that the ball was actually hit way the hell up where I was sitting, in like the upper, upper, upper deck.",
+    "start_time": 706.87,
+    "end_time": 714.64,
+    "gap_to_next": -0.02
+  },
+  {
+    "index": 250,
+    "text": "which means the ball's gonna be coming in at about 100, 120 miles an hour.",
+    "start_time": 714.62,
+    "end_time": 719.129,
+    "gap_to_next": 0.76
+  },
+  {
+    "index": 251,
+    "text": "So I gotta figure out, like, which body part I'm gonna sacrifice to slow it down.",
+    "start_time": 719.129,
+    "end_time": 723.718,
+    "gap_to_next": 0.54
+  },
+  {
+    "index": 252,
+    "text": "And then I gotta pounce on it, curl up in the fetal position as eight guys punch me in the back of the head.",
+    "start_time": 723.718,
+    "end_time": 729.91,
+    "gap_to_next": 0.68
+  },
+  {
+    "index": 253,
+    "text": "And I pray to God that I can hang on until security gets there.",
+    "start_time": 729.91,
+    "end_time": 734.538,
+    "gap_to_next": 1.24
+  },
+  {
+    "index": 254,
+    "text": "And he just walks right up and just handed them off.",
+    "start_time": 734.538,
+    "end_time": 737.755,
+    "gap_to_next": 0.35
+  },
+  {
+    "index": 255,
+    "text": "She probably didn't even know what it was.",
+    "start_time": 737.755,
+    "end_time": 739.237,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 256,
+    "text": "Like, basket?",
+    "start_time": 739.297,
+    "end_time": 740.238,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 257,
+    "text": "Oh, baseball.",
+    "start_time": 740.258,
+    "end_time": 741.099,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 258,
+    "text": "Oh, my God.",
+    "start_time": 741.159,
+    "end_time": 742.36,
+    "gap_to_next": 0.34
+  },
+  {
+    "index": 259,
+    "text": "Let me take this home and stick it next to my other unbelievable free things that I don't appreciate.",
+    "start_time": 742.36,
+    "end_time": 746.905,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 260,
+    "text": "Shelf in my house.",
+    "start_time": 746.965,
+    "end_time": 758.457,
+    "gap_to_next": 8.89
+  },
+  {
+    "index": 261,
+    "text": "So, anywho.",
+    "start_time": 758.457,
+    "end_time": 759.819,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 262,
+    "text": "I was taking the, uh... I don't know.",
+    "start_time": 759.839,
+    "end_time": 761.601,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 263,
+    "text": "You know what the greatest thing about this job is?",
+    "start_time": 761.621,
+    "end_time": 762.902,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 264,
+    "text": "I don't have a boss.",
+    "start_time": 762.922,
+    "end_time": 764.688,
+    "gap_to_next": 0.92
+  },
+  {
+    "index": 265,
+    "text": "That's what I love about this show.",
+    "start_time": 764.688,
+    "end_time": 765.929,
+    "gap_to_next": 0.34
+  },
+  {
+    "index": 266,
+    "text": "I never wanted a job where I had a boss.",
+    "start_time": 765.929,
+    "end_time": 767.371,
+    "gap_to_next": 0.12
+  },
+  {
+    "index": 267,
+    "text": "That's why I used to always work in, like, warehouses.",
+    "start_time": 767.371,
+    "end_time": 769.253,
+    "gap_to_next": 0.42
+  },
+  {
+    "index": 268,
+    "text": "Because if my boss gave me a rough time, I could just get on a forklift and just, like, drive away from him.",
+    "start_time": 769.253,
+    "end_time": 774.278,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 269,
+    "text": "You know?",
+    "start_time": 774.298,
+    "end_time": 775.82,
+    "gap_to_next": 1.34
+  },
+  {
+    "index": 270,
+    "text": "And I realized that was too stupid to run a business.",
+    "start_time": 775.82,
+    "end_time": 778.463,
+    "gap_to_next": 0.78
+  },
+  {
+    "index": 271,
+    "text": "You know what I mean?",
+    "start_time": 778.463,
+    "end_time": 779.043,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 272,
+    "text": "I just knew I was never going to be that guy, like, you know, in the big office, big long table, going, we know we... In the fourth quarter, we need to increase production, okay?",
+    "start_time": 779.063,
+    "end_time": 787.572,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 273,
+    "text": "Kathy, you're using a little bit too many paperclips, and we need to just kind of tone that down.",
+    "start_time": 787.592,
+    "end_time": 791.296,
+    "gap_to_next": 0.36
+  },
+  {
+    "index": 274,
+    "text": "I'm not singling you out.",
+    "start_time": 791.296,
+    "end_time": 792.037,
+    "gap_to_next": 0.24
+  },
+  {
+    "index": 275,
+    "text": "We're just kind of...",
+    "start_time": 792.037,
+    "end_time": 794.202,
+    "gap_to_next": 1.36
+  },
+  {
+    "index": 276,
+    "text": "I could never do it.",
+    "start_time": 794.202,
+    "end_time": 794.823,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 277,
+    "text": "So I realized the only thing I could ever do, my greatest thing I could ever do, was work in one of those cubicles.",
+    "start_time": 794.843,
+    "end_time": 799.651,
+    "gap_to_next": 0.86
+  },
+  {
+    "index": 278,
+    "text": "And I refused to do it.",
+    "start_time": 799.651,
+    "end_time": 801.675,
+    "gap_to_next": 1.16
+  },
+  {
+    "index": 279,
+    "text": "Cubicles should be illegal, man.",
+    "start_time": 801.675,
+    "end_time": 802.877,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 280,
+    "text": "You know what a cubicle basically says?",
+    "start_time": 802.897,
+    "end_time": 804.339,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 281,
+    "text": "It basically says, like, you know what?",
+    "start_time": 804.419,
+    "end_time": 806.403,
+    "gap_to_next": 0.74
+  },
+  {
+    "index": 282,
+    "text": "We don't think you're smart enough for an office, but we don't want you to look at anybody.",
+    "start_time": 806.403,
+    "end_time": 811.391,
+    "gap_to_next": 1.8
+  },
+  {
+    "index": 283,
+    "text": "So you're going to get in there, and you're going to shut your face.",
+    "start_time": 811.391,
+    "end_time": 816.68,
+    "gap_to_next": 1.8
+  },
+  {
+    "index": 284,
+    "text": "Then you just get in there and you're hunched over, typing away.",
+    "start_time": 816.68,
+    "end_time": 819.846,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 285,
+    "text": "Around lunchtime, you pop your head up like a gopher, like, hey, Steve, you want to get a sandwich or something?",
+    "start_time": 819.886,
+    "end_time": 824.716,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 286,
+    "text": "I said, get in there and shut your face.",
+    "start_time": 824.736,
+    "end_time": 827.842,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 287,
+    "text": "I was just asking for a sandwich or something.",
+    "start_time": 827.862,
+    "end_time": 829.906,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 288,
+    "text": "God, I hate that guy.",
+    "start_time": 829.926,
+    "end_time": 831.048,
+    "gap_to_next": 0.24
+  },
+  {
+    "index": 289,
+    "text": "I really hate that guy.",
+    "start_time": 831.048,
+    "end_time": 832.391,
+    "gap_to_next": 0.24
+  },
+  {
+    "index": 290,
+    "text": "It's time to go on the internet and look for a weapon.",
+    "start_time": 832.391,
+    "end_time": 838.567,
+    "gap_to_next": 4.13
+  },
+  {
+    "index": 291,
+    "text": "Pathetic, man.",
+    "start_time": 838.567,
+    "end_time": 839.248,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 292,
+    "text": "You know what I love about the cubicle?",
+    "start_time": 839.268,
+    "end_time": 840.269,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 293,
+    "text": "I always love the pathetic attempt to try to make the cubicle like a home.",
+    "start_time": 840.309,
+    "end_time": 842.953,
+    "gap_to_next": 0.1
+  },
+  {
+    "index": 294,
+    "text": "You know what I mean?",
+    "start_time": 842.953,
+    "end_time": 844.295,
+    "gap_to_next": 0.92
+  },
+  {
+    "index": 295,
+    "text": "There's always like a stuffed animal in there or like a picture of your mom with like her disappointed eyes looking back out at you like, why have you accepted this as your lot in life?",
+    "start_time": 844.295,
+    "end_time": 852.587,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 296,
+    "text": "Why don't you have the balls to get up and walk out of this thing?",
+    "start_time": 852.667,
+    "end_time": 856.172,
+    "gap_to_next": 1.04
+  },
+  {
+    "index": 297,
+    "text": "I'm telling you, those people need to be rescued.",
+    "start_time": 856.172,
+    "end_time": 858.575,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 298,
+    "text": "You ever walk by a cubicle?",
+    "start_time": 858.595,
+    "end_time": 860.117,
+    "gap_to_next": 0.4
+  },
+  {
+    "index": 299,
+    "text": "The person in the cubicle always looks back out at you.",
+    "start_time": 860.117,
+    "end_time": 864.605,
+    "gap_to_next": 1.26
+  },
+  {
+    "index": 300,
+    "text": "Because they're starved for some sort of human contact.",
+    "start_time": 864.605,
+    "end_time": 868.57,
+    "gap_to_next": 1.08
+  },
+  {
+    "index": 301,
+    "text": "They'll just start up a conversation like, hey, hey.",
+    "start_time": 868.57,
+    "end_time": 871.333,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 302,
+    "text": "Is it raining out?",
+    "start_time": 871.353,
+    "end_time": 873.756,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 303,
+    "text": "I haven't seen the sky in like six days.",
+    "start_time": 873.796,
+    "end_time": 876.039,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 304,
+    "text": "They don't let us look out the windows.",
+    "start_time": 876.079,
+    "end_time": 878.442,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 305,
+    "text": "This is a true story, man.",
+    "start_time": 878.482,
+    "end_time": 881.565,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 306,
+    "text": "I'm staying there, all right?",
+    "start_time": 881.585,
+    "end_time": 882.246,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 307,
+    "text": "Minding my own business.",
+    "start_time": 882.266,
+    "end_time": 883.287,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 308,
+    "text": "All right, this black guy goes to get on the train, right?",
+    "start_time": 883.307,
+    "end_time": 885.49,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 309,
+    "text": "All of a sudden, the door's like closed on him.",
+    "start_time": 885.51,
+    "end_time": 887.312,
+    "gap_to_next": 0.36
+  },
+  {
+    "index": 310,
+    "text": "You know when that happens?",
+    "start_time": 887.312,
+    "end_time": 887.933,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 311,
+    "text": "They kind of open and close it.",
+    "start_time": 887.953,
+    "end_time": 890.196,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 312,
+    "text": "It's like they're trying to like dice you up.",
+    "start_time": 890.216,
+    "end_time": 894.288,
+    "gap_to_next": 1.23
+  },
+  {
+    "index": 313,
+    "text": "So it's like typical New York.",
+    "start_time": 894.288,
+    "end_time": 895.33,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 314,
+    "text": "There's like 20 people watching, but nobody helps out.",
+    "start_time": 895.35,
+    "end_time": 898.237,
+    "gap_to_next": 0.72
+  },
+  {
+    "index": 315,
+    "text": "Everyone's just standing like, wow, I think it's gonna cut his arm off.",
+    "start_time": 898.237,
+    "end_time": 904.09,
+    "gap_to_next": 3.07
+  },
+  {
+    "index": 316,
+    "text": "So the dude's stuck in the doors, the conductor comes out, starts giving the guy a rough time as he's stuck in the doors.",
+    "start_time": 904.09,
+    "end_time": 910.345,
+    "gap_to_next": 1.02
+  },
+  {
+    "index": 317,
+    "text": "He's going, come on, buddy, let's go!",
+    "start_time": 910.345,
+    "end_time": 913.019,
+    "gap_to_next": 0.79
+  },
+  {
+    "index": 318,
+    "text": "He's like, you're holding people up?",
+    "start_time": 913.019,
+    "end_time": 914.123,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 319,
+    "text": "Let's go!",
+    "start_time": 914.183,
+    "end_time": 915.908,
+    "gap_to_next": 0.94
+  },
+  {
+    "index": 320,
+    "text": "So the dude in the door starts flipping out.",
+    "start_time": 915.908,
+    "end_time": 917.494,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 321,
+    "text": "He's like, what the hell are you yelling at me for?",
+    "start_time": 917.514,
+    "end_time": 919.5,
+    "gap_to_next": 0.6
+  },
+  {
+    "index": 322,
+    "text": "He's like, I'm stuck in the doors.",
+    "start_time": 919.5,
+    "end_time": 921.768,
+    "gap_to_next": 0.8
+  },
+  {
+    "index": 323,
+    "text": "Then he makes it racial.",
+    "start_time": 921.768,
+    "end_time": 922.651,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 324,
+    "text": "He's like, I bet you wouldn't say anything to all these crackers sitting over here.",
+    "start_time": 922.671,
+    "end_time": 926.705,
+    "gap_to_next": 1.15
+  },
+  {
+    "index": 325,
+    "text": "It was, like, me and three other white dudes sitting there.",
+    "start_time": 926.705,
+    "end_time": 929.708,
+    "gap_to_next": 0.74
+  },
+  {
+    "index": 326,
+    "text": "So he gets into it, this guy.",
+    "start_time": 929.708,
+    "end_time": 930.929,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 327,
+    "text": "He keeps coming back to that point.",
+    "start_time": 930.969,
+    "end_time": 932.53,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 328,
+    "text": "Like, I bet he wouldn't say anything to these crackers sitting over here.",
+    "start_time": 932.55,
+    "end_time": 935.573,
+    "gap_to_next": 0.72
+  },
+  {
+    "index": 329,
+    "text": "And after, like, the third or fourth, crackers sitting over here, me and the three white dudes kind of start, like, looking at each other, like, dude, shouldn't we, like, be getting offended at this point?",
+    "start_time": 935.573,
+    "end_time": 944.901,
+    "gap_to_next": 1.28
+  },
+  {
+    "index": 330,
+    "text": "This is getting ridiculous.",
+    "start_time": 944.901,
+    "end_time": 946.863,
+    "gap_to_next": 0.8
+  },
+  {
+    "index": 331,
+    "text": "I can literally feel the heat from his fingers.",
+    "start_time": 946.863,
+    "end_time": 948.825,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 332,
+    "text": "He's going, crackers sitting over here.",
+    "start_time": 948.865,
+    "end_time": 951.607,
+    "gap_to_next": 1.24
+  },
+  {
+    "index": 333,
+    "text": "Somebody should do something.",
+    "start_time": 951.607,
+    "end_time": 953.729,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 334,
+    "text": "Do you know what?",
+    "start_time": 953.749,
+    "end_time": 954.229,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 335,
+    "text": "Nobody did shit.",
+    "start_time": 954.289,
+    "end_time": 956.945,
+    "gap_to_next": 1.96
+  },
+  {
+    "index": 336,
+    "text": "We just sat there and took it.",
+    "start_time": 956.945,
+    "end_time": 960.33,
+    "gap_to_next": 1.32
+  },
+  {
+    "index": 337,
+    "text": "That's what sucks about being white in that situation.",
+    "start_time": 960.33,
+    "end_time": 963.395,
+    "gap_to_next": 0.96
+  },
+  {
+    "index": 338,
+    "text": "There's no unity.",
+    "start_time": 963.395,
+    "end_time": 965.619,
+    "gap_to_next": 1.36
+  },
+  {
+    "index": 339,
+    "text": "There's no brothers when it comes to white people.",
+    "start_time": 965.619,
+    "end_time": 969.145,
+    "gap_to_next": 1.52
+  },
+  {
+    "index": 340,
+    "text": "We are just complete individuals.",
+    "start_time": 969.145,
+    "end_time": 972.049,
+    "gap_to_next": 0.48
+  },
+  {
+    "index": 341,
+    "text": "We don't care about each other.",
+    "start_time": 972.049,
+    "end_time": 973.111,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 342,
+    "text": "It's not my brother.",
+    "start_time": 973.171,
+    "end_time": 973.972,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 343,
+    "text": "My brother lives in Ohio.",
+    "start_time": 974.012,
+    "end_time": 974.994,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 344,
+    "text": "I don't know that guy.",
+    "start_time": 975.014,
+    "end_time": 976.757,
+    "gap_to_next": 1.04
+  },
+  {
+    "index": 345,
+    "text": "I'm not concerned about over here.",
+    "start_time": 976.757,
+    "end_time": 979.221,
+    "gap_to_next": 0.74
+  },
+  {
+    "index": 346,
+    "text": "I'm concerned about from here to right here.",
+    "start_time": 979.221,
+    "end_time": 982.366,
+    "gap_to_next": 0.82
+  },
+  {
+    "index": 347,
+    "text": "Here.",
+    "start_time": 982.366,
+    "end_time": 985.143,
+    "gap_to_next": 2.06
+  },
+  {
+    "index": 348,
+    "text": "That was unbelievable.",
+    "start_time": 985.143,
+    "end_time": 986.745,
+    "gap_to_next": 0.84
+  },
+  {
+    "index": 349,
+    "text": "I got called a cracker for, like, 18 stops.",
+    "start_time": 986.745,
+    "end_time": 993.214,
+    "gap_to_next": 4.59
+  },
+  {
+    "index": 350,
+    "text": "I'll tell you, that's funny, though, when someone gets racial with you when you're white, because you're not allowed to get racial back, you know what I mean?",
+    "start_time": 993.214,
+    "end_time": 998.281,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 351,
+    "text": "So it's kind of, like, awkward.",
+    "start_time": 998.301,
+    "end_time": 999.302,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 352,
+    "text": "The dude's going on, you white boy!",
+    "start_time": 999.322,
+    "end_time": 1001.485,
+    "gap_to_next": 0.84
+  },
+  {
+    "index": 353,
+    "text": "You cracker!",
+    "start_time": 1001.485,
+    "end_time": 1002.707,
+    "gap_to_next": 0.6
+  },
+  {
+    "index": 354,
+    "text": "You're like, yeah, you stupid jerk.",
+    "start_time": 1002.707,
+    "end_time": 1007.671,
+    "gap_to_next": 3.1
+  },
+  {
+    "index": 355,
+    "text": "No, you can't get racial back, because the second you get racial back when you're white, then all of a sudden they like wheel out that podium and have like that press conference.",
+    "start_time": 1007.671,
+    "end_time": 1016.142,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 356,
+    "text": "You got to be like that guy standing up there going, I disgraced the company.",
+    "start_time": 1016.162,
+    "end_time": 1020.527,
+    "gap_to_next": 1.06
+  },
+  {
+    "index": 357,
+    "text": "I disgraced myself.",
+    "start_time": 1020.527,
+    "end_time": 1021.729,
+    "gap_to_next": 0.1
+  },
+  {
+    "index": 358,
+    "text": "I'd just like to state that there was no air conditioning on the subway.",
+    "start_time": 1021.729,
+    "end_time": 1024.432,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 359,
+    "text": "I wasn't thinking clearly.",
+    "start_time": 1024.492,
+    "end_time": 1026.334,
+    "gap_to_next": 0.14
+  },
+  {
+    "index": 360,
+    "text": "I have nothing against Mexicans.",
+    "start_time": 1026.334,
+    "end_time": 1027.716,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 361,
+    "text": "I went to Tijuana.",
+    "start_time": 1027.796,
+    "end_time": 1028.837,
+    "gap_to_next": 0.24
+  },
+  {
+    "index": 362,
+    "text": "I had a great time.",
+    "start_time": 1028.837,
+    "end_time": 1030.56,
+    "gap_to_next": 0.8
+  },
+  {
+    "index": 363,
+    "text": "Please, please don't do this.",
+    "start_time": 1030.56,
+    "end_time": 1034.941,
+    "gap_to_next": 2.36
+  },
+  {
+    "index": 364,
+    "text": "No, that's why a lot of white dudes, we can get uptight in certain social situations.",
+    "start_time": 1034.941,
+    "end_time": 1038.848,
+    "gap_to_next": 0.46
+  },
+  {
+    "index": 365,
+    "text": "We got to watch out for the podium.",
+    "start_time": 1038.848,
+    "end_time": 1042.375,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 366,
+    "text": "No, that podium can come out of nowhere.",
+    "start_time": 1042.395,
+    "end_time": 1045.06,
+    "gap_to_next": 1.0
+  },
+  {
+    "index": 367,
+    "text": "You're not even trying to say something like, yeah, I'm thinking of getting a shirt.",
+    "start_time": 1045.06,
+    "end_time": 1048.305,
+    "gap_to_next": 0.24
+  },
+  {
+    "index": 368,
+    "text": "What shirt?",
+    "start_time": 1048.305,
+    "end_time": 1048.706,
+    "gap_to_next": 0.06
+  },
+  {
+    "index": 369,
+    "text": "I'm thinking of the black shirt.",
+    "start_time": 1048.766,
+    "end_time": 1049.788,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 370,
+    "text": "What the hell did you say?",
+    "start_time": 1049.808,
+    "end_time": 1050.77,
+    "gap_to_next": 0.14
+  },
+  {
+    "index": 371,
+    "text": "I said black shirt.",
+    "start_time": 1050.77,
+    "end_time": 1052.253,
+    "gap_to_next": 0.42
+  },
+  {
+    "index": 372,
+    "text": "I should have said African-American shirt.",
+    "start_time": 1052.253,
+    "end_time": 1054.116,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 373,
+    "text": "I apologize.",
+    "start_time": 1054.136,
+    "end_time": 1055.318,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 374,
+    "text": "Please, I need this position.",
+    "start_time": 1055.338,
+    "end_time": 1057.061,
+    "gap_to_next": 0.2
+  },
+  {
+    "index": 375,
+    "text": "I have a mortgage.",
+    "start_time": 1057.061,
+    "end_time": 1057.803,
+    "gap_to_next": 0.08
+  },
+  {
+    "index": 376,
+    "text": "Please don't do this.",
+    "start_time": 1057.883,
+    "end_time": 1063.257,
+    "gap_to_next": 4.23
+  },
+  {
+    "index": 377,
+    "text": "So, anywho, I got a computer recently.",
+    "start_time": 1063.257,
+    "end_time": 1066.601,
+    "gap_to_next": 0.94
+  },
+  {
+    "index": 378,
+    "text": "That's, like, one of the biggest things in my life.",
+    "start_time": 1066.601,
+    "end_time": 1067.862,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 379,
+    "text": "I'm really trying to get, like, more, like, you know, into this whole technology thing.",
+    "start_time": 1067.882,
+    "end_time": 1071.106,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 380,
+    "text": "I'm awful with computers.",
+    "start_time": 1071.146,
+    "end_time": 1072.567,
+    "gap_to_next": 0.5
+  },
+  {
+    "index": 381,
+    "text": "I'm one of those guys, basically, every button I hit on my computer, my computer has to, like, shut down, like, regroup, somehow, like, deal with my idiocy, you know what I mean?",
+    "start_time": 1072.567,
+    "end_time": 1082.779,
+    "gap_to_next": 1.02
+  },
+  {
+    "index": 382,
+    "text": "Then there's always, like, some eight-year-old I see later on a laptop, like...",
+    "start_time": 1082.779,
+    "end_time": 1088.148,
+    "gap_to_next": 2.33
+  },
+  {
+    "index": 383,
+    "text": "He's, like, breaking into the Pentagon, downloading movies that haven't even been made yet.",
+    "start_time": 1088.148,
+    "end_time": 1092.714,
+    "gap_to_next": 0.04
+  },
+  {
+    "index": 384,
+    "text": "I just got a plane ticket for six bucks.",
+    "start_time": 1092.754,
+    "end_time": 1094.316,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 385,
+    "text": "He just wanted to, like, slam his head in the thing.",
+    "start_time": 1094.336,
+    "end_time": 1097.62,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 386,
+    "text": "I'll tell you the only thing I like about my computer is I really enjoy spellcheck.",
+    "start_time": 1097.64,
+    "end_time": 1103.067,
+    "gap_to_next": 2.02
+  },
+  {
+    "index": 387,
+    "text": "No, I love it.",
+    "start_time": 1103.067,
+    "end_time": 1103.487,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 388,
+    "text": "You know what I love about spellcheck?",
+    "start_time": 1103.507,
+    "end_time": 1104.929,
+    "gap_to_next": 0.22
+  },
+  {
+    "index": 389,
+    "text": "You don't have to be close to getting the word right.",
+    "start_time": 1104.929,
+    "end_time": 1107.092,
+    "gap_to_next": 0.24
+  },
+  {
+    "index": 390,
+    "text": "Have you ever noticed that?",
+    "start_time": 1107.092,
+    "end_time": 1108.513,
+    "gap_to_next": 0.66
+  },
+  {
+    "index": 391,
+    "text": "All you gotta do is just get it, like, somewhere, like, within the ballpark of the word.",
+    "start_time": 1108.513,
+    "end_time": 1112.598,
+    "gap_to_next": 0.58
+  },
+  {
+    "index": 392,
+    "text": "It's almost like your computer can just start guessing, like, ah, , I don't know.",
+    "start_time": 1112.598,
+    "end_time": 1116.664,
+    "gap_to_next": 0.76
+  },
+  {
+    "index": 393,
+    "text": "Dinosaur?",
+    "start_time": 1116.664,
+    "end_time": 1118.287,
+    "gap_to_next": 0.4
+  },
+  {
+    "index": 394,
+    "text": "You know, when you're sitting there like an idiot, like, nah, I wasn't trying to spell dinosaur.",
+    "start_time": 1118.287,
+    "end_time": 1124.413,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 395,
+    "text": "So then what does your computer do?",
+    "start_time": 1124.433,
+    "end_time": 1126.335,
+    "gap_to_next": 0.52
+  },
+  {
+    "index": 396,
+    "text": "It starts throwing out like every D word it can possibly think of, like, okay, how about dictionary?",
+    "start_time": 1126.335,
+    "end_time": 1131.461,
+    "gap_to_next": 0.78
+  },
+  {
+    "index": 397,
+    "text": "Diary, any of this stuff looking familiar.",
+    "start_time": 1131.461,
+    "end_time": 1134.624,
+    "gap_to_next": 0.74
+  },
+  {
+    "index": 398,
+    "text": "Are we moving towards the goal or away from it?",
+    "start_time": 1134.624,
+    "end_time": 1138.468,
+    "gap_to_next": 0.9
+  },
+  {
+    "index": 399,
+    "text": "You ever spell a word so bad, though, your spell check has absolutely no clue what the hell you're trying to spell?",
+    "start_time": 1138.468,
+    "end_time": 1143.734,
+    "gap_to_next": 1.22
+  },
+  {
+    "index": 400,
+    "text": "What do you end up getting?",
+    "start_time": 1143.734,
+    "end_time": 1145.095,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 401,
+    "text": "You end up getting like a question mark.",
+    "start_time": 1145.115,
+    "end_time": 1147.463,
+    "gap_to_next": 0.49
+  },
+  {
+    "index": 402,
+    "text": "You got a million dollars worth of technology just looking back at you like... Just like, you got me, buddy!",
+    "start_time": 1147.463,
+    "end_time": 1154.954,
+    "gap_to_next": 0.94
+  },
+  {
+    "index": 403,
+    "text": "Which is pretty amazing, because I have all the words.",
+    "start_time": 1154.954,
+    "end_time": 1160.683,
+    "gap_to_next": 2.5
+  },
+  {
+    "index": 404,
+    "text": "Yeah, and that doesn't look like any of them.",
+    "start_time": 1160.683,
+    "end_time": 1164.048,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 405,
+    "text": "I can't even make a guess that's so screwed up.",
+    "start_time": 1164.068,
+    "end_time": 1167.233,
+    "gap_to_next": 1.12
+  },
+  {
+    "index": 406,
+    "text": "Would you, like, pass out and whack your head off the keyboard?",
+    "start_time": 1167.233,
+    "end_time": 1170.698,
+    "gap_to_next": 0.42
+  },
+  {
+    "index": 407,
+    "text": "Please tell me you're not that stupid.",
+    "start_time": 1170.698,
+    "end_time": 1172.981,
+    "gap_to_next": 0.38
+  },
+  {
+    "index": 408,
+    "text": "All right, that's it for me.",
+    "start_time": 1172.981,
+    "end_time": 1173.702,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 409,
+    "text": "You guys were a lot of fun.",
+    "start_time": 1173.722,
+    "end_time": 1175.024,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 410,
+    "text": "Thank you very much.",
+    "start_time": 1175.044,
+    "end_time": 1176.647,
+    "gap_to_next": 0.02
+  },
+  {
+    "index": 411,
+    "text": "God bless you.",
+    "start_time": 1176.667,
+    "end_time": 1239.875938,
+    "gap_to_next": 62.93
+  }
+]

@@ -1,0 +1,23 @@
+[
+  { "segment_id": 1, "funny_score": 0 },
+  { "segment_id": 2, "funny_score": 3 },
+  { "segment_id": 3, "funny_score": 4 },
+  { "segment_id": 4, "funny_score": 4 },
+  { "segment_id": 5, "funny_score": 3 },
+  { "segment_id": 6, "funny_score": 4 },
+  { "segment_id": 7, "funny_score": 5 },
+  { "segment_id": 8, "funny_score": 4 },
+  { "segment_id": 9, "funny_score": 4 },
+  { "segment_id": 10, "funny_score": 3 },
+  { "segment_id": 11, "funny_score": 4 },
+  { "segment_id": 12, "funny_score": 3 },
+  { "segment_id": 13, "funny_score": 3 },
+  { "segment_id": 14, "funny_score": 4 },
+  { "segment_id": 15, "funny_score": 3 },
+  { "segment_id": 16, "funny_score": 4 },
+  { "segment_id": 17, "funny_score": 4 },
+  { "segment_id": 18, "funny_score": 3 },
+  { "segment_id": 19, "funny_score": 4 },
+  { "segment_id": 20, "funny_score": 3 },
+  { "segment_id": 21, "funny_score": 1 }
+]

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎭 Comedy Segmentation Review</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            display: flex;
+            height: calc(100vh - 200px);
+        }
+
+        .sidebar {
+            width: 400px;
+            background: #f8f9fa;
+            border-right: 1px solid #dee2e6;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .folder-selector {
+            padding: 20px;
+            border-bottom: 1px solid #dee2e6;
+            background: #fff;
+        }
+
+        .folder-selector h3 {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+
+        .folder-input-group {
+            margin-bottom: 15px;
+        }
+
+        .folder-input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #495057;
+            font-size: 0.9em;
+        }
+
+        .folder-input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid #ced4da;
+            border-radius: 6px;
+            font-size: 0.9em;
+            transition: border-color 0.2s;
+        }
+
+        .folder-input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .load-button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        .load-button:hover {
+            background: #0056b3;
+        }
+
+        .load-button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+
+        .review-list {
+            flex: 1;
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .review-list h3 {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+
+        .review-items {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .review-item {
+            padding: 12px 15px;
+            cursor: pointer;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        .review-item:hover {
+            background-color: #f8f9fa;
+            border-color: #007bff;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,123,255,0.15);
+        }
+
+        .review-item.selected {
+            background-color: #007bff;
+            color: white;
+            border-color: #0056b3;
+        }
+
+        .review-item.reviewed {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .review-item.reviewed.selected {
+            background-color: #28a745;
+            border-color: #1e7e34;
+        }
+
+        .review-item-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .review-item-info {
+            font-size: 0.85em;
+            opacity: 0.8;
+        }
+
+        .review-item.selected .review-item-info {
+            opacity: 0.9;
+        }
+
+        .audio-controls {
+            padding: 20px;
+            background: #fff;
+        }
+
+        .audio-controls h3 {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+
+        audio {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .time-display {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #007bff;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+
+        .segments-panel {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .segments-header {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .segments-header h3 {
+            color: #495057;
+            margin-bottom: 10px;
+        }
+
+        .file-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: #0066cc;
+        }
+
+        .segment {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .segment:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .segment-header {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .segment-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+
+        .segment-metadata {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9em;
+        }
+
+        .metadata-item {
+            background: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid #ced4da;
+            color: #6c757d;
+        }
+
+        .metadata-item.time {
+            background: #e7f3ff;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .segment-content {
+            padding: 20px;
+        }
+
+        .segment-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #212529;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+
+        .segment-controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #545b62;
+            transform: translateY(-1px);
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #1e7e34;
+            transform: translateY(-1px);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 30px;
+            font-size: 1.1em;
+            color: #6c757d;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #f5c6cb;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 50px;
+            color: #6c757d;
+        }
+
+        .empty-state h3 {
+            margin-bottom: 15px;
+        }
+
+        .review-progress {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #e9ecef;
+            border-radius: 6px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #dee2e6;
+            border-radius: 4px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #28a745;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        .mark-reviewed {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .mark-reviewed:hover {
+            background: #1e7e34;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .sidebar {
+                width: 100%;
+            }
+            
+            .segment-metadata {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .segment-controls {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎭 Comedy Segmentation Review</h1>
+            <p>Batch review and validate AI-generated comedy segmentations with audio playback</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="folder-selector">
+                    <h3>📂 Select Folders</h3>
+                    <div class="folder-input-group">
+                        <label for="audioFolder">🎵 Audio Folder (WAV files):</label>
+                        <input type="file" id="audioFolder" class="folder-input" webkitdirectory directory multiple>
+                    </div>
+                    <div class="folder-input-group">
+                        <label for="jsonFolder">📄 JSON Folder (Segmentation files):</label>
+                        <input type="file" id="jsonFolder" class="folder-input" webkitdirectory directory multiple>
+                    </div>
+                    <button class="load-button" onclick="segmentationReview.loadFolders()" disabled id="loadButton">
+                        Load Review Items
+                    </button>
+                </div>
+                
+                <div class="review-list">
+                    <h3>📋 Review Queue</h3>
+                    <div class="review-items" id="reviewItems">
+                        <div class="loading">Select folders above to load review items</div>
+                    </div>
+                    <div class="review-progress" id="reviewProgress" style="display: none;">
+                        <div>Progress: <span id="progressText">0 / 0</span></div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="audio-controls">
+                    <h3>🎵 Audio Player</h3>
+                    <audio id="audioPlayer" controls>
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="time-display" id="timeDisplay">
+                        00:00 / 00:00
+                    </div>
+                </div>
+            </div>
+            
+            <div class="segments-panel">
+                <div class="segments-header">
+                    <h3>🎬 Segments</h3>
+                    <div class="file-info" id="fileInfo">
+                        Select folders and load review items to begin
+                    </div>
+                </div>
+                
+                <div id="segmentsContainer">
+                    <div class="empty-state">
+                        <h3>No segments loaded</h3>
+                        <p>Choose folders and select a review item from the left panel to start reviewing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class SegmentationReviewUI {
+            constructor() {
+                this.audioPlayer = document.getElementById('audioPlayer');
+                this.timeDisplay = document.getElementById('timeDisplay');
+                this.reviewItems = document.getElementById('reviewItems');
+                this.fileInfo = document.getElementById('fileInfo');
+                this.segmentsContainer = document.getElementById('segmentsContainer');
+                this.loadButton = document.getElementById('loadButton');
+                this.reviewProgress = document.getElementById('reviewProgress');
+                this.progressText = document.getElementById('progressText');
+                this.progressFill = document.getElementById('progressFill');
+                
+                this.currentSegments = null;
+                this.currentAudioFile = null;
+                this.reviewData = [];
+                this.reviewedItems = new Set();
+                this.selectedItemIndex = -1;
+                
+                this.init();
+            }
+            
+            init() {
+                this.setupEventListeners();
+                this.setupAudioPlayer();
+            }
+            
+            setupEventListeners() {
+                const audioFolder = document.getElementById('audioFolder');
+                const jsonFolder = document.getElementById('jsonFolder');
+                
+                audioFolder.addEventListener('change', () => this.checkFoldersSelected());
+                jsonFolder.addEventListener('change', () => this.checkFoldersSelected());
+            }
+            
+            checkFoldersSelected() {
+                const audioFolder = document.getElementById('audioFolder');
+                const jsonFolder = document.getElementById('jsonFolder');
+                
+                const hasAudio = audioFolder.files && audioFolder.files.length > 0;
+                const hasJson = jsonFolder.files && jsonFolder.files.length > 0;
+                
+                this.loadButton.disabled = !(hasAudio && hasJson);
+                
+                if (hasAudio && hasJson) {
+                    this.loadButton.textContent = 'Load Review Items';
+                } else if (hasAudio) {
+                    this.loadButton.textContent = 'Select JSON folder...';
+                } else if (hasJson) {
+                    this.loadButton.textContent = 'Select audio folder...';
+                } else {
+                    this.loadButton.textContent = 'Load Review Items';
+                }
+            }
+            
+            async loadFolders() {
+                const audioFolder = document.getElementById('audioFolder');
+                const jsonFolder = document.getElementById('jsonFolder');
+                
+                this.reviewItems.innerHTML = '<div class="loading">Processing folders...</div>';
+                
+                try {
+                    // Process audio files
+                    const audioFiles = new Map();
+                    const audioFileNames = [];
+                    for (const file of audioFolder.files) {
+                        if (file.name.match(/\.(wav|mp3|m4a)$/i)) {
+                            const basename = this.getBasename(file.name);
+                            audioFiles.set(basename, file);
+                            audioFileNames.push(file.name);
+                        }
+                    }
+                    
+                    // Process JSON files and match with audio
+                    const matchedItems = [];
+                    const jsonFileNames = [];
+                    const unmatchedJson = [];
+                    const unmatchedAudio = [];
+                    
+                    for (const file of jsonFolder.files) {
+                        if (file.name.endsWith('.json')) {
+                            const basename = this.getBasename(file.name);
+                            jsonFileNames.push(file.name);
+                            const audioFile = audioFiles.get(basename);
+                            
+                            if (audioFile) {
+                                matchedItems.push({
+                                    name: basename,
+                                    jsonFile: file,
+                                    audioFile: audioFile,
+                                    reviewed: false
+                                });
+                            } else {
+                                unmatchedJson.push(file.name);
+                            }
+                        }
+                    }
+                    
+                    // Find unmatched audio files
+                    for (const [basename, file] of audioFiles) {
+                        const hasMatch = matchedItems.some(item => item.name === basename);
+                        if (!hasMatch) {
+                            unmatchedAudio.push(file.name);
+                        }
+                    }
+                    
+                    // Sort by name for consistent ordering
+                    matchedItems.sort((a, b) => a.name.localeCompare(b.name));
+                    
+                    this.reviewData = matchedItems;
+                    this.displayReviewItems();
+                    this.updateProgress();
+                    
+                    if (matchedItems.length === 0) {
+                        let debugInfo = '<div class="error">No matching audio and JSON files found</div>';
+                        debugInfo += '<div style="padding: 15px; font-size: 0.9em;">';
+                        debugInfo += `<strong>Debug Info:</strong><br>`;
+                        debugInfo += `📁 Audio files found (${audioFileNames.length}): ${audioFileNames.join(', ') || 'None'}<br><br>`;
+                        debugInfo += `📄 JSON files found (${jsonFileNames.length}): ${jsonFileNames.join(', ') || 'None'}<br><br>`;
+                        if (unmatchedAudio.length > 0) {
+                            debugInfo += `🔍 Unmatched audio: ${unmatchedAudio.join(', ')}<br><br>`;
+                        }
+                        if (unmatchedJson.length > 0) {
+                            debugInfo += `🔍 Unmatched JSON: ${unmatchedJson.join(', ')}<br><br>`;
+                        }
+                        debugInfo += `<em>Files must have identical names (without extensions) to match.</em>`;
+                        debugInfo += '</div>';
+                        this.reviewItems.innerHTML = debugInfo;
+                    }
+                    
+                } catch (error) {
+                    console.error('Error loading folders:', error);
+                    this.reviewItems.innerHTML = '<div class="error">Error loading folders: ' + error.message + '</div>';
+                }
+            }
+            
+            getBasename(filename) {
+                let basename = filename.replace(/\.[^/.]+$/, ""); // Remove extension
+                // Remove _segments suffix from JSON files
+                if (basename.endsWith('_segments')) {
+                    basename = basename.replace(/_segments$/, '');
+                }
+                return basename;
+            }
+            
+            displayReviewItems() {
+                if (this.reviewData.length === 0) {
+                    this.reviewItems.innerHTML = '<div class="loading">No review items found</div>';
+                    return;
+                }
+                
+                this.reviewItems.innerHTML = '';
+                
+                this.reviewData.forEach((item, index) => {
+                    const div = document.createElement('div');
+                    div.className = `review-item${this.reviewedItems.has(index) ? ' reviewed' : ''}`;
+                    div.onclick = () => this.selectReviewItem(index);
+                    
+                    div.innerHTML = `
+                        <div class="review-item-name">${item.name}</div>
+                        <div class="review-item-info">
+                            📄 ${item.jsonFile.name}<br>
+                            🎵 ${item.audioFile.name}
+                        </div>
+                    `;
+                    
+                    this.reviewItems.appendChild(div);
+                });
+                
+                this.reviewProgress.style.display = 'block';
+            }
+            
+            async selectReviewItem(index) {
+                // Update selection UI
+                const items = this.reviewItems.querySelectorAll('.review-item');
+                items.forEach((item, i) => {
+                    item.classList.toggle('selected', i === index);
+                });
+                
+                this.selectedItemIndex = index;
+                const item = this.reviewData[index];
+                
+                this.reviewItems.innerHTML = '<div class="loading">Loading ' + item.name + '...</div>';
+                
+                try {
+                    // Load JSON segmentation
+                    const jsonText = await this.readFile(item.jsonFile);
+                    this.currentSegments = JSON.parse(jsonText);
+                    
+                    // Load audio
+                    this.currentAudioFile = item.audioFile;
+                    const audioURL = URL.createObjectURL(this.currentAudioFile);
+                    this.audioPlayer.src = audioURL;
+                    
+                    // Update UI
+                    this.displaySegments();
+                    this.updateFileInfo(item.name, item.jsonFile.name, item.audioFile.name);
+                    
+                    // Restore the review items list
+                    this.displayReviewItems();
+                    
+                    // Re-select the current item
+                    const currentItems = this.reviewItems.querySelectorAll('.review-item');
+                    if (currentItems[index]) {
+                        currentItems[index].classList.add('selected');
+                    }
+                    
+                } catch (error) {
+                    console.error('Error loading review item:', error);
+                    this.reviewItems.innerHTML = '<div class="error">Error loading ' + item.name + ': ' + error.message + '</div>';
+                }
+            }
+            
+            markAsReviewed() {
+                if (this.selectedItemIndex >= 0) {
+                    this.reviewedItems.add(this.selectedItemIndex);
+                    this.updateProgress();
+                    this.displayReviewItems();
+                    
+                    // Re-select current item
+                    const items = this.reviewItems.querySelectorAll('.review-item');
+                    if (items[this.selectedItemIndex]) {
+                        items[this.selectedItemIndex].classList.add('selected');
+                    }
+                }
+            }
+            
+            updateProgress() {
+                if (this.reviewData.length === 0) return;
+                
+                const reviewed = this.reviewedItems.size;
+                const total = this.reviewData.length;
+                const percentage = (reviewed / total) * 100;
+                
+                this.progressText.textContent = `${reviewed} / ${total}`;
+                this.progressFill.style.width = percentage + '%';
+            }
+            
+            readFile(file) {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => resolve(e.target.result);
+                    reader.onerror = reject;
+                    reader.readAsText(file);
+                });
+            }
+            
+            updateFileInfo(itemName, jsonFileName, audioFileName) {
+                const segmentCount = this.currentSegments ? this.currentSegments.length : 0;
+                const totalDuration = this.currentSegments ? 
+                    Math.max(...this.currentSegments.map(s => s.end_time)) : 0;
+                
+                this.fileInfo.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <strong>📁 Item:</strong> ${itemName}<br>
+                            <strong>📄 JSON:</strong> ${jsonFileName}<br>
+                            <strong>🎵 Audio:</strong> ${audioFileName}<br>
+                            <strong>📊 Stats:</strong> ${segmentCount} segments, ${this.formatTime(totalDuration)} duration
+                        </div>
+                        <button class="mark-reviewed" onclick="segmentationReview.markAsReviewed()">
+                            ✅ Mark Reviewed
+                        </button>
+                    </div>
+                `;
+            }
+            
+            displaySegments() {
+                if (!this.currentSegments || this.currentSegments.length === 0) {
+                    this.segmentsContainer.innerHTML = '<div class="empty-state"><h3>No segments found</h3></div>';
+                    return;
+                }
+                
+                this.segmentsContainer.innerHTML = '';
+                
+                this.currentSegments.forEach((segment, index) => {
+                    const segmentElement = this.createSegmentElement(segment, index);
+                    this.segmentsContainer.appendChild(segmentElement);
+                });
+            }
+            
+            createSegmentElement(segment, index) {
+                const div = document.createElement('div');
+                div.className = 'segment';
+                div.innerHTML = `
+                    <div class="segment-header">
+                        <div class="segment-title">Segment ${segment.segment_id || index + 1}</div>
+                        <div class="segment-metadata">
+                            <div class="metadata-item time">
+                                ⏱️ ${this.formatTime(segment.start_time)} - ${this.formatTime(segment.end_time)}
+                            </div>
+                            <div class="metadata-item">
+                                📏 Duration: ${this.formatTime(segment.duration)}
+                            </div>
+                            <div class="metadata-item">
+                                📝 Sentences: ${segment.sentence_indexes ? segment.sentence_indexes.length : 'N/A'}
+                            </div>
+                            ${segment.total_gap !== undefined ? 
+                                `<div class="metadata-item">⏸️ Total Gap: ${this.formatTime(segment.total_gap)}</div>` : ''
+                            }
+                        </div>
+                    </div>
+                    <div class="segment-content">
+                        <div class="segment-text">${segment.text || 'No text available'}</div>
+                        <div class="segment-controls">
+                            <button class="btn btn-primary" onclick="segmentationReview.jumpToTime(${segment.start_time})">
+                                ▶️ Jump to Start
+                            </button>
+                            <button class="btn btn-secondary" onclick="segmentationReview.jumpToTime(${segment.end_time})">
+                                ⏭️ Jump to End
+                            </button>
+                            <button class="btn btn-success" onclick="segmentationReview.playSegment(${segment.start_time}, ${segment.end_time})">
+                                🎬 Play Segment
+                            </button>
+                        </div>
+                    </div>
+                `;
+                return div;
+            }
+            
+            setupAudioPlayer() {
+                this.audioPlayer.addEventListener('timeupdate', () => {
+                    this.updateTimeDisplay();
+                });
+                
+                this.audioPlayer.addEventListener('loadedmetadata', () => {
+                    this.updateTimeDisplay();
+                });
+            }
+            
+            updateTimeDisplay() {
+                const current = this.audioPlayer.currentTime || 0;
+                const duration = this.audioPlayer.duration || 0;
+                
+                this.timeDisplay.textContent = `${this.formatTime(current)} / ${this.formatTime(duration)}`;
+            }
+            
+            jumpToTime(timeInSeconds) {
+                if (this.audioPlayer.src) {
+                    this.audioPlayer.currentTime = timeInSeconds;
+                    this.audioPlayer.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('Please load an audio file first');
+                }
+            }
+            
+            playSegment(startTime, endTime) {
+                if (!this.audioPlayer.src) {
+                    alert('Please load an audio file first');
+                    return;
+                }
+                
+                this.audioPlayer.currentTime = startTime;
+                this.audioPlayer.play();
+                
+                // Stop at end time
+                const stopPlayback = () => {
+                    if (this.audioPlayer.currentTime >= endTime) {
+                        this.audioPlayer.pause();
+                        this.audioPlayer.removeEventListener('timeupdate', stopPlayback);
+                    }
+                };
+                
+                this.audioPlayer.addEventListener('timeupdate', stopPlayback);
+            }
+            
+            formatTime(seconds) {
+                if (isNaN(seconds) || seconds === null || seconds === undefined) {
+                    return '00:00';
+                }
+                
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            }
+        }
+        
+        // Initialize the application
+        const segmentationReview = new SegmentationReviewUI();
+    </script>
+</body>
+</html> 

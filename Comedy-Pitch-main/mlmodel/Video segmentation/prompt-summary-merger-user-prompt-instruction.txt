@@ -1,0 +1,17 @@
+📌 **Your task:**
+You will read several individual chunk summaries from a stand-up comedy performance. Your goal is to **combine them into one cohesive global context summary** that can serve as a standalone overview of the entire show.
+
+### Your final context summary should:
+
+* 🧠 Identify the **main themes or topics** the comedian covers across all chunks (e.g., family, work, relationships, culture)
+* 🎭 Mention any **recurring characters, stories, or inside jokes** that show up more than once
+* 🔁 Capture any **callbacks** or multi-part jokes that appear across different segments
+* ✂️ Avoid restating all details — focus on **what’s essential to understand the show as a whole**
+* 🪄 Write clearly and concisely, as this will appear **before** the transcript and help a reader get oriented
+
+---
+
+🎯 **Goal:**
+This summary will help readers understand references and jokes throughout the transcript, even if they only read a portion of the show.
+
+Now, based on the following chunk summaries, write one **global context summary**:

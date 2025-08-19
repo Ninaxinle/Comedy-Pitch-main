@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comedy Peach - Firebase Auth Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .header {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .auth-section {
+            margin: 20px 0;
+        }
+        .user-info {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #f44336;
+        }
+        .success {
+            background: #e8f5e8;
+            color: #2e7d32;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn-danger {
+            background: #dc3545;
+        }
+        .btn-danger:hover {
+            background: #c82333;
+        }
+        /* Custom authentication form styling */
+        .auth-form-container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            margin: 15px 0;
+        }
+        .hidden {
+            display: none;
+        }
+        .api-test {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #dee2e6;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .status.online {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status.offline {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .reset-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        input[type="email"] {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 200px;
+        }
+    </style>
+    <!-- Global polyfill for Firebase compatibility -->
+    <script>
+        if (typeof global === 'undefined') {
+            var global = window;
+        }
+    </script>
+    
+    <!-- Firebase SDKs - Stable browser versions -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <!-- FirebaseUI Auth -->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍑 Comedy Peach</h1>
+            <h2>Firebase Authentication Test (Python FastAPI)</h2>
+            <div id="server-status" class="status offline">Backend: Checking...</div>
+        </div>
+
+        <!-- Authentication Section -->
+        <div class="auth-section">
+            <h3>Authentication</h3>
+            
+            <!-- Custom Auth Choice -->
+            <div id="auth-choice" class="hidden">
+                <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #ffc107;">
+                    <h4 style="margin-top: 0; color: #856404;">Choose Your Authentication Method</h4>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+                        <button class="btn" onclick="showSignInForm()" style="background: #28a745;">
+                            🔑 Sign In (Existing Account)
+                        </button>
+                        <button class="btn" onclick="showSignUpForm()" style="background: #007bff;">
+                            ✨ Create New Account
+                        </button>
+                        <button class="btn" onclick="signInWithGoogle()" style="background: #dc3545;">
+                            🌐 Sign in with Google
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Sign In Form -->
+            <div id="custom-signin-form" class="hidden">
+                <div style="background: #e8f5e8; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                    <h4 style="margin-top: 0; color: #155724;">🔑 Sign In to Your Account</h4>
+                    <div style="margin-bottom: 15px;">
+                        <input type="email" id="signin-email" placeholder="Email address" style="width: 100%; max-width: 300px; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="password" id="signin-password" placeholder="Password" style="width: 100%; max-width: 300px; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <button class="btn" onclick="performSignIn()" style="background: #28a745;">Sign In</button>
+                        <button class="btn" onclick="showAuthChoice()" style="background: #6c757d;">Back</button>
+                    </div>
+                    <div id="signin-result"></div>
+                </div>
+            </div>
+
+            <!-- Custom Sign Up Form -->
+            <div id="custom-signup-form" class="hidden">
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                    <h4 style="margin-top: 0; color: #1976d2;">✨ Create New Account</h4>
+                    <div style="margin-bottom: 15px;">
+                        <input type="email" id="signup-email" placeholder="Email address" style="width: 100%; max-width: 300px; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="password" id="signup-password" placeholder="Password (min 6 characters)" style="width: 100%; max-width: 300px; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <button class="btn" onclick="performSignUp()" style="background: #007bff;">Create Account</button>
+                        <button class="btn" onclick="showAuthChoice()" style="background: #6c757d;">Back</button>
+                    </div>
+                    <div id="signup-result"></div>
+                </div>
+            </div>
+
+            <!-- User Info Display -->
+            <div id="user-info" class="hidden">
+                <div class="user-info">
+                    <h4>✅ Logged in successfully!</h4>
+                    <div id="user-details"></div>
+                    <button class="btn btn-danger" onclick="signOut()">Sign Out</button>
+                </div>
+                
+                <!-- Token Display Section -->
+                <div style="background: #fff3cd; padding: 15px; border-radius: 5px; margin-top: 15px; border-left: 4px solid #ffc107;">
+                    <h4 style="margin-top: 0; color: #856404;">🔑 Your Bearer Token for Testing</h4>
+                    <p style="margin-bottom: 10px; color: #856404; font-size: 14px;">
+                        Copy this token to test secure API endpoints with tools like curl, Postman, or your own applications.
+                    </p>
+                    <div id="current-token-display"></div>
+                    
+                    <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #007bff;">
+                        <h5 style="margin-top: 0; color: #007bff;">🔧 How to Use This Token in Swagger UI:</h5>
+                        <ol style="margin: 10px 0; padding-left: 20px; font-size: 14px;">
+                            <li>Copy your token using the button above</li>
+                            <li>Go to <a href="/docs" target="_blank" style="color: #007bff;">Swagger UI</a></li>
+                            <li>Click the <strong>"Authorize"</strong> button (🔒 icon) at the top</li>
+                            <li>In the "Value" field, paste your token <strong>WITHOUT</strong> "Bearer " prefix</li>
+                            <li>Click "Authorize" then "Close"</li>
+                            <li>Now try any protected endpoint (like GET /api/users/me)</li>
+                        </ol>
+                        <p style="margin: 5px 0; font-size: 12px; color: #6c757d;">
+                            <strong>Note:</strong> If you still get 401 errors, try clearing your browser cache or using a different browser.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Password Reset Section (shown when not authenticated) -->
+            <div id="password-reset-section" class="hidden">
+                <div class="reset-section">
+                    <h4>Forgot your password?</h4>
+                    <p>Enter your email below to receive password reset instructions:</p>
+                    <input type="email" id="reset-email" placeholder="Enter your email">
+                    <button class="btn" onclick="resetPassword()">Send Password Reset</button>
+                    <div id="reset-result" style="margin-top: 10px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Testing Section -->
+        <div id="api-testing" class="hidden">
+            <h3>Backend API Testing</h3>
+            
+            <p>Test the Python FastAPI backend endpoints:</p>
+            
+            <div class="api-test">
+                <h4>Token Verification</h4>
+                <p>Test if your authentication token is valid:</p>
+                <button class="btn" onclick="testTokenVerification()">Test Token Verification</button>
+                <div id="token-verification-result" style="margin-top: 10px;"></div>
+            </div>
+            
+            <div class="api-test">
+                <h4>User Profile</h4>
+                <p>Retrieve your user profile from the backend:</p>
+                <button class="btn" onclick="testUserProfile()">Get User Profile</button>
+                <div id="user-profile-result" style="margin-top: 10px;"></div>
+            </div>
+            
+            <div class="api-test">
+                <h4>List Users (Admin)</h4>
+                <p>Get all users in the system (admin function):</p>
+                <button class="btn" onclick="testListUsers()">List All Users</button>
+                <div id="list-users-result" style="margin-top: 10px;"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 40px; color: #666; font-size: 14px;">
+            <p>🔧 Firebase Authentication Test Interface</p>
+            <p>Backend: Python FastAPI | Frontend: Firebase Web SDK</p>
+        </div>
+    </div>
+
+    <!-- Load the auth script -->
+    <script src="auth.js"></script>
+</body>
+</html> 

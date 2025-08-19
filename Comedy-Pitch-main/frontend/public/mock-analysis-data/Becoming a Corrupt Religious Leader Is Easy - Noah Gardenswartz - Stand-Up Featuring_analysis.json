@@ -1,0 +1,168 @@
+[
+  {
+    "segment_id": 1,
+    "text": "I became an ordained minister last year because I had two friends that got married... underground parking scheme for the Lord.",
+    "feedback": {
+      "summary": "Great blend of absurdity and grounded setup — tighten for quicker punch",
+      "details": [
+        {
+          "subtype": "length_balance",
+          "message": "The setup takes a bit long — consider trimming the explanation of the ordainment process to get to the parking pass payoff faster."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Underground parking scheme for the Lord’ is gold — you could tag it with something biblical for extra flavor (e.g., ‘And on the seventh day, I parked for free’)."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 2,
+    "text": "I liked officiating the wedding, though... maybe I'll have a salad for lunch.",
+    "feedback": {
+      "summary": "Clever twist on health tracking — consider adding one absurd escalation",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "The sodium bloat as health monitor is funny — escalate with a tag like ‘Fitbit wishes it had this level of accountability.’"
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "Consider adding one more comparison (e.g., ‘When my hand starts tingling, I know I’ve hit my daily cheese limit.’)"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 3,
+    "text": "Yeah, I don't fight with my wife a lot... Can't plan a future with a sociopath like that.",
+    "feedback": {
+      "summary": "Funny exaggeration of petty spousal conflict — heighten absurdity further",
+      "details": [
+        {
+          "subtype": "angle_suggestion",
+          "message": "Try comparing the sound of the apple to another disaster (e.g., ‘I thought we were under siege by raccoons’)."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Eat a banana’ and ‘silent fruits’ is funny — consider naming a fake silent fruit like ‘marshmallow grapes’ to extend the bit."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 4,
+    "text": "And it bothered me because I have a neural disorder called misophonia... Fucking relax, Brooklyn.",
+    "feedback": {
+      "summary": "Dark, edgy punchline — consider softening the lead-in to broaden audience trust",
+      "details": [
+        {
+          "subtype": "audience_reference_fit",
+          "message": "To make the Pence analogy land better, consider softening into it with a line like ‘This is going to sound harsh, but…’ before dropping the comparison."
+        },
+        {
+          "subtype": "voice_consistency",
+          "message": "The defensive 'I don't agree with his politics' may come off too late — move it before the punchline so the intention is clearer."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 5,
+    "text": "I don't know. My friends have told me, though, that I should use exposure therapy... until I heard how loud they were eating their food.",
+    "feedback": {
+      "summary": "Well-built escalation — clarify emotional shift between fear and rage",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "The transition from ‘passing out’ to ‘rage’ at eating could use a bridge — e.g., ‘And just when I thought I was safe… crunch.’"
+        },
+        {
+          "subtype": "callback_opportunity",
+          "message": "You could callback to the ‘cereal’ or ‘apple’ from earlier when they start eating — 'And one of them had a Granny Smith.'"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 6,
+    "text": "I've talked about this on certain shows... that albino Korean respects this chef.",
+    "feedback": {
+      "summary": "Risky cultural angle — soften or clarify satire to protect tone",
+      "details": [
+        {
+          "subtype": "audience_reference_fit",
+          "message": "Consider prefacing this joke with acknowledgment that it's satire — e.g., ‘To stay zen in public, I invented my own coping strategy…’"
+        },
+        {
+          "subtype": "voice_consistency",
+          "message": "The phrase ‘albino Korean’ might land awkwardly — consider a milder or clearer phrasing like ‘unexpected Korean culinary ambassador.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 7,
+    "text": "I can feel you guys tightening up on me... that we see.",
+    "feedback": {
+      "summary": "Sincere sociopolitical insight — follow with quick levity",
+      "details": [
+        {
+          "subtype": "flow_disruption",
+          "message": "This segment is more serious — consider breaking tension with a light self-aware tag like 'Just me and sociology 101 up here, folks.'"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 8,
+    "text": "And I mean this from the bottom of my heart... I'll finish this goddamn set.",
+    "feedback": {
+      "summary": "Bold and confrontational — consider inviting the audience in earlier",
+      "details": [
+        {
+          "subtype": "audience_reference_fit",
+          "message": "To avoid losing the room, try inviting them in with a rhetorical question like ‘You ever met someone from your own group who just sucks?’ before hitting the punch."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Kind of racist if you don’t hate one person from each race’ is a sharp angle — consider clarifying the satire with a callback to the ‘lack of exposure’ line earlier."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 9,
+    "text": "Race issues, class issues as well... not in your father's ball sack?",
+    "feedback": {
+      "summary": "Strong analogy with unexpected crassness — refine setup for smoother ride",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Your father’s ball sack’ is a hard visual — consider building to it more gradually, or using misdirection (e.g., ‘Why is 7-Eleven luck more palatable than family inheritance?’)"
+        },
+        {
+          "subtype": "angle_suggestion",
+          "message": "The ‘ski race’ line is a good exaggerated trope — tag it with a name or description (‘Tad in his puffy vest’)."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 10,
+    "text": "No, but there are a lot of class issues... LeBron's making 60 grand next year, so.",
+    "feedback": {
+      "summary": "Clever economic insight with strong absurd twist — polish setup phrasing",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "The teacher vs. athlete comparison works better if you preview your twist sooner — e.g., ‘It’s not about fairness, it’s about scarcity.’"
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Lower the rims’ is an excellent absurd resolution — add a quick tag like ‘Suddenly your mailman’s in the All-Star Game.’"
+        }
+      ]
+    }
+  }
+]

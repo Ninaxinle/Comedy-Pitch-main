@@ -1,0 +1,117 @@
+[
+  {
+    "segment_id": 1,
+    "text": "Something's wrong, man. Just don't be one of these people that's surprised that black folks got issues... eyes closed.",
+    "feedback": {
+      "summary": "Strong opening stance — clarify tone with brief framing",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "You might add a quick contextual sentence before jumping in (e.g., ‘Let’s get this straight off the bat…’) to clearly signal this is social commentary with a comedic edge."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 2,
+    "text": "Did you know black people, why are black people angry?... We've been sad. How the hell are you surprised?",
+    "feedback": {
+      "summary": "Powerful cultural insight — highlight musical absurdity for greater impact",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "‘We invented the blues’ is a strong comedic anchor — consider exaggerating the emotional contrast more (e.g., ‘You invented brunch, we invented sadness set to guitar.’)"
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "You could tag the ‘freedom song’ chant with one absurdly happy line (e.g., ‘Everybody clap twice if you’re not enslaved!’) to amplify the contrast."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 3,
+    "text": "They're not patriotic. The black people don't like the national anthem anymore... They be serious.",
+    "feedback": {
+      "summary": "Clever breakdown of musical patriotism — reinforce the irony in delivery",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "The argument about conflicting identity is strong — consider adding a quick comedic summary, e.g., ‘It’s hard to write a love song to a place that keeps ghosting you.’"
+        },
+        {
+          "subtype": "callback_opportunity",
+          "message": "‘Proud to be an American’ could become a callback later when you contrast another over-the-top patriotic moment."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 4,
+    "text": "You couldn't possibly expect that level of patriotism... They keep it rocking.",
+    "feedback": {
+      "summary": "Great use of song references — amplify with additional contrast",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "The idea of ‘we don’t sing about the country, just the party cities’ is strong — tag it with a fake PSA: ‘Black America: Not saluting the flag, but we *will* show you where to dance.’"
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "You might add a closing mini-medley of fake city-based songs, e.g., ‘We don’t pledge allegiance, but we do pledge allegiance to New Orleans crawfish boils.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 5,
+    "text": "Black people don't do patriotism... like every day.",
+    "feedback": {
+      "summary": "Smart lyrical breakdown — escalate contrast to Ray Charles further",
+      "details": [
+        {
+          "subtype": "angle_suggestion",
+          "message": "Push the absurdity more — e.g., ‘Ray didn’t even pack a bag. He was just reminiscing from a safe distance.’"
+        },
+        {
+          "subtype": "callback_opportunity",
+          "message": "Consider calling back to the earlier ‘city party anthem’ motif when you quote ‘where the players play.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 6,
+    "text": "My Uncle Derek tried to shut me down... Michael B. Jordan lost his daddy that day.",
+    "feedback": {
+      "summary": "Strong fictionalized rebuttal — highlight film absurdity more",
+      "details": [
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Apollo Creed died immediately after’ is great — exaggerate the tragic irony more (e.g., ‘James Brown was still sweating when the heart monitor flatlined.’)"
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "‘Michael B. Jordan lost his daddy’ is a strong closer — tag it with a contrast like, ‘That’s not patriotism, that’s generational trauma.’"
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 7,
+    "text": "If anything, living in America is not patriotic... That's it.",
+    "feedback": {
+      "summary": "Brilliant punchline through city-name absurdity — reinforce structure",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "Consider highlighting earlier that the list of cities is suspiciously long — e.g., ‘It goes on longer than a weather report.’"
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "‘Safe places for Black folks’ is a powerful reveal — you could close with a fake warning label: ‘Living in America — exclusions apply.’"
+        }
+      ]
+    }
+  }
+]

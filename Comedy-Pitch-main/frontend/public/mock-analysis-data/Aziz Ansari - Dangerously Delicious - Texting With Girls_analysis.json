@@ -1,0 +1,57 @@
+[
+  {
+    "segment_id": 1,
+    "text": "I was in a relationship for a few years, and I think in the time I was in the relationship, all dating communication went exclusively to text. You can't call anybody anymore. If you call someone, they're like, what, are you on fire? Then quit wasting my time, text me that shit.",
+    "feedback": {
+      "summary": "Strong relatable premise — tighten setup for quicker payoff",
+      "details": [
+        {
+          "subtype": "length_balance",
+          "message": "The opening line is a bit slow — consider compressing it to get to the phone joke faster and hook the audience early."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "The 'are you on fire?' line is strong — you could tag it with a quick exaggerated example of what *would* justify a call."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 2,
+    "text": "And I don't like texting people, especially girls... You did, because I hate you now.",
+    "feedback": {
+      "summary": "Funny emotional escalation — trim repetition and punch the ending",
+      "details": [
+        {
+          "subtype": "structure_clarity",
+          "message": "The repeated 'I text her back right away' line effectively builds tension, but could be trimmed by one or two iterations for tighter pacing."
+        },
+        {
+          "subtype": "punchline_strength",
+          "message": "The 'uninvited to the pizza party' line is a good payoff — consider making it more specific or childish to heighten the absurdity ('You're off the guest list and I ate your slice')."
+        },
+        {
+          "subtype": "flow_disruption",
+          "message": "The 'locker/roller coaster' line is slightly out of place — clarify the metaphor or replace it with something more grounded in texting culture (e.g., 'What, did you drop your phone in a volcano?')."
+        }
+      ]
+    }
+  },
+  {
+    "segment_id": 3,
+    "text": "Girl always writes something bad. Sorry, I was at my niece's ballet recital... I went with my friend Brian. He's nice to me.",
+    "feedback": {
+      "summary": "Nice closing contrast — emphasize the petty tone more clearly",
+      "details": [
+        {
+          "subtype": "voice_consistency",
+          "message": "Lean into the petty bitterness — e.g., add a tag like 'Brian doesn’t leave me hanging for pirouettes.'"
+        },
+        {
+          "subtype": "tag_potential",
+          "message": "You could tag the ‘he’s nice to me’ line with a callback to the texting loop (e.g., 'He texts me back. Right away.')."
+        }
+      ]
+    }
+  }
+]

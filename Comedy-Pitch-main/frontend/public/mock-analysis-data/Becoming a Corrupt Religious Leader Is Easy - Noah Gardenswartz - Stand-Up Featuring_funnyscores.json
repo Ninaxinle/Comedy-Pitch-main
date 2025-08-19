@@ -1,0 +1,42 @@
+[
+  {
+    "segment_id": 1,
+    "funny_score": 0
+  },
+  {
+    "segment_id": 2,
+    "funny_score": 3
+  },
+  {
+    "segment_id": 3,
+    "funny_score": 4
+  },
+  {
+    "segment_id": 4,
+    "funny_score": 3
+  },
+  {
+    "segment_id": 5,
+    "funny_score": 4
+  },
+  {
+    "segment_id": 6,
+    "funny_score": 2
+  },
+  {
+    "segment_id": 7,
+    "funny_score": 1
+  },
+  {
+    "segment_id": 8,
+    "funny_score": 4
+  },
+  {
+    "segment_id": 9,
+    "funny_score": 4
+  },
+  {
+    "segment_id": 10,
+    "funny_score": 5
+  }
+]

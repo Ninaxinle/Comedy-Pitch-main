@@ -1,0 +1,30 @@
+# Core ML and Audio Processing
+torch>=1.9.0
+torchaudio>=0.9.0
+transformers>=4.20.0
+librosa>=0.9.0
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Audio Processing
+pydub>=0.25.0
+soundfile>=0.10.0
+
+# Model Loading
+safetensors>=0.3.0
+
+# Data Processing
+pandas>=1.3.0
+openpyxl>=3.0.0
+
+# Speech Recognition (alignment via WhisperX)
+whisperx>=3.1.0
+
+# Utilities
+tqdm>=4.62.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Optional: For better performance
+# torch-scatter  # Uncomment if using PyTorch Geometric
+# torch-sparse   # Uncomment if using PyTorch Geometric 
